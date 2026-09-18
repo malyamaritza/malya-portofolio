@@ -18,7 +18,7 @@
                 "tabColor": "bg-[#8FA87B] text-white",
                 "title": "Sistem Informasi Retail Terintegrasi — Damakara",
                 "category": "Enterprise System Modeling & Requirements Engineering",
-                "overview": "Analisis dan perancangan sistem informasi retail komprehensif untuk Damakara guna mengeliminasi bottleneck inventaris, mengoptimalkan pipeline pesanan multi-channel, dan menyatukan pelaporan antar departemen.",
+                "overview": "Analisis dan perancangan sistem informasi ritel fashion yang komprehensif untuk Dama Kara, guna mengintegrasikan proses perencanaan produksi massal, manajemen warehouse berbasis barcode, operasional toko offline, dan dashboard pelaporan eksekutif.",
                 "techStack": [
                     "HTML5",
                     "CSS3",
@@ -28,12 +28,13 @@
                     "Database Normalization"
                 ],
                 "deliverables": [
-                    "Perancangan 4 Modul Inti: Planning & Production, Warehouse Management System (WMS), Store Management System (SMS), dan Executive Dashboard.",
-                    "Use Case Diagrams, Activity Diagrams, dan Class Diagrams berstandar industri.",
-                    "Arsitektur Data Relasional & Skema ERD untuk pelacakan batch SKU dan reorder point otomatis.",
-                    "Desain Wireframe dan Hi-Fi Interactive Prototype untuk antarmuka kasir dan manajer toko."
+                    "Sistem Planning & Production dengan kalkulasi otomatis kebutuhan kain (Bills Of Material) dan penerbitan instruksi kerja (WO) digital.",
+                    "Sistem Manajemen Warehouse berbasis pemetaan rak digital dan barcode scanner untuk putaway, picking, serta sinkronisasi omnichannel (Jubelio).",
+                    "Sistem Store Management untuk operasional POS kasir, manajemen retur barang, dan permohonan auto-restock order ke gudang pusat.",
+                    "Dashboard Executive yang menyajikan pantauan stok akumulatif, grafik tren performa penjualan, serta notifikasi dini low stock dan dead stock.",
+                    "Pembuatan Domain Model komprehensif serta Use Case Diagram untuk keseluruhan subsistem (Warehouse, Planning, Store)."
                 ],
-                "metrics": "Mengurangi potensi selisih stok manual hingga 95% dalam skenario simulasi sistem.",
+                "metrics": "Mengeliminasi proses pendataan manual via spreadsheet dan WhatsApp, serta mempercepat pencarian barang gudang dengan koordinat rak presisi.",
                 "interactiveDemoTitle": "Interactive Architecture Schema Inspector",
                 "interactiveType": "damakara_schema",
                 "interactiveData": {
@@ -69,7 +70,7 @@
                 "tabColor": "bg-[#758D6B] text-white",
                 "title": "Clevago Department — Multi-Service Operational Platform",
                 "category": "Service Blueprint & Operational Workflow System",
-                "overview": "Platform tata kelola operasional terintegrasi untuk layanan laundry, pengendalian hama (pest control), dan pembersihan rumah harian (home cleaning) dengan alur reservasi terpusat.",
+                "overview": "Pemodelan proses bisnis terpadu untuk ClevaGo (Smart Cleaning On the Go), sebuah layanan inovatif yang mengintegrasikan pencucian laundry premium, pembersihan rumah & kantor (home cleaning), serta pengendalian hama (pest control) dalam satu ekosistem.",
                 "techStack": [
                     "Figma Prototype",
                     "BPMN Process Modeling",
@@ -77,12 +78,12 @@
                     "UI Component Kit"
                 ],
                 "deliverables": [
-                    "End-to-end operational flow untuk 3 cabang layanan (Laundry, Pest Control, Cleaning).",
-                    "Modul Preventive Maintenance dan Pengadaan Barang (Procurement) vendor cairan higienis.",
-                    "Figma Interactive Prototype dengan alur pelanggan, teknisi lapangan, dan admin operasional.",
-                    "Matriks hak akses (Role-Based Access Control) multi-level staff."
+                    "Pemodelan End-to-End Business Process untuk departemen layanan internal (penerimaan hingga pengepakan laundry, procurement, pemeliharaan aset) dan departemen eksternal.",
+                    "Perancangan Use Case dan Activity Diagram untuk merangkai interaksi berbagai aktor termasuk Pimpinan, Front Service, Logistik, Manajer, dan Vendor.",
+                    "Integrasi sistem pelacakan otomatis (tracking) siklus pakaian laundry pelanggan dengan memanfaatkan teknologi RFID tag dan Barcode.",
+                    "Perumusan Value Proposition dengan pendekatan Operational Excellence dan Employee Capability serta penyusunan Value Network perusahaan."
                 ],
-                "metrics": "Memangkas waktu penugasan teknisi lapangan melalui sistem dispatch otomatis.",
+                "metrics": "Meningkatkan akurasi identifikasi pakaian (meminimalisir tertukar) dan mengotomatisasi alur pesanan dari Purchase Request hingga distribusi.",
                 "interactiveDemoTitle": "Operational Flow Mapping",
                 "interactiveType": "clevago_flow",
                 "interactiveData": {
@@ -116,7 +117,7 @@
                 "tabColor": "bg-[#5B7553] text-white",
                 "title": "HOWL Library & Creative Space Management",
                 "category": "Relational Database Design & Full-Flow UI Architecture",
-                "overview": "Sistem otomasi sirkulasi perpustakaan modern yang memadukan reservasi bilik kreatif, keanggotaan berkala, dan penelusuran katalog buku secara real-time.",
+                "overview": "Analisis dan perancangan sistem basis data untuk perpustakaan independen HOWL guna memusatkan dan mengotomatisasi sistem operasional reservasi kunjungan, pengelolaan keanggotaan (membership), serta tata kelola sirkulasi buku harian.",
                 "techStack": [
                     "SQL Relational Schema",
                     "HTML5",
@@ -125,12 +126,12 @@
                     "ERD Modeling"
                 ],
                 "deliverables": [
-                    "3 Modul Utama: Profile & Space Booking, Membership & Events, Book Catalog Circulation.",
-                    "Relational Database Schema ternormalisasi 3NF dengan stored procedures untuk denda keterlambatan.",
-                    "Antarmuka pencarian buku interaktif berbasis live filter kategori dan ketersediaan fisik.",
-                    "Fitur reservasi private pod & soundproof meeting room terpadu."
+                    "Perancangan Konseptual Entity Relationship Diagram (ERD) dan Database Logikal yang telah melalui tahap normalisasi hingga bentuk ketiga (3NF).",
+                    "Penyusunan Kamus Data yang presisi mencakup 14 entitas tabel master dan transaksional seperti Users, Memberships, Books, Events, Reservations, hingga Payments.",
+                    "Pemodelan tiga modul utama operasional: Modul Reservasi dengan pelacakan kapasitas real-time dan gelang preferensi sosial, Modul Membership (Crew & Customer), serta Modul Sirkulasi Buku (In-House & Take Home).",
+                    "Desain prototipe antarmuka sistem di Figma yang menampung alur pengunjung dan dashboard analitik kasir/admin."
                 ],
-                "metrics": "Kapasitas katalog menampung ribuan judul koleksi buku dengan query response sub-detik.",
+                "metrics": "Mencegah overcapacity pada ruang baca secara real-time dan mengotomatisasi pemotongan kuota benefit member.",
                 "interactiveDemoTitle": "Interactive Pod Booking & Circulation Matrix",
                 "interactiveType": "howl_relations",
                 "interactiveData": {
@@ -208,7 +209,7 @@
                 "tabColor": "bg-[#658a97] text-white",
                 "title": "GOCAMP — Camping Gear Rental & E-Commerce",
                 "category": "Full Frontend + Serverless Sheets Backend Engine",
-                "overview": "Platform e-commerce penyewaan dan penjualan perlengkapan outdoor tanpa backend server yang mahal, mengombinasikan antarmuka pure frontend dengan basis data Google Sheets.",
+                "overview": "Aplikasi e-commerce berbasis web statis untuk penjualan peralatan casual camping dengan arsitektur serverless (zero-cost). Memanfaatkan model pemesanan \"Order First, Pay Later\" dengan proses checkout terotomatisasi dan validasi pembayaran manual via WhatsApp.",
                 "techStack": [
                     "HTML5",
                     "CSS3",
@@ -217,12 +218,12 @@
                     "Google Sheets API"
                 ],
                 "deliverables": [
-                    "Katalog barang outdoor interaktif dengan filtering kategori (Tenda, Carrier, Cooking Set).",
-                    "Sistem keranjang belanja lokal (LocalStorage) dengan perhitungan durasi sewa dinamis.",
-                    "Backend serverless memanfaatkan Google Apps Script untuk pencatatan transaksi langsung ke Google Sheets.",
-                    "Pengiriman ringkasan faktur pesanan otomatis melalui integrasi email API."
+                    "Katalog produk responsif yang mendukung navigasi, fungsi pencarian barang, dan filtering produk spesifik.",
+                    "Manajemen keranjang belanja dinamis yang menyimpan data pengguna sementara melalui LocalStorage peramban.",
+                    "Sistem proses Checkout dengan validasi pengurangan ketersediaan stok fisik real-time berbasis Locking Mechanism di sisi server backend.",
+                    "Dasbor admin terproteksi PIN (kriptografi hashing SHA-256) untuk konfirmasi pelunasan, penambahan biaya ongkos kirim, dan rekapitulasi riwayat pesanan."
                 ],
-                "metrics": "Zero-cost database hosting dengan waktu sinkronisasi pesanan ke spreadsheet < 2 detik.",
+                "metrics": "Memproses sinkronisasi data transaksi ke Google Sheets dalam waktu rata-rata 5-8 detik dan load time awal kurang dari 5 detik.",
                 "interactiveDemoTitle": "Serverless Webhook Data Flow",
                 "interactiveType": "gocamp_sheets",
                 "interactiveData": {
