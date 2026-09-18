@@ -1,0 +1,355 @@
+{
+    "catA": {
+        "id": "catA",
+        "volumeLabel": "Archive Vol. 01",
+        "title": "System Analysis & UI/UX Architecture",
+        "subtitle": "Damakara Retail, Clevago Dept, and HOWL Space.",
+        "countLabel": "3 Case Studies",
+        "icon": "🌿",
+        "spineColor": "#455c3e",
+        "bgColor": "bg-[#5B7553]",
+        "textColor": "text-[#FAF7EE]",
+        "badgeBg": "bg-[#455c3e]",
+        "badgeTextColor": "text-[#D2E3C8]",
+        "tabs": [
+            {
+                "id": "damakara",
+                "tabName": "🔖 SI Damakara Retail",
+                "tabColor": "bg-[#8FA87B] text-white",
+                "title": "Sistem Informasi Retail Terintegrasi — Damakara",
+                "category": "Enterprise System Modeling & Requirements Engineering",
+                "overview": "Analisis dan perancangan sistem informasi retail komprehensif untuk Damakara guna mengeliminasi bottleneck inventaris, mengoptimalkan pipeline pesanan multi-channel, dan menyatukan pelaporan antar departemen.",
+                "techStack": [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript",
+                    "System Modeling (UML)",
+                    "Figma UI/UX",
+                    "Database Normalization"
+                ],
+                "deliverables": [
+                    "Perancangan 4 Modul Inti: Planning & Production, Warehouse Management System (WMS), Store Management System (SMS), dan Executive Dashboard.",
+                    "Use Case Diagrams, Activity Diagrams, dan Class Diagrams berstandar industri.",
+                    "Arsitektur Data Relasional & Skema ERD untuk pelacakan batch SKU dan reorder point otomatis.",
+                    "Desain Wireframe dan Hi-Fi Interactive Prototype untuk antarmuka kasir dan manajer toko."
+                ],
+                "metrics": "Mengurangi potensi selisih stok manual hingga 95% dalam skenario simulasi sistem.",
+                "interactiveDemoTitle": "Interactive Architecture Schema Inspector",
+                "interactiveType": "damakara_schema",
+                "interactiveData": {
+                    "code": "DAMAKARA_CORE_MODULES",
+                    "status": "STATUS: VERIFIED",
+                    "modules": [
+                        {
+                            "number": "1",
+                            "name": "Planning & Production",
+                            "desc": "Bill of materials (BOM), schedule batch produksi kain, dan kuota bahan baku berkala."
+                        },
+                        {
+                            "number": "2",
+                            "name": "Warehouse System (WMS)",
+                            "desc": "Barcode scanner integration, stock opname batching, and auto-dispatch tracking."
+                        },
+                        {
+                            "number": "3",
+                            "name": "Store Management (SMS)",
+                            "desc": "Point of Sales (POS) frontend, multi-payment reconciliation, shift logging."
+                        },
+                        {
+                            "number": "4",
+                            "name": "Executive Dashboard",
+                            "desc": "Visualisasi grafik profit harian, analisis turnover produk terlaris."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "clevago",
+                "tabName": "🔖 Clevago Department",
+                "tabColor": "bg-[#758D6B] text-white",
+                "title": "Clevago Department — Multi-Service Operational Platform",
+                "category": "Service Blueprint & Operational Workflow System",
+                "overview": "Platform tata kelola operasional terintegrasi untuk layanan laundry, pengendalian hama (pest control), dan pembersihan rumah harian (home cleaning) dengan alur reservasi terpusat.",
+                "techStack": [
+                    "Figma Prototype",
+                    "BPMN Process Modeling",
+                    "Use Case Documentation",
+                    "UI Component Kit"
+                ],
+                "deliverables": [
+                    "End-to-end operational flow untuk 3 cabang layanan (Laundry, Pest Control, Cleaning).",
+                    "Modul Preventive Maintenance dan Pengadaan Barang (Procurement) vendor cairan higienis.",
+                    "Figma Interactive Prototype dengan alur pelanggan, teknisi lapangan, dan admin operasional.",
+                    "Matriks hak akses (Role-Based Access Control) multi-level staff."
+                ],
+                "metrics": "Memangkas waktu penugasan teknisi lapangan melalui sistem dispatch otomatis.",
+                "interactiveDemoTitle": "Operational Flow Mapping",
+                "interactiveType": "clevago_flow",
+                "interactiveData": {
+                    "pipeline": [
+                        {
+                            "step": "Customer Order Input",
+                            "type": "input",
+                            "desc": "Mobile & Web Booking Form"
+                        },
+                        {
+                            "step": "Automated Triage",
+                            "type": "logic",
+                            "desc": "Service Routing & SLA Check"
+                        },
+                        {
+                            "step": "Field Crew App",
+                            "type": "field",
+                            "desc": "Task Acceptance & GPS Log"
+                        },
+                        {
+                            "step": "QA & Completion",
+                            "type": "finish",
+                            "desc": "Checklist Verification & Invoice"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "howl",
+                "tabName": "🔖 HOWL Library & Space",
+                "tabColor": "bg-[#5B7553] text-white",
+                "title": "HOWL Library & Creative Space Management",
+                "category": "Relational Database Design & Full-Flow UI Architecture",
+                "overview": "Sistem otomasi sirkulasi perpustakaan modern yang memadukan reservasi bilik kreatif, keanggotaan berkala, dan penelusuran katalog buku secara real-time.",
+                "techStack": [
+                    "SQL Relational Schema",
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript",
+                    "ERD Modeling"
+                ],
+                "deliverables": [
+                    "3 Modul Utama: Profile & Space Booking, Membership & Events, Book Catalog Circulation.",
+                    "Relational Database Schema ternormalisasi 3NF dengan stored procedures untuk denda keterlambatan.",
+                    "Antarmuka pencarian buku interaktif berbasis live filter kategori dan ketersediaan fisik.",
+                    "Fitur reservasi private pod & soundproof meeting room terpadu."
+                ],
+                "metrics": "Kapasitas katalog menampung ribuan judul koleksi buku dengan query response sub-detik.",
+                "interactiveDemoTitle": "Interactive Pod Booking & Circulation Matrix",
+                "interactiveType": "howl_relations",
+                "interactiveData": {
+                    "schema": "SQL_3NF",
+                    "tables": [
+                        {
+                            "name": "tbl_members",
+                            "key": "PK: member_id",
+                            "fields": "name, tier, join_date"
+                        },
+                        {
+                            "name": "tbl_circulation",
+                            "key": "FK: book_id, member_id",
+                            "fields": "borrow_date, due_date, fine"
+                        },
+                        {
+                            "name": "tbl_creative_pods",
+                            "key": "PK: pod_id, schedule",
+                            "fields": "capacity, soundproof_flag, status"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "catB": {
+        "id": "catB",
+        "volumeLabel": "Archive Vol. 02",
+        "title": "Frontend Web Development",
+        "subtitle": "Empact Profile, GOCAMP E-commerce, and Edu LMS.",
+        "countLabel": "3 Interactive Projects",
+        "icon": "💻",
+        "spineColor": "#7b9da9",
+        "bgColor": "bg-[#94B4C1]",
+        "textColor": "text-slate-900",
+        "badgeBg": "bg-[#7b9da9]",
+        "badgeTextColor": "text-white",
+        "tabs": [
+            {
+                "id": "empact",
+                "tabName": "🔖 Empact Web Profile",
+                "tabColor": "bg-[#7b9da9] text-white",
+                "title": "Empact Organization Official Web Profile",
+                "category": "Component-Driven Responsive Web Development",
+                "overview": "Situs profil organisasi resmi untuk Empact (bagian dari inisiatif UKM One by Code) yang menampilkan portofolio divisi, dokumentasi acara, dan pendaftaran anggota baru.",
+                "techStack": [
+                    "React.js",
+                    "Tailwind CSS",
+                    "JavaScript ES6",
+                    "Responsive Layouts",
+                    "Vite"
+                ],
+                "deliverables": [
+                    "Komponen navigasi responsif dengan dukungan dark-soft accent palette.",
+                    "Hierarki komponen modular (Hero, Mission, Department Showcase, Event Highlights, Registration Form).",
+                    "Optimasi performa halaman dengan skor Google Lighthouse 95+.",
+                    "Form validasi client-side interaktif dengan penanganan feedback ramah pengguna."
+                ],
+                "metrics": "100% Mobile Responsive dengan loading time instan dan animasi transisi halus.",
+                "interactiveDemoTitle": "Live Responsive Architecture Sandbox",
+                "interactiveType": "empact_tree",
+                "interactiveData": {
+                    "bundle": "BUNDLE: 42KB GZIP",
+                    "nodes": [
+                        "<Navbar sticky={true} theme=\"garden-soft\" />",
+                        "<HeroSection badge=\"Empact 2026 Recruitment\" />",
+                        "<DepartmentGrid filterable={true} />",
+                        "<ApplicationModal onSubmit={handleRegister} />"
+                    ]
+                }
+            },
+            {
+                "id": "gocamp",
+                "tabName": "🔖 GOCAMP E-commerce",
+                "tabColor": "bg-[#658a97] text-white",
+                "title": "GOCAMP — Camping Gear Rental & E-Commerce",
+                "category": "Full Frontend + Serverless Sheets Backend Engine",
+                "overview": "Platform e-commerce penyewaan dan penjualan perlengkapan outdoor tanpa backend server yang mahal, mengombinasikan antarmuka pure frontend dengan basis data Google Sheets.",
+                "techStack": [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript (Vanilla)",
+                    "Google Apps Script",
+                    "Google Sheets API"
+                ],
+                "deliverables": [
+                    "Katalog barang outdoor interaktif dengan filtering kategori (Tenda, Carrier, Cooking Set).",
+                    "Sistem keranjang belanja lokal (LocalStorage) dengan perhitungan durasi sewa dinamis.",
+                    "Backend serverless memanfaatkan Google Apps Script untuk pencatatan transaksi langsung ke Google Sheets.",
+                    "Pengiriman ringkasan faktur pesanan otomatis melalui integrasi email API."
+                ],
+                "metrics": "Zero-cost database hosting dengan waktu sinkronisasi pesanan ke spreadsheet < 2 detik.",
+                "interactiveDemoTitle": "Serverless Webhook Data Flow",
+                "interactiveType": "gocamp_sheets",
+                "interactiveData": {
+                    "endpoint": "POST /macros/s/...exec",
+                    "samplePayload": "{ customerName: \"Malya\", cartItems: [\"Tent 4P\", \"Carrier 60L\"], rentalDays: 3, totalPrice: 175000 }",
+                    "statusMsg": "✓ Status 200 OK — Row appended & Mail Dispatch Triggered"
+                }
+            },
+            {
+                "id": "edulms",
+                "tabName": "🔖 Edu LMS Prototype",
+                "tabColor": "bg-[#94B4C1] text-slate-900",
+                "title": "Edu LMS — E-Learning Management System",
+                "category": "Educational Experience & Course Flow Prototyping",
+                "overview": "Antarmuka pembelajaran daring adaptif yang berorientasi pada kemudahan navigasi silabus mata kuliah, tracking progres modul, dan submit tugas mahasiswa.",
+                "techStack": [
+                    "HTML5",
+                    "Bootstrap / Tailwind",
+                    "CSS Grid",
+                    "JavaScript UI Controls"
+                ],
+                "deliverables": [
+                    "Struktur dashboard mahasiswa terfokus: progress bar mingguan dan deadline submission tracker.",
+                    "Media viewer interaktif untuk modul teks dan presentasi materi kuliah.",
+                    "Komponen rubrik penilaian tugas transparan bagi pengajar dan mahasiswa.",
+                    "Aksesibilitas kontras warna WCAG AA untuk kenyamanan membaca berdurasi panjang."
+                ],
+                "metrics": "Peningkatan 40% kecepatan akses mahasiswa ke materi kuliah prioritas.",
+                "interactiveDemoTitle": "Student Progress Interface Module",
+                "interactiveType": "edulms_progress",
+                "interactiveData": {
+                    "moduleCode": "IS_ARCHITECTURE_WEEK_04",
+                    "percent": 75,
+                    "upcoming": "Assignment 02 - Normalization Case Study (Due Friday)"
+                }
+            }
+        ]
+    },
+    "catC": {
+        "id": "catC",
+        "volumeLabel": "Archive Vol. 03",
+        "title": "Gamification & Interactive Media",
+        "subtitle": "ELO Social Challenge and Frontyard Volleyball 2D.",
+        "countLabel": "2 Simulations",
+        "icon": "🎮",
+        "spineColor": "#c8877b",
+        "bgColor": "bg-[#E8A598]",
+        "textColor": "text-stone-900",
+        "badgeBg": "bg-[#c8877b]",
+        "badgeTextColor": "text-white",
+        "tabs": [
+            {
+                "id": "elo",
+                "tabName": "🔖 ELO (Agilis)",
+                "tabColor": "bg-[#c8877b] text-white",
+                "title": "ELO — Sustainable Social Challenge Gamification",
+                "category": "Behavioral Gamification & Experience Design",
+                "overview": "Aplikasi mobile prototype yang mendorong perilaku ramah lingkungan masyarakat urban melalui mekanik gamifikasi, perolehan XP poin, leaderboard komunitas, dan penukaran voucher.",
+                "techStack": [
+                    "Figma Interactive Prototype",
+                    "Gamification Design Framework",
+                    "User Persona Modeling"
+                ],
+                "deliverables": [
+                    "Sistem leveling karakter pohon virtual yang bertumbuh seiring terselesaikannya misi keberlanjutan.",
+                    "Pemberian reward badges otomatis: 'Zero Waste Warrior', 'Public Transport Enthusiast', dsb.",
+                    "Katalog penukaran poin XP dengan voucher diskon brand mitra lokal yang terverifikasi.",
+                    "Fitur Social Feed untuk berbagi bukti aksi lingkungan bersama komunitas."
+                ],
+                "metrics": "Tingkat retensi pengguna terproyeksi meningkat 65% dibandingkan aplikasi pelacak kebiasaan konvensional.",
+                "interactiveDemoTitle": "Gamification Mechanic Breakdown",
+                "interactiveType": "elo_loop",
+                "interactiveData": {
+                    "loop": [
+                        {
+                            "num": "1",
+                            "label": "Daily Quest",
+                            "icon": "🌱"
+                        },
+                        {
+                            "num": "2",
+                            "label": "Proof Upload",
+                            "icon": "📸"
+                        },
+                        {
+                            "num": "3",
+                            "label": "XP + Tree Growth",
+                            "icon": "⭐"
+                        },
+                        {
+                            "num": "4",
+                            "label": "Real Reward",
+                            "icon": "🎁"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "volleyball",
+                "tabName": "🔖 Frontyard Volleyball",
+                "tabColor": "bg-[#E8A598] text-stone-900",
+                "title": "Frontyard Volleyball — 2D Pixel Retro Arcade",
+                "category": "Interactive HTML5 Canvas Game Engine",
+                "overview": "Game arkade 2-pemain klasik bertema halaman rumah bernuansa santai, menampilkan pertarungan voli antara karakter Kucing dan Anjing dengan simulasi gravitasi bola realistis.",
+                "techStack": [
+                    "HTML5 Canvas API",
+                    "Pure JavaScript",
+                    "2D Physics & Collision",
+                    "Sprite Sheet Rendering"
+                ],
+                "deliverables": [
+                    "Custom Physics Engine ringan: gravitasi bola, elastisitas net, dan kecepatan pantulan sudut raket/kepala.",
+                    "Dukungan dual-input keyboard lokal (Player 1: WASD, Player 2: Arrow Keys) tanpa input lag.",
+                    "Sprite sheet animation engine untuk karakter idle, jumping, and smashing.",
+                    "Pencatat skor digital otomatis dengan win-condition set 15 poin dan selebrasi visual confetti."
+                ],
+                "metrics": "Konsisten berjalan pada 60 FPS tanpa external gaming framework atau library berat.",
+                "interactiveDemoTitle": "Canvas Physics Simulation Preview",
+                "interactiveType": "volleyball_game",
+                "interactiveData": {
+                    "fps": "60_FPS",
+                    "initialScore": {
+                        "p1": 8,
+                        "p2": 6
+                    }
+                }
+            }
+        ]
+    }
+}

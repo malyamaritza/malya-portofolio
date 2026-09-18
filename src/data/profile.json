@@ -1,0 +1,87 @@
+{
+    "name": "Malya Maritza Rahadiani",
+    "shortName": "Malya M. R.",
+    "taglineBadge": "Currently cultivating digital experiences & looking for internship",
+    "roleHeadline": "Information Systems Student @ Satu University | Frontend Developer, UI/UX Architect & System Analyst.",
+    "bio": "Crafting structured software blueprints and aesthetic, thoughtful user experiences. Experienced in orchestrating retail information systems, bridging organizational requirements with human-centered interfaces, and building responsive web apps with clean code.",
+    "campusBadge": "@Satu Univ '26",
+    "location": "Bandung, Indonesia",
+    "email": "malya.maritza@student.satu.ac.id",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com",
+    "techStack": [
+        {
+            "name": "HTML5 / Semantic",
+            "featured": false
+        },
+        {
+            "name": "CSS3 / Tailwind v3",
+            "featured": false
+        },
+        {
+            "name": "JavaScript (ES6+)",
+            "featured": false
+        },
+        {
+            "name": "React.js",
+            "featured": false
+        },
+        {
+            "name": "Bootstrap",
+            "featured": false
+        },
+        {
+            "name": "SQL / Relational DB",
+            "featured": false
+        },
+        {
+            "name": "Figma UI/UX",
+            "featured": true
+        },
+        {
+            "name": "UML & System Modeling",
+            "featured": true
+        },
+        {
+            "name": "Google Apps Script",
+            "featured": false
+        }
+    ],
+    "education": {
+        "institution": "Satu University — Information Systems Department",
+        "department": "Information Systems Department",
+        "focusAreas": "Human-Computer Interaction, Enterprise ERP Modeling, Web Architecture."
+    },
+    "highlights": [
+        {
+            "id": "hl-1",
+            "title": "SI Damakara Retail",
+            "category": "System Architecture",
+            "type": "Retail",
+            "description": "Enterprise-grade architecture featuring WMS, SMS, and Executive dashboard modeling.",
+            "targetCategory": "catA",
+            "targetTabId": "damakara",
+            "categoryBadgeClass": "bg-garden-pastel text-garden-dark font-bold"
+        },
+        {
+            "id": "hl-2",
+            "title": "Empact Web Profile",
+            "category": "Frontend Web",
+            "type": "Production",
+            "description": "High-performance interactive organization profile built with modern component styling.",
+            "targetCategory": "catB",
+            "targetTabId": "empact",
+            "categoryBadgeClass": "bg-garden-pondLight text-slate-700 font-bold"
+        },
+        {
+            "id": "hl-3",
+            "title": "Frontyard Volleyball",
+            "category": "Gamification",
+            "type": "JS Canvas",
+            "description": "Classic retro 2D 2-player arcade game powered by custom collision and sprite rendering.",
+            "targetCategory": "catC",
+            "targetTabId": "volleyball",
+            "categoryBadgeClass": "bg-garden-peachLight text-garden-terracotta font-bold"
+        }
+    ]
+}

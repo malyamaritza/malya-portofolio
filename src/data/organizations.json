@@ -1,0 +1,65 @@
+[
+    {
+        "id": "himasif",
+        "period": "2026 — Present",
+        "periodBadgeColor": "pastel",
+        "organization": "HIMASIF (Himpunan Mahasiswa Sistem Informasi)",
+        "role": "Bendahara & Dokumentasi Pengabdian Kepada Masyarakat",
+        "description": "Memimpin tata kelola anggaran dan akuntabilitas kas himpunan. Berperan aktif sebagai tim Dokumentasi PKM (Pengabdian Kepada Masyarakat) di Desa Baros, Arjasari, menyusun arsip digital dan laporan pertanggungjawaban program kemasyarakatan.",
+        "tags": [
+            "Financial Audit",
+            "Field Documentation",
+            "Budgeting"
+        ],
+        "icon": "📊",
+        "washiColor": "green",
+        "washiRotation": "-rotate-1"
+    },
+    {
+        "id": "onelsh",
+        "period": "2025 — Present",
+        "periodBadgeColor": "peach",
+        "organization": "Onelsh (English Club)",
+        "role": "Sekretaris & Calon Ketua",
+        "description": "Mengorkestrasi administrasi internal dan korespondensi resmi. Dipercaya sebagai Seminar Internal Manager (18 Okt 2025) serta bertindak sebagai Speaker & Moderator dalam sesi Benchmarking internasional bersama University of the Philippines Manila (Feb 2026).",
+        "tags": [
+            "International Benchmarking",
+            "Public Speaking",
+            "Event Management"
+        ],
+        "icon": "🌐",
+        "washiColor": "peach",
+        "washiRotation": "rotate-2"
+    },
+    {
+        "id": "onebycode",
+        "period": "2026",
+        "periodBadgeColor": "pond",
+        "organization": "One by Code (UKM Pemrograman)",
+        "role": "Bendahara Umum",
+        "description": "Mengelola alokasi modal dan sponsorship untuk bootcamp programming serta kompetisi coding. Menginisiasi standarisasi pembukuan digital transparan untuk seluruh divisi operasional.",
+        "tags": [
+            "Cashflow Control",
+            "Tech Community"
+        ],
+        "icon": "💻",
+        "washiColor": "peach",
+        "washiRotation": "rotate-1"
+    },
+    {
+        "id": "community-volunteer",
+        "period": "2026",
+        "periodBadgeColor": "pastel",
+        "organization": "Community Tech Volunteer",
+        "role": "BWAI Bandung & Technical Workshops",
+        "description": "Volunteer aktif dalam perhelatan akbar Build with AI (BWAI) 2026 Bandung. Peserta intensif pada Workshop \"DevOps Meets Security\", serta mengampu inisiatif AI Content Creation (Mei–Juli 2026).",
+        "tags": [
+            "Build with AI",
+            "DevSecOps",
+            "AI Content Creation"
+        ],
+        "icon": "🤝",
+        "washiColor": "green",
+        "washiRotation": "-rotate-2"
+    }
+]

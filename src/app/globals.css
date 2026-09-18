@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-garden-dark: #2d3b2a;
+  --color-garden-sage: #5B7553;
+  --color-garden-moss: #758D6B;
+  --color-garden-olive: #8FA87B;
+  --color-garden-pastel: #D2E3C8;
+  --color-garden-cream: #FAF7EE;
+  --color-garden-sand: #F2EDE0;
+  --color-garden-pond: #94B4C1;
+  --color-garden-pondLight: #E3EDF0;
+  --color-garden-peach: #E8A598;
+  --color-garden-peachLight: #FDF0ED;
+  --color-garden-terracotta: #C86D51;
+
+  --shadow-scrapbook: 4px 6px 0px 0px rgba(91, 117, 83, 0.35);
+  --shadow-scrapbook-lg: 7px 9px 0px 0px rgba(45, 59, 42, 0.25);
+  --shadow-window: 0 12px 36px -10px rgba(45, 59, 42, 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Gingham background pattern */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e4eee0;
+  background-image:
+    linear-gradient(90deg, rgba(143, 168, 123, 0.14) 1px, transparent 1px),
+    linear-gradient(rgba(143, 168, 123, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #2d3b2a;
+}
+
+/* Washi tape visual effects */
+.washi-tape-green {
+  background: rgba(210, 227, 200, 0.88);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+}
+
+.washi-tape-peach {
+  background: rgba(232, 165, 152, 0.82);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+}
+
+/* Subtle paper noise texture */
+.paper-texture {
+  background-color: #FAF7EE;
+  background-image: radial-gradient(#5B7553 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8FA87B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B7553;
 }
