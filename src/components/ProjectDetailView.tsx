@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ProjectTab, ProjectCategory } from '../types';
 import { useLanguage } from '../context/LanguageContext';
+import { resolveImage } from '../lib/imageMap';
 
 interface ProjectDetailViewProps {
     project: ProjectTab;
@@ -98,32 +99,28 @@ export default function ProjectDetailView({
                         </div>
                     </div>
 
-                    {/* Right: Project Specimen Thumbnail Frame */}
-                    <div className="lg:col-span-5 space-y-3">
-                        <div className="bg-garden-cream p-3 border-2 border-garden-sage rounded-2xl shadow-sm relative">
-                            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl bg-white border border-garden-sage/30 flex items-center justify-center">
+                    {/* Right: Project Thumbnail Frame */}
+                    <div className="lg:col-span-5 space-y-3 flex flex-col items-center">
+                        <div className="bg-garden-cream p-3 border-2 border-garden-sage rounded-2xl shadow-sm relative w-full max-w-[420px] mx-auto">
+                            <div className="relative w-full overflow-hidden rounded-xl bg-white border border-garden-sage/30 flex items-center justify-center p-2 min-h-[200px]">
                                 {project.thumbnail && !imageError ? (
                                     <img
-                                        src={project.thumbnail}
+                                        src={resolveImage(project.thumbnail)}
                                         alt={project.thumbnailAlt || project.title}
                                         onError={() => setImageError(true)}
-                                        className="w-full h-full object-contain"
+                                        className="w-[320px] sm:w-[360px] max-w-full h-auto object-contain rounded-lg"
                                         loading="lazy"
                                     />
                                 ) : (
-                                    <div className="flex flex-col items-center justify-center p-4 text-center">
+                                    <div className="flex flex-col items-center justify-center p-6 text-center">
                                         <span className="text-4xl mb-1">🌿</span>
                                         <span className="text-xs font-mono font-bold text-garden-sage">{project.title}</span>
                                     </div>
                                 )}
-                                <div className="absolute bottom-2 left-2 right-2 bg-garden-dark/80 backdrop-blur-xs text-garden-cream px-2.5 py-1 rounded-lg text-[10px] font-mono flex items-center justify-between">
-                                    <span className="truncate pr-2">{project.thumbnailAlt || project.title}</span>
-                                    <span className="shrink-0 text-garden-pastel font-bold">Visual Specimen</span>
-                                </div>
                             </div>
                         </div>
 
-                        <div className="text-center text-[11px] font-mono text-stone-500 bg-garden-sand/40 border border-garden-sage/30 py-1.5 px-3 rounded-xl">
+                        <div className="text-center text-[11px] font-mono text-stone-500 bg-garden-sand/40 border border-garden-sage/30 py-1.5 px-3 rounded-xl w-full max-w-[420px]">
                             💡 Seluruh tautan prototype &amp; dokumentasi lengkap berada di bagian bawah halaman.
                         </div>
                     </div>

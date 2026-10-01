@@ -34,7 +34,7 @@ export default function Navigation({
           className="hover:underline text-left cursor-pointer flex items-center gap-1.5 truncate"
         >
           <span className="text-base sm:text-lg">🌿</span>
-          <span className="truncate text-xs sm:text-sm font-bold">Malya's Portfolio Dossier</span>
+          <span className="truncate text-xs sm:text-sm font-bold">Malya Maritza's Portfolio</span>
           {isDetailActive && (
             <span className="text-[10px] sm:text-[11px] font-mono font-normal bg-garden-sand border border-garden-sage/50 text-garden-sage px-1.5 py-0.5 rounded-md shrink-0">
               (Detail)
@@ -48,11 +48,10 @@ export default function Navigation({
         <button
           type="button"
           onClick={() => onNavigate('home')}
-          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
-            !isDetailActive && activeSection === 'home'
+          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${!isDetailActive && activeSection === 'home'
               ? 'bg-garden-sage text-garden-cream shadow-xs font-bold'
               : 'hover:bg-garden-pastel text-garden-dark font-medium'
-          }`}
+            }`}
         >
           {t.navHome}
         </button>
@@ -60,11 +59,10 @@ export default function Navigation({
         <button
           type="button"
           onClick={() => onNavigate('projects')}
-          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
-            isDetailActive || activeSection === 'projects' || activeSection === 'detail'
+          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${isDetailActive || activeSection === 'projects' || activeSection === 'detail'
               ? 'bg-garden-sage text-garden-cream shadow-xs font-bold'
               : 'hover:bg-garden-pastel text-garden-dark font-medium'
-          }`}
+            }`}
         >
           {isDetailActive ? `${t.navProjects} (Detail)` : t.navProjects}
         </button>
@@ -72,11 +70,10 @@ export default function Navigation({
         <button
           type="button"
           onClick={() => onNavigate('experience')}
-          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
-            !isDetailActive && activeSection === 'experience'
+          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${!isDetailActive && activeSection === 'experience'
               ? 'bg-garden-sage text-garden-cream shadow-xs font-bold'
               : 'hover:bg-garden-pastel text-garden-dark font-medium'
-          }`}
+            }`}
         >
           {t.navExperience}
         </button>
@@ -84,11 +81,10 @@ export default function Navigation({
         <button
           type="button"
           onClick={() => onNavigate('certificates')}
-          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
-            !isDetailActive && activeSection === 'certificates'
+          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${!isDetailActive && activeSection === 'certificates'
               ? 'bg-garden-sage text-garden-cream shadow-xs font-bold'
               : 'hover:bg-garden-pastel text-garden-dark font-medium'
-          }`}
+            }`}
         >
           {t.navCertificates}
         </button>
@@ -96,11 +92,10 @@ export default function Navigation({
         <button
           type="button"
           onClick={() => onNavigate('about')}
-          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
-            !isDetailActive && activeSection === 'about'
+          className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${!isDetailActive && activeSection === 'about'
               ? 'bg-garden-sage text-garden-cream shadow-xs font-bold'
               : 'hover:bg-garden-pastel text-garden-dark font-medium'
-          }`}
+            }`}
         >
           {t.navAbout}
         </button>

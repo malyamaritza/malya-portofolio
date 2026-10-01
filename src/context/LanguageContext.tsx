@@ -91,7 +91,7 @@ interface Translations {
 }
 
 const translationsId: Translations = {
-    portfolioUrl: 'https://satu.ac.id/students/malya-maritza',
+    portfolioUrl: 'https:///malya-maritza',
     readyStatus: 'Siap Magang 2026',
     zoomMode: 'Mode Tampilan Portofolio',
     minimizeWindow: 'Minimalkan Jendela',
@@ -107,7 +107,7 @@ const translationsId: Translations = {
 
     badgeInternship: 'Sedang menempuh studi & terbuka untuk kesempatan magang',
     roleHeadline: 'Mahasiswa Sistem Informasi @ Satu University | Frontend Developer, UI/UX Architect & Analis Sistem.',
-    bioText: 'Merancang arsitektur sistem informasi terstruktur dan pengalaman pengguna yang estetis. Terbiasa menganalisis proses bisnis, memetakan skema relasional, dan membangun aplikasi web responsif berstandar modern.',
+    bioText: 'Fokus pada perancangan sistem dan analisis proses bisnis. Berpengalaman menerjemahkan kebutuhan pengguna ke dalam solusi sistem terintegrasi mulai dari pemetaan proses bisnis, pemodelan arsitektur UML, hingga prototipe antarmuka. Berorientasi pada peran System Analyst dan Business Analyst untuk menghadirkan solusi teknologi yang efisien dan tepat sasaran.',
     exploreArchiveBtn: 'Lihat Projek',
     contactResumeBtn: 'Kontak & Resume',
 
@@ -140,7 +140,7 @@ const translationsId: Translations = {
     problemSubtitle: 'Identifikasi celah operasional dan friksi kerja sebelumnya.',
     architectureTitle: 'Arsitektur Inti & Rincian Modul',
     architectureSubtitle: 'Struktur modular yang dibangun untuk keandalan dan akurasi data.',
-    workflowTitle: 'Alur Proses Bisnis Terintegrasi (End-to-End)',
+    workflowTitle: 'Alur Proses Bisnis (End-to-End)',
     workflowSubtitle: 'Siklus dari input pemesanan hingga evaluasi eksekutif.',
     techTitle: 'Teknologi & Metode',
     deliverablesTitle: 'Artefak & Deliverables Utama',
@@ -160,7 +160,7 @@ const translationsId: Translations = {
 
     aboutBadge: 'Profil Pribadi',
     aboutTitle: 'Tentang Malya Maritza',
-    aboutText: 'Mahasiswa Sistem Informasi di Satu University yang memadukan ketelitian analitis dengan desain antarmuka yang empatik. Memiliki pengalaman dalam merancang pemodelan sistem enterprise, UI/UX berorientasi pengguna, dan aplikasi web modular.',
+    aboutText: 'Mahasiswa Sistem Informasi yang berfokus pada analisis proses bisnis dan perancangan arsitektur sistem. Berpengalaman menerjemahkan kebutuhan pengguna ke dalam pemetaan proses, pemodelan UML, dan prototipe antarmuka. Berorientasi pada peran System Analyst & Business Analyst untuk menghadirkan solusi teknologi yang efisien dan terintegrasi.',
     contactHeader: 'Mari Berkolaborasi',
     sendEmailBtn: 'Kirim Email',
     downloadResumeBtn: 'Lihat Resume Lengkap',
@@ -169,7 +169,7 @@ const translationsId: Translations = {
 };
 
 const translationsEn: Translations = {
-    portfolioUrl: 'https://satu.ac.id/students/malya-maritza',
+    portfolioUrl: 'https://malya-maritza',
     readyStatus: '2026 Internship Ready',
     zoomMode: 'Portfolio Display Mode',
     minimizeWindow: 'Minimize Window',
@@ -185,7 +185,7 @@ const translationsEn: Translations = {
 
     badgeInternship: 'Currently cultivating digital experiences & looking for internship',
     roleHeadline: 'Information Systems Student @ Satu University | Frontend Developer, UI/UX Architect & System Analyst.',
-    bioText: 'Crafting structured software blueprints and aesthetic, thoughtful user experiences. Experienced in orchestrating retail information systems, bridging organizational requirements with human-centered interfaces, and building responsive web apps with clean code.',
+    bioText: 'Specialized in system design and business process analysis. Experienced in translating user requirements into integrated solutions from business process mapping and UML modeling to interface prototyping. Passionate about System Analyst and Business Analyst roles, collaborating with teams to deliver operationally efficient technology solutions.',
     exploreArchiveBtn: 'View Projects',
     contactResumeBtn: 'Contact & Resume',
 
@@ -218,7 +218,7 @@ const translationsEn: Translations = {
     problemSubtitle: 'Identifying operational gaps and friction in previous manual processes.',
     architectureTitle: 'Core Architecture & Key Modules',
     architectureSubtitle: 'Modular breakdown designed for data integrity and user satisfaction.',
-    workflowTitle: 'Integrated End-to-End Business Workflow',
+    workflowTitle: 'End-to-End Business Workflow',
     workflowSubtitle: 'Lifecycle from customer booking input to executive evaluation.',
     techTitle: 'Technologies & Methods Deployed',
     deliverablesTitle: 'Key Architectural Deliverables',
@@ -238,7 +238,7 @@ const translationsEn: Translations = {
 
     aboutBadge: 'Demographic Profile',
     aboutTitle: 'About Malya Maritza',
-    aboutText: 'Information Systems undergraduate at Satu University who blends analytical rigor with empathetic interface design. Specialized in decomposing ambiguous business processes into normalized relational schemas, UML diagrams, and high-fidelity prototype flows.',
+    aboutText: 'Information Systems student specializing in system design and business process analysis. Experienced in translating user requirements into integrated technology solutions through process mapping, UML architecture modeling, and interactive prototyping. Passionate about System Analyst and Business Analyst roles to deliver operationally efficient results.',
     contactHeader: "Let's Connect & Collaborate",
     sendEmailBtn: 'Send Email',
     downloadResumeBtn: 'View Full Resume',

@@ -3,7 +3,7 @@
     "shortName": "Malya",
     "taglineBadge": "Currently cultivating digital experiences & looking for internship",
     "roleHeadline": "Information Systems Student @ Satu University | Frontend Developer, UI/UX Architect & System Analyst.",
-    "bio": "Crafting structured software blueprints and aesthetic, thoughtful user experiences. Experienced in orchestrating retail information systems, bridging organizational requirements with human-centered interfaces, and building responsive web apps with clean code.",
+    "bio": "Specialized in system design and business process analysis. Experienced in translating user requirements into integrated solutions—from business process mapping and UML modeling to interface prototyping. Passionate about System Analyst and Business Analyst roles, collaborating with teams to deliver operationally efficient technology solutions.",
     "campusBadge": "@Satu University B28",
     "location": "Bandung, Indonesia",
     "email": "malyamaritza01@gmail.com",
@@ -44,6 +44,14 @@
         },
         {
             "name": "Google Apps Script",
+            "featured": false
+        },
+        {
+            "name": "Microsoft 365",
+            "featured": false
+        },
+        {
+            "name": "Github",
             "featured": false
         }
     ],

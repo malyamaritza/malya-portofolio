@@ -2,6 +2,16 @@
 
 import profileData from '../data/profile.json';
 import orgsData from '../data/organizations.json';
+import projectsDataRaw from '../data/projects.json';
+import { ProjectCategory, ProjectTab } from '../types';
+import { useLanguage } from '../context/LanguageContext';
+
+const projectsData = projectsDataRaw as Record<'catA' | 'catB' | 'catC', ProjectCategory>;
+const allProjects: ProjectTab[] = [
+    ...(projectsData.catA?.tabs || []),
+    ...(projectsData.catB?.tabs || []),
+    ...(projectsData.catC?.tabs || []),
+];
 
 interface ResumeModalProps {
     isOpen: boolean;
@@ -17,6 +27,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
+    const { t } = useLanguage();
     if (!isOpen) return null;
 
     return (
@@ -71,9 +82,9 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                     {/* Profil */}
                     <div>
-                        <SectionLabel>Profil</SectionLabel>
+                        <SectionLabel>Profil Singkat</SectionLabel>
                         <p className="text-xs text-stone-700 leading-relaxed mt-1.5">
-                            {profileData.bio}
+                            {t.bioText}
                         </p>
                     </div>
 
@@ -107,11 +118,10 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                             {profileData.techStack.map((tech) => (
                                 <span
                                     key={tech.name}
-                                    className={`text-[11px] px-2.5 py-0.5 rounded-full border font-mono ${
-                                        tech.featured
+                                    className={`text-[11px] px-2.5 py-0.5 rounded-full border font-mono ${tech.featured
                                             ? 'bg-garden-pastel border-garden-moss text-garden-dark font-bold'
                                             : 'bg-white border-garden-sage/40 text-stone-600'
-                                    }`}
+                                        }`}
                                 >
                                     {tech.name}
                                 </span>
@@ -121,17 +131,17 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                     <hr className="border-garden-sage/20" />
 
-                    {/* Proyek Pilihan */}
+                    {/* Proyek */}
                     <div>
-                        <SectionLabel>Proyek Pilihan</SectionLabel>
+                        <SectionLabel>Proyek</SectionLabel>
                         <div className="mt-2 space-y-3">
-                            {profileData.highlights.map((h) => (
-                                <div key={h.id}>
+                            {allProjects.map((p) => (
+                                <div key={p.id}>
                                     <div className="flex items-start justify-between gap-2">
-                                        <p className="text-xs font-bold text-garden-dark">{h.title}</p>
-                                        <span className="text-[10px] font-mono text-garden-sage shrink-0">{h.category}</span>
+                                        <p className="text-xs font-bold text-garden-dark">{p.title}</p>
+                                        <span className="text-[10px] font-mono text-garden-sage shrink-0">{p.category}</span>
                                     </div>
-                                    <p className="text-[11px] text-stone-600 mt-0.5 leading-relaxed">{h.description}</p>
+                                    <p className="text-[11px] text-stone-600 mt-0.5 leading-relaxed">{p.overview}</p>
                                 </div>
                             ))}
                         </div>
@@ -164,13 +174,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                             Malya Maritza Portfolio · 2026
                         </p>
                         <div className="flex gap-2 w-full sm:w-auto">
-                            <button
-                                type="button"
-                                onClick={() => window.print()}
-                                className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-garden-sage hover:bg-garden-moss text-white font-bold text-xs shadow cursor-pointer transition"
-                            >
-                                Cetak / PDF 🖨️
-                            </button>
+
                             <button
                                 type="button"
                                 onClick={onClose}

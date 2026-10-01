@@ -148,7 +148,7 @@ export default function ArchiveBooksSection({
                         <RevealOnScroll key={project.id} delay={(idx % 2) * 100 + 50} duration={650}>
                             <div
                                 onClick={() => onSelectProjectDetail?.(project, currentCategory)}
-                                className="bg-white border-2 border-garden-sage rounded-2xl p-4 sm:p-5 shadow-scrapbook hover:shadow-scrapbook-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between group/card relative h-full cursor-pointer"
+                                className="bg-white border-2 border-garden-sage rounded-2xl p-4 sm:p-5 shadow-scrapbook hover:shadow-scrapbook-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group/card relative cursor-pointer"
                             >
                                 {/* Card Top: Thumbnail, Title, Description, and Impact */}
                                 <div>
@@ -169,15 +169,15 @@ export default function ArchiveBooksSection({
                                                     {project.title}
                                                 </span>
                                                 <span className="text-[10px] text-stone-500 mt-0.5">
-                                                    Artifact Specimen
+                                                    Pratinjau tidak tersedia
                                                 </span>
                                             </div>
                                         )}
 
-                                        {/* Watermark Tag */}
-                                        <div className="absolute bottom-2 left-2 right-2 bg-garden-dark/75 backdrop-blur-xs text-garden-cream px-2 py-0.5 rounded-md text-[10px] font-mono flex items-center justify-between opacity-90 group-hover/card:opacity-100 transition-opacity">
+                                        {/* Caption overlay */}
+                                        <div className="absolute bottom-2 left-2 right-2 bg-garden-dark/70 backdrop-blur-xs text-garden-cream px-2 py-0.5 rounded-md text-[10px] font-mono flex items-center justify-between opacity-0 group-hover/card:opacity-100 transition-opacity duration-200">
                                             <span className="truncate pr-1 font-medium">{project.thumbnailAlt || project.title}</span>
-                                            <span className="shrink-0 text-garden-pastel font-bold text-[9px]">Specimen</span>
+                                            <span className="shrink-0 text-garden-pastel/80 text-[9px]">↗ lihat detail</span>
                                         </div>
                                     </div>
 
@@ -193,10 +193,12 @@ export default function ArchiveBooksSection({
                                         {project.title}
                                     </h3>
 
-                                    {/* 3. Deskripsi Singkat */}
-                                    <p className="text-xs text-stone-600 mt-2 leading-relaxed font-sans line-clamp-3">
-                                        {project.overview}
-                                    </p>
+                                    {/* 3. Deskripsi Singkat — expands on hover */}
+                                    <div className="mt-2 overflow-hidden transition-all duration-300 ease-in-out max-h-[4.5rem] group-hover/card:max-h-48">
+                                        <p className="text-xs text-stone-600 leading-relaxed font-sans">
+                                            {project.overview}
+                                        </p>
+                                    </div>
 
                                     {/* 4. Impactnya */}
                                     <div className="mt-3 bg-[#FAF7EE] border border-garden-sage/40 rounded-xl p-2.5 sm:p-3 text-xs text-garden-dark leading-relaxed shadow-2xs">
