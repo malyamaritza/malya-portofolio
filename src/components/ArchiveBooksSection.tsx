@@ -137,7 +137,7 @@ export default function ArchiveBooksSection({
             </RevealOnScroll>
 
             {/* 2-Grid Responsive Project Cards Layout (Layout 2 Kisi) */}
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-1">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-1 items-stretch">
                 {currentCategory.tabs.map((project, idx) => {
                     // Identify the primary prototype or live website link
                     const prototypeLink =
@@ -145,13 +145,18 @@ export default function ArchiveBooksSection({
                         project.projectLinks?.[0];
 
                     return (
-                        <RevealOnScroll key={project.id} delay={(idx % 2) * 100 + 50} duration={650}>
+                        <RevealOnScroll
+                            key={project.id}
+                            delay={(idx % 2) * 100 + 50}
+                            duration={650}
+                            className="h-full flex flex-col"
+                        >
                             <div
                                 onClick={() => onSelectProjectDetail?.(project, currentCategory)}
-                                className="bg-white border-2 border-garden-sage rounded-2xl p-4 sm:p-5 shadow-scrapbook hover:shadow-scrapbook-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group/card relative cursor-pointer"
+                                className="bg-white border-2 border-garden-sage rounded-2xl p-4 sm:p-5 shadow-scrapbook hover:shadow-scrapbook-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group/card relative cursor-pointer h-full"
                             >
                                 {/* Card Top: Thumbnail, Title, Description, and Impact */}
-                                <div>
+                                <div className="flex flex-col">
                                     {/* 1. Thumbnail Specimen Frame */}
                                     <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl bg-garden-sand/40 border border-garden-sage/30 flex items-center justify-center mb-3.5 group/img">
                                         {project.thumbnail && !imageErrors[project.id] ? (
@@ -189,15 +194,19 @@ export default function ArchiveBooksSection({
                                     </div>
 
                                     {/* 2. Nama Projek */}
-                                    <h3 className="text-base sm:text-lg font-bold text-garden-dark group-hover/card:text-garden-sage transition-colors leading-snug">
+                                    <h3 className="text-base sm:text-lg font-bold text-garden-dark group-hover/card:text-garden-sage transition-colors leading-snug min-h-[2.6rem] sm:min-h-[3.25rem]">
                                         {project.title}
                                     </h3>
 
                                     {/* 3. Deskripsi Singkat — expands on hover */}
-                                    <div className="mt-2 overflow-hidden transition-all duration-300 ease-in-out max-h-[4.5rem] group-hover/card:max-h-48">
-                                        <p className="text-xs text-stone-600 leading-relaxed font-sans">
-                                            {project.overview}
-                                        </p>
+                                    <div className="relative mt-2">
+                                        <div className="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-[2.75rem] group-hover/card:max-h-72">
+                                            <p className="text-xs text-stone-600 leading-relaxed font-sans">
+                                                {project.overview}
+                                            </p>
+                                        </div>
+                                        {/* Subtle resting-state fade cue, smoothly vanishes on hover */}
+                                        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-white to-transparent opacity-100 group-hover/card:opacity-0 transition-opacity duration-300" />
                                     </div>
 
                                     {/* 4. Impactnya */}
@@ -213,7 +222,7 @@ export default function ArchiveBooksSection({
                                 </div>
 
                                 {/* Card Bottom: 5. Link Prototype & 6. View Detail Button */}
-                                <div className="mt-4 pt-3 border-t border-garden-sand flex items-center gap-2">
+                                <div className="mt-auto pt-3 border-t border-garden-sand flex items-center gap-2">
                                     {project.id === 'clevago' ? (
                                         <button
                                             type="button"

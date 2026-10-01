@@ -1325,7 +1325,7 @@
                     "Source code HTML/CSS/JS yang bisa dijalankan lewat index.html atau Live Server."
                 ],
                 "metrics": "Tanpa instalasi backend: cukup buka index.html atau Live Server untuk mendemokan seluruh interaksi.",
-                "thumbnail": "@/assets/thumbnail-edulms.png",
+                "thumbnail": "@/assets/thumbnail_edulms.png",
                 "thumbnailAlt": "Edu LMS Student Learning Management Dashboard",
                 "gdriveDocumentationUrl": "",
                 "documentationLabels": [
@@ -1344,7 +1344,7 @@
                     },
                     {
                         "label": "Source Code HTML/CSS/JS di GitHub",
-                        "url": "https://github.com/malyamaritza/edulms-student-portal",
+                        "url": "https://github.com/malyamaritza/edu-lms-fe-project",
                         "type": "github",
                         "icon": "🐙",
                         "isPrimary": false
@@ -1750,7 +1750,7 @@
                     },
                     {
                         "label": "Source Code Engine di GitHub",
-                        "url": "https://github.com/malyamaritza/frontyard-volleyball-canvas",
+                        "url": "https://github.com/malyamaritza/frontyard-volley",
                         "type": "github",
                         "icon": "🐙",
                         "isPrimary": false
