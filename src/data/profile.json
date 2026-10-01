@@ -8,7 +8,7 @@
     "location": "Bandung, Indonesia",
     "email": "malya.maritza@student.satu.ac.id",
     "linkedin": "https://linkedin.com",
-    "github": "https://github.com",
+    "github": "https://github.com/malyamaritza",
     "techStack": [
         {
             "name": "HTML5 / Semantic",
@@ -52,6 +52,36 @@
         "department": "Information Systems Department",
         "focusAreas": "Human-Computer Interaction, Enterprise ERP Modeling, Web Architecture."
     },
+    "educationTimeline": [
+        {
+            "id": "edu-1",
+            "period": "2021 – 2024",
+            "periodEn": "2021 – 2024",
+            "institution": "SMA YAS",
+            "institutionFull": "SMA YAS",
+            "level": "Sekolah Menengah Atas (SMA)",
+            "levelEn": "Senior High School",
+            "major": "Pendidikan Menengah Atas",
+            "majorEn": "Secondary High School Education",
+            "status": "Lulus",
+            "statusEn": "Graduated",
+            "badgeColor": "bg-garden-pastel text-garden-dark"
+        },
+        {
+            "id": "edu-2",
+            "period": "2024 – Saat Ini",
+            "periodEn": "2024 – Present",
+            "institution": "Satu University",
+            "institutionFull": "Satu University",
+            "level": "Pendidikan Tinggi / Sarjana (S1)",
+            "levelEn": "Higher Education / Undergraduate (B.S.)",
+            "major": "Jurusan Sistem Informasi",
+            "majorEn": "Information Systems Major",
+            "status": "Mahasiswa Aktif",
+            "statusEn": "Active Student",
+            "badgeColor": "bg-[#5B7553] text-[#FAF7EE]"
+        }
+    ],
     "highlights": [
         {
             "id": "hl-1",
@@ -65,23 +95,23 @@
         },
         {
             "id": "hl-2",
-            "title": "Empact Web Profile",
+            "title": "GoCamp E-Commerce",
             "category": "Frontend Web",
             "type": "Production",
-            "description": "High-performance interactive organization profile built with modern component styling.",
+            "description": "Platform e-commerce outdoor interaktif dengan alur pemesanan serverless terhubung ke Google Sheets.",
             "targetCategory": "catB",
-            "targetTabId": "empact",
+            "targetTabId": "gocamp",
             "categoryBadgeClass": "bg-garden-pondLight text-slate-700 font-bold"
         },
         {
             "id": "hl-3",
-            "title": "Frontyard Volleyball",
-            "category": "Gamification",
-            "type": "JS Canvas",
-            "description": "Classic retro 2D 2-player arcade game powered by custom collision and sprite rendering.",
+            "title": "Eatventory App",
+            "category": "UI/UX Research",
+            "type": "SDGs Zero Hunger",
+            "description": "Riset & prototipe Hi-Fi Figma manajemen stok makanan cerdas berbasis expert system untuk mitigasi food waste.",
             "targetCategory": "catC",
-            "targetTabId": "volleyball",
-            "categoryBadgeClass": "bg-garden-peachLight text-garden-terracotta font-bold"
+            "targetTabId": "eatventory",
+            "categoryBadgeClass": "bg-[#325540] text-white font-bold"
         }
     ]
 }

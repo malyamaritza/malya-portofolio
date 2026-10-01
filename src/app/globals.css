@@ -14,15 +14,15 @@
   --color-garden-peachLight: #FDF0ED;
   --color-garden-terracotta: #C86D51;
 
+  --font-sans: 'Plus Jakarta Sans', 'Quicksand', system-ui, sans-serif;
+  --font-hand: 'Patrick Hand', cursive;
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Quicksand', sans-serif;
+
   --shadow-scrapbook: 4px 6px 0px 0px rgba(91, 117, 83, 0.35);
   --shadow-scrapbook-lg: 7px 9px 0px 0px rgba(45, 59, 42, 0.25);
   --shadow-window: 0 12px 36px -10px rgba(45, 59, 42, 0.18);
 }
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Gingham background pattern */
 body {
@@ -32,6 +32,7 @@ body {
     linear-gradient(rgba(143, 168, 123, 0.14) 1px, transparent 1px);
   background-size: 24px 24px;
   color: #2d3b2a;
+  font-family: var(--font-sans);
 }
 
 /* Washi tape visual effects */
@@ -50,7 +51,14 @@ body {
 /* Subtle paper noise texture */
 .paper-texture {
   background-color: #FAF7EE;
-  background-image: radial-gradient(#5B7553 0.75px, transparent 0.75px);
+  background-image: radial-gradient(rgba(91, 117, 83, 0.12) 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+/* Subtle green paper noise texture matching header #8FA87B */
+.paper-texture-green {
+  background-color: #8FA87B;
+  background-image: radial-gradient(rgba(45, 59, 42, 0.12) 0.75px, transparent 0.75px);
   background-size: 16px 16px;
 }
 

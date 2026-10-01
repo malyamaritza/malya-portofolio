@@ -1,3 +1,55 @@
+Modern Ghibli Atelier — Design System & Visual Specification (DESIGN.md)
+1. Aesthetic Manifesto & Philosophy
+This portfolio embodies the soul of Studio Ghibli's pastoral warmth (organic botany, hand-crafted mindfulness, matcha, cedar wood, and lush tranquility) evolved through the lens of high-end contemporary Japanese editorial design (e.g., POPEYE, Kinfolk, and Komorebi Atelier).
+The Dual Paradigm:
+Ghibli Organic Warmth: Earthy tones, pressed botanical textures, gentle ambient soundscapes, authentic paper surfaces, and welcoming character.
+Modern Editorial Precision: Crisp hairline borders, generous architectural whitespace, typographic hierarchy, unboxed metadata discipline, and zero cartoonish clichés.
+2. Anti-AI Slop Mandate & Zero-Pill Discipline
+To ensure the portfolio is uniquely handcrafted and free from generic "AI web generator" aesthetics:
+Zero Static Pill Enclosures: No wrapping tags, dates, or metadata in candy pill capsules or chunky bordered chips. Metadata is rendered as clean, unboxed editorial typography separated by subtle dots (·) or slashes (/).
+No Badge Sandwiches: Cards must never start with a stack of 3 floating colorful pills. Headings and primary titles lead with clarity and prominence.
+No Mechanical / Pseudo-Technical Clutter: Prohibit // 01_CORE comments, fake latency flags, mock server tickers, or arbitrary innovation scorecards.
+Architectural Framing Over Loud Borders: Replace harsh 3px cartoon borders with refined hairline rules (border border-[#2d3b2a]/15 or border-[#43604a]/25), subtle warm cream backgrounds (#FBF8F3), and soft natural paper diffusion.
+Restrained Visual Accents: Washi accents and botanical motifs are treated with delicate minimalism rather than chaotic sticker bombing.
+3. Curated Color Palette (60-30-10 System)
+60% Dominant Neutral Canvas
+Parchment Canvas (#F7F4EC): Atmospheric warm paper ground.
+Atelier Cream (#FCFAF5): Clean structural card interior with delicate grain.
+Soft Oat Sand (#EFE9DD): Secondary container and divider surface.
+30% Structural & Botanical Tones
+Evergreen Ink (#182619): High-contrast, deeply legible dark ink for typography and primary borders.
+Cedar Sage (#3D573F): Primary brand green for active states, key headers, and focus elements.
+Forest Moss (#587559): Secondary green for subheadings and borders.
+Celadon Pistachio (#D6E3D1): Soft calming surface highlights and active button backdrops.
+10% High-Intent Accents
+Persimmon Terracotta (#B85338): High-intent focal accent for alerts, primary actions, and warm highlight seals.
+Morning Pond Mist (#64828E): Muted atmospheric slate blue for digital architecture folios.
+4. Typographic Architecture
+Hierarchy	Typeface	Size	Weight / Line-Height	Role
+Editorial Display (H1)	Fraunces / Newsreader	32px – 44px	SemiBold (600), Tight tracking	Primary hero headlines, exhibition titles
+Section Headlines (H2/H3)	Fraunces / Plus Jakarta Sans	20px – 28px	Bold (700), Leading-snug	Section titles, project names
+Body Prose	Plus Jakarta Sans	14px – 15px	Regular (400) & Medium (500), 1.6em	Descriptions, case overviews, bios
+Editorial Eyebrows	Space Mono / Plus Jakarta Sans	11px – 12px	Bold (700), Tracking-widest, Uppercase	Volume indicators, categories, section labels
+Technical & Metadata	Space Mono	10px – 12px	Tabular numerals, Regular	Deliverables, active years, IDs
+5. Component Contracts
+Top Bar & Navigation (3-Zone Contract)
+Zone 1 (Brand): Clean serif wordmark (Malya Maritza) with quiet status dot (Available for 2026).
+Zone 2 (Nav Links): Single-line editorial text links with animated bottom indicator line.
+Zone 3 (Interactive Utilities): Minimalist audio play/pause toggle with waveform indicator + Next.js guide action.
+The Landscape Archive Books
+Architectural folio binders with clean spine tabs, volume labels, and tactile tab switches.
+Project cards feature 16:10 preview frames, clear deliverable checklists, and a direct link to the interactive case study detail view.
+Experience & Journey Map
+Concise profile cards with organization logos, active years, and current positions.
+Clicking any card opens a curated chronological journey map modal with verified milestones and archival photo frames.
+Certificate Gallery
+Dual-mode viewer: Smooth touch-enabled horizontal slider and responsive 4-column grid.
+Clean inspection modal highlighting verified issuers, credentials, and skills without layout shift.
+
+
+
+
+
 ---
 name: Botanical Scrapbook Garden
 colors:

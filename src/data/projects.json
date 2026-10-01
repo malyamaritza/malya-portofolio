@@ -3,8 +3,8 @@
         "id": "catA",
         "volumeLabel": "Archive Vol. 01",
         "title": "System Analysis & UI/UX Architecture",
-        "subtitle": "Damakara Retail, Clevago Dept, and HOWL Space.",
-        "countLabel": "3 Case Studies",
+        "subtitle": "Damakara Retail, Clevago Dept, HOWL Space, Filmint, and Eatventory.",
+        "countLabel": "5 Case Studies",
         "icon": "🌿",
         "spineColor": "#455c3e",
         "bgColor": "bg-[#5B7553]",
@@ -16,144 +16,825 @@
                 "id": "damakara",
                 "tabName": "🔖 SI Damakara Retail",
                 "tabColor": "bg-[#8FA87B] text-white",
-                "title": "Sistem Informasi Retail Terintegrasi — Damakara",
+                "title": "Sistem Informasi Retail Terintegrasi — Dama Kara",
                 "category": "Enterprise System Modeling & Requirements Engineering",
-                "overview": "Analisis dan perancangan sistem informasi ritel fashion yang komprehensif untuk Dama Kara, guna mengintegrasikan proses perencanaan produksi massal, manajemen warehouse berbasis barcode, operasional toko offline, dan dashboard pelaporan eksekutif.",
-                "techStack": [
-                    "HTML5",
-                    "CSS3",
-                    "JavaScript",
-                    "System Modeling (UML)",
-                    "Figma UI/UX",
-                    "Database Normalization"
-                ],
-                "deliverables": [
-                    "Sistem Planning & Production dengan kalkulasi otomatis kebutuhan kain (Bills Of Material) dan penerbitan instruksi kerja (WO) digital.",
-                    "Sistem Manajemen Warehouse berbasis pemetaan rak digital dan barcode scanner untuk putaway, picking, serta sinkronisasi omnichannel (Jubelio).",
-                    "Sistem Store Management untuk operasional POS kasir, manajemen retur barang, dan permohonan auto-restock order ke gudang pusat.",
-                    "Dashboard Executive yang menyajikan pantauan stok akumulatif, grafik tren performa penjualan, serta notifikasi dini low stock dan dead stock.",
-                    "Pembuatan Domain Model komprehensif serta Use Case Diagram untuk keseluruhan subsistem (Warehouse, Planning, Store)."
-                ],
-                "metrics": "Mengeliminasi proses pendataan manual via spreadsheet dan WhatsApp, serta mempercepat pencarian barang gudang dengan koordinat rak presisi.",
-                "interactiveDemoTitle": "Interactive Architecture Schema Inspector",
-                "interactiveType": "damakara_schema",
-                "interactiveData": {
-                    "code": "DAMAKARA_CORE_MODULES",
-                    "status": "STATUS: VERIFIED",
-                    "modules": [
+                "overview": "Analisis dan perancangan sistem informasi enterprise terpadu untuk Dama Kara, ritel fashion batik cap asal Bandung dengan misi sosial inklusif (Dama Kara Foundation). Mengintegrasikan rantai pasok hulu ke hilir untuk mengatasi fragmentasi data dan mendukung kapasitas 6.000–9.000 potong/bulan.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Advanced System Analysis & Design",
+                    "year": "2026",
+                    "team": "Group 2 (Internal Departmen)",
+                    "role": "Lead System Analyst & UI/UX Architect"
+                },
+                "problemStatement": {
+                    "summary": "Sebelumnya, operasional Dama Kara terfragmentasi antara koordinasi WhatsApp, kartu Trello, spreadsheet manual, dan platform Jubelio tanpa sinkronisasi otomatis, menyebabkan kerentanan human error pada skala produksi ribuan potong pakaian per bulan.",
+                    "painPoints": [
                         {
-                            "number": "1",
-                            "name": "Planning & Production",
-                            "desc": "Bill of materials (BOM), schedule batch produksi kain, dan kuota bahan baku berkala."
+                            "title": "Kalkulasi Kebutuhan Kain Manual (BOM)",
+                            "desc": "Penghitungan kebutuhan yard kain dilakukan di spreadsheet manual, memicu risiko kesalahan hitung bahan baku dan potensi kekurangan kain di tengah proses penjahitan vendor."
                         },
                         {
-                            "number": "2",
-                            "name": "Warehouse System (WMS)",
-                            "desc": "Barcode scanner integration, stock opname batching, and auto-dispatch tracking."
+                            "title": "Pemisahan Data & Stok Silo (Online vs Offline)",
+                            "desc": "Stok gudang pusat, kanal marketplace online (Jubelio), dan toko fisik dikelola PIC berbeda sehingga pimpinan kesulitan mengakses data stok akumulatif secara real-time."
                         },
                         {
-                            "number": "3",
-                            "name": "Store Management (SMS)",
-                            "desc": "Point of Sales (POS) frontend, multi-payment reconciliation, shift logging."
+                            "title": "Ketiadaan Deteksi Dead Stock & Low Stock",
+                            "desc": "Tidak adanya sistem peringatan otomatis membuat stok kritis baru disadari saat barang habis, sementara barang tidak laku (dead stock) menumpuk di rak tanpa strategi promosi cepat."
                         },
                         {
-                            "number": "4",
-                            "name": "Executive Dashboard",
-                            "desc": "Visualisasi grafik profit harian, analisis turnover produk terlaris."
+                            "title": "Pencarian Barang Manual di Gudang",
+                            "desc": "Staf gudang mencari pakaian berdasarkan ingatan tanpa pemetaan koordinat rak digital, memperlambat proses picking dan penyiapan order pelanggan."
                         }
                     ]
-                }
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Production & Planning System",
+                        "tag": "Hulu Produksi",
+                        "description": "Menjembatani tim kreatif merchandising dengan perencanaan material massal.",
+                        "highlights": [
+                            "Fitur Kelola Resep Produk (BOM) otomatis menghitung kebutuhan yard kain berdasarkan desain.",
+                            "Penerbitan Work Order (WO) digital untuk vendor penjahit mitra.",
+                            "Prosedur Quality Control (QC) terstandarisasi sebelum barang didistribusikan ke gudang."
+                        ]
+                    },
+                    {
+                        "name": "2. Warehouse Management System (WMS)",
+                        "tag": "Logistik Gudang",
+                        "description": "Mengatur alur barang fisik, penomoran rak, dan sinkronisasi omnichannel.",
+                        "highlights": [
+                            "Labeling barcode otomatis saat barang lolos QC dan registrasi stok digital (Scan-In).",
+                            "Sistem Putaway cerdas memandu staf menaruh barang di koordinat rak digital yang tersedia.",
+                            "Panduan Picking List rute rak terpendek untuk pemenuhan pesanan pelanggan secara kilat.",
+                            "Sinkronisasi otomatis stok keluar dengan platform omnichannel Jubelio."
+                        ]
+                    },
+                    {
+                        "name": "3. Store Management System (SMS)",
+                        "tag": "Toko Offline",
+                        "description": "Pengendalian penjualan kasir, retur barang, dan permohonan restock toko fisik.",
+                        "highlights": [
+                            "Point of Sales (POS) scan barcode yang langsung memotong kuota inventori pusat.",
+                            "Fitur Restock Order digital dari kepala toko ke gudang pusat tanpa jalur chat manual.",
+                            "Administrasi shift kasir dan modul pengelolaan event diskon toko berkala."
+                        ]
+                    },
+                    {
+                        "name": "4. Executive Dashboard & Analytics",
+                        "tag": "Pengambilan Keputusan",
+                        "description": "Pusat visibilitas performa bisnis menyeluruh bagi jajaran manajemen.",
+                        "highlights": [
+                            "Monitoring stok akumulatif gabungan gudang, toko fisik, dan marketplace.",
+                            "Grafik analisis tren produk terlaris harian untuk perencanaan produksi koleksi baru.",
+                            "Sistem peringatan dini otomatis (Early Warning) untuk stok menipis dan dead stock lama mengendap."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Perencanaan Koleksi & Kalkulasi BOM",
+                        "actor": "Merchandising & Planning",
+                        "description": "Input desain dan spesifikasi kain, sistem mengkalkulasi kebutuhan yard bahan secara presisi."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Penerbitan WO & Finishing Vendor",
+                        "actor": "Tim Produksi & Penjahit",
+                        "description": "Penerbitan Work Order digital, penjahitan pakaian, lalu pengecekan QC kelayakan barang."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Scan-In & Putaway Koordinat Rak",
+                        "actor": "Inbound Warehouse Staff",
+                        "description": "Pencetakan label barcode dan penempatan barang mengikuti peta koordinat rak gudang."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Penjualan POS & Sinkronisasi Real-Time",
+                        "actor": "Kasir Store & Marketplace",
+                        "description": "Barcode di-scan saat transaksi, stok berkurang seketika di seluruh kanal omnichannel."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Evaluasi Eksekutif & Restock Alert",
+                        "actor": "Owner & Manajemen",
+                        "description": "Executive dashboard memantau omzet, stok menipis memicu rekomendasi restock cepat."
+                    }
+                ],
+                "techStack": [
+                    "System Modeling (UML)",
+                    "Figma UI/UX Kit",
+                    "Domain Model Architecture",
+                    "Database Normalization 3NF",
+                    "Omnichannel Jubelio Integration",
+                    "Barcode Hardware Protocol"
+                ],
+                "deliverables": [
+                    "Laporan Analisis Sistem Komprehensif (Bab 1 Pendahuluan s/d Bab 3 Dampak Bisnis).",
+                    "UML Artifacts lengkap: Domain Model, Use Case Planning, Use Case Warehouse, Use Case Store.",
+                    "Desain High-Fidelity UI Prototype Figma untuk 4 modul operasional.",
+                    "Business Process Matrix yang menghubungkan toko offline, gudang, dan marketplace."
+                ],
+                "metrics": "Mengurangi potensi selisih stok manual hingga 95% dan memangkas waktu kalkulasi bahan produksi dari hitungan jam menjadi hitungan detik.",
+                "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Dama Kara Retail Integrated Management & Production Architecture",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Domain Model Diagram",
+                    "Use Case Diagram (Planning, Warehouse, Store)",
+                    "Dokumen Spesifikasi Kebutuhan (SRS)",
+                    "Bill of Materials (BOM) Logic",
+                    "Business Process Matrix",
+                    "Activity Diagram"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "View Interactive Prototype",
+                        "url": "https://damakara-sistem-design.vercel.app/",
+                        "type": "web",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Company Profile Dama Kara",
+                        "url": "https://damakara.com",
+                        "type": "live",
+                        "icon": "🌿",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Domain Model Blueprint",
+                        "tag": "UML Architecture",
+                        "description": "Relasi kelas data antara modul BOM, QC, WMS, dan SMS."
+                    },
+                    {
+                        "caption": "Use Case Store Offline",
+                        "tag": "System Behavior",
+                        "description": "Aktor kasir dan kepala store dalam memproses penjualan & restock."
+                    },
+                    {
+                        "caption": "Use Case Warehouse & Picking",
+                        "tag": "Supply Chain",
+                        "description": "Alur penempatan barang di koordinat rak gudang."
+                    }
+                ]
             },
             {
                 "id": "clevago",
                 "tabName": "🔖 Clevago Department",
                 "tabColor": "bg-[#758D6B] text-white",
-                "title": "Clevago Department — Multi-Service Operational Platform",
-                "category": "Service Blueprint & Operational Workflow System",
-                "overview": "Pemodelan proses bisnis terpadu untuk ClevaGo (Smart Cleaning On the Go), sebuah layanan inovatif yang mengintegrasikan pencucian laundry premium, pembersihan rumah & kantor (home cleaning), serta pengendalian hama (pest control) dalam satu ekosistem.",
-                "techStack": [
-                    "Figma Prototype",
-                    "BPMN Process Modeling",
-                    "Use Case Documentation",
-                    "UI Component Kit"
-                ],
-                "deliverables": [
-                    "Pemodelan End-to-End Business Process untuk departemen layanan internal (penerimaan hingga pengepakan laundry, procurement, pemeliharaan aset) dan departemen eksternal.",
-                    "Perancangan Use Case dan Activity Diagram untuk merangkai interaksi berbagai aktor termasuk Pimpinan, Front Service, Logistik, Manajer, dan Vendor.",
-                    "Integrasi sistem pelacakan otomatis (tracking) siklus pakaian laundry pelanggan dengan memanfaatkan teknologi RFID tag dan Barcode.",
-                    "Perumusan Value Proposition dengan pendekatan Operational Excellence dan Employee Capability serta penyusunan Value Network perusahaan."
-                ],
-                "metrics": "Meningkatkan akurasi identifikasi pakaian (meminimalisir tertukar) dan mengotomatisasi alur pesanan dari Purchase Request hingga distribusi.",
-                "interactiveDemoTitle": "Operational Flow Mapping",
-                "interactiveType": "clevago_flow",
-                "interactiveData": {
-                    "pipeline": [
+                "title": "ClevaGo — Smart Cleaning On the Go Ecosystem",
+                "category": "Service Blueprint, RFID Logistics & Operational Workflow System",
+                "overview": "Ekosistem operasional terintegrasi berbasis teknologi untuk perusahaan layanan kebersihan modern yang menggabungkan laundry premium (Mama Laundry), deep cleaning rumah/kantor (The House Mob), dan pengendalian hama ramah lingkungan (Bug Daddy) dengan pendekatan Operational Excellence.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Analisis dan Perancangan Sistem Informasi",
+                    "year": "2026",
+                    "team": "Group 1-4 (LA02)",
+                    "role": "System Analyst & Service Blueprint Designer"
+                },
+                "problemStatement": {
+                    "summary": "Tantangan operasional multi-layanan (laundry, home cleaning, pest control) meliputi risiko pakaian tertukar pada cucian massal, penempatan rak pasca setrika yang tidak terkelompok per pesanan, serta inefisiensi pengadaan material kimia dan pemeliharaan mesin cuci.",
+                    "painPoints": [
                         {
-                            "step": "Customer Order Input",
-                            "type": "input",
-                            "desc": "Mobile & Web Booking Form"
+                            "title": "Risiko Pakaian Tertukar / Hilang",
+                            "desc": "Penandaan manual pada pakaian pelanggan rentan lepas dan tertukar selama proses pencucian dan pengeringan massal."
                         },
                         {
-                            "step": "Automated Triage",
-                            "type": "logic",
-                            "desc": "Service Routing & SLA Check"
+                            "title": "Penempatan Rak Penyimpanan Berceceran",
+                            "desc": "Pakaian dari nomor order yang sama kerap disimpan di rak berbeda, memperlambat pengepakan dan penyerahan ke kurir."
                         },
                         {
-                            "step": "Field Crew App",
-                            "type": "field",
-                            "desc": "Task Acceptance & GPS Log"
+                            "title": "Pengadaan Bahan Operasional (Deterjen/Pestisida) Lambat",
+                            "desc": "Proses permintaan bahan dari cabang ke pusat masih manual dan membutuhkan verifikasi penawaran harga vendor yang berbelit."
                         },
                         {
-                            "step": "QA & Completion",
-                            "type": "finish",
-                            "desc": "Checklist Verification & Invoice"
+                            "title": "Jadwal Servis Aset Rusak Tanpa Reminder",
+                            "desc": "Pemeliharaan mesin cuci komersial dan peralatan fogging hama sering terlewat, memicu kerusakan fatal dan penundaan layanan pelanggan."
                         }
                     ]
-                }
+                },
+                "keyModules": [
+                    {
+                        "name": "1. RFID Textile Tagging & Batch Scanning",
+                        "tag": "Laundry Innovation",
+                        "description": "Pelacakan identitas unik setiap helai pakaian pelanggan.",
+                        "highlights": [
+                            "Tag RFID tekstil tahan air dan tahan panas dipasang pada setiap helai pakaian saat intake.",
+                            "Reader RFID membaca puluhan pakaian serentak tanpa perlu scan satu per satu.",
+                            "Sistem merekomendasikan metode pencucian spesifik sesuai bahan kain yang terdeteksi."
+                        ]
+                    },
+                    {
+                        "name": "2. Smart Storage Rack Bin Grouping",
+                        "tag": "Gudang & Rak",
+                        "description": "Pengelompokan otomatis pakaian per nomor order ke slot rak yang sama.",
+                        "highlights": [
+                            "Sistem otomatis mencari rak kosong atau mengarahkan ke rak yang sudah berisi pakaian dari nomor order yang sama.",
+                            "Penghitungan otomatis kuantitas pakaian: notifikasi siap kemas muncul saat seluruh item terkumpul lengkap.",
+                            "Pencetakan label barcode akhir sebelum diserahkan ke kurir pengantaran."
+                        ]
+                    },
+                    {
+                        "name": "3. Automated Procurement & RFQ System",
+                        "tag": "Rantai Pasok",
+                        "description": "Pengadaan deterjen, bahan pembersih, dan perlengkapan dari supplier.",
+                        "highlights": [
+                            "Purchase Request (PR) otomatis dari tim material cabang ketika stok mencapai reorder point.",
+                            "Penerbitan Request For Quotation (RFQ) via email tautan bagi supplier rekanan.",
+                            "Pemeriksaan Receiving Report dan integrasi pembayaran otomatis ke tim finance."
+                        ]
+                    },
+                    {
+                        "name": "4. Asset Maintenance & Service Order",
+                        "tag": "Pemeliharaan Mesin",
+                        "description": "Monitoring berkala mesin cuci, pengering, dan peralatan semprot hama.",
+                        "highlights": [
+                            "Reminder otomatis kontrak servis rutin dengan vendor pemeliharaan mesin.",
+                            "Tiket laporan kerusakan insidental dengan alur RFQ perbaikan dan verifikasi penggantian spare-part."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Penerimaan & Pasang Tag RFID",
+                        "actor": "Front Service Staff",
+                        "description": "Customer booking via App/WA, staf menempelkan tag RFID pada pakaian sesuai order."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Sortir & Scan Metode Pencucian",
+                        "actor": "Staf Penyortiran",
+                        "description": "RFID di-scan serentak, sistem memvalidasi bahan dan menentukan metode pencucian."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Proses Cuci, Setrika & Simpan Rak",
+                        "actor": "Staf Operasional Laundry",
+                        "description": "Pakaian disetrika dan disimpan ke nomor rak khusus nomor order tersebut."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Pengepakan Lengkap & Cetak Label Barcode",
+                        "actor": "Staf Pengemasan",
+                        "description": "Sistem memberi sinyal order komplit, pakaian dikemas dan ditempeli barcode pengiriman."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Dispatch Logistik & Pengantaran",
+                        "actor": "Kurir Delivery",
+                        "description": "Kurir memindai barcode, pesanan diantar dengan rute GPS optimal ke alamat customer."
+                    }
+                ],
+                "techStack": [
+                    "RFID Textile Tagging Hardware",
+                    "BPMN Business Process Modeling",
+                    "Figma UI Kit & App Prototype",
+                    "Use Case Engineering",
+                    "Operational Excellence Framework"
+                ],
+                "deliverables": [
+                    "Laporan Akhir Analisis dan Perancangan Sistem Informasi ClevaGo (Bab 1 s/d Bab 7).",
+                    "BPMN End-to-End Diagram: Alur Laundry, Alur Procurement, dan Alur Pemeliharaan Aset.",
+                    "Use Case Diagram lengkap untuk tim Operasional, Procurement, dan Maintenance.",
+                    "Prototipe Desain Antarmuka Mobile ClevaGo (Customer App & Staff Scanner)."
+                ],
+                "metrics": "Eliminasi 100% kasus pakaian tertukar berkat teknologi RFID tekstil dan pengelompokan rak otomatis.",
+                "thumbnail": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "ClevaGo Smart Cleaning & RFID Laundry Management Platform",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "BPMN End-to-End Diagram",
+                    "Use Case Diagram (Operational, Procurement, Maintenance)",
+                    "Dokumen Spesifikasi Kebutuhan Sistem",
+                    "Service Blueprint Laundry & RFID",
+                    "Activity Diagram & RFQ Workflow"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "Jelajahi Figma Interactive Flow",
+                        "url": "https://www.figma.com/proto/sample-clevago-department-flow",
+                        "type": "figma",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Repositori Service Blueprint & Arsitektur",
+                        "url": "https://github.com/malyamaritza/clevago-service-blueprint",
+                        "type": "github",
+                        "icon": "🐙",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "BPMN Alur Internal Laundry",
+                        "tag": "Process Architecture",
+                        "description": "Diagram alir penanganan pakaian dari intake hingga rak."
+                    },
+                    {
+                        "caption": "Use Case Procurement & RFQ",
+                        "tag": "Supply Chain",
+                        "description": "Interaksi manajer procurement dengan supplier bahan kimia."
+                    },
+                    {
+                        "caption": "Arsitektur Tag RFID",
+                        "tag": "Hardware Mapping",
+                        "description": "Implementasi tag tekstil tahan suhu tinggi pada pakaian."
+                    }
+                ]
             },
             {
                 "id": "howl",
                 "tabName": "🔖 HOWL Library & Space",
                 "tabColor": "bg-[#5B7553] text-white",
                 "title": "HOWL Library & Creative Space Management",
-                "category": "Relational Database Design & Full-Flow UI Architecture",
-                "overview": "Analisis dan perancangan sistem basis data untuk perpustakaan independen HOWL guna memusatkan dan mengotomatisasi sistem operasional reservasi kunjungan, pengelolaan keanggotaan (membership), serta tata kelola sirkulasi buku harian.",
-                "techStack": [
-                    "SQL Relational Schema",
-                    "HTML5",
-                    "CSS3",
-                    "JavaScript",
-                    "ERD Modeling"
-                ],
-                "deliverables": [
-                    "Perancangan Konseptual Entity Relationship Diagram (ERD) dan Database Logikal yang telah melalui tahap normalisasi hingga bentuk ketiga (3NF).",
-                    "Penyusunan Kamus Data yang presisi mencakup 14 entitas tabel master dan transaksional seperti Users, Memberships, Books, Events, Reservations, hingga Payments.",
-                    "Pemodelan tiga modul utama operasional: Modul Reservasi dengan pelacakan kapasitas real-time dan gelang preferensi sosial, Modul Membership (Crew & Customer), serta Modul Sirkulasi Buku (In-House & Take Home).",
-                    "Desain prototipe antarmuka sistem di Figma yang menampung alur pengunjung dan dashboard analitik kasir/admin."
-                ],
-                "metrics": "Mencegah overcapacity pada ruang baca secara real-time dan mengotomatisasi pemotongan kuota benefit member.",
-                "interactiveDemoTitle": "Interactive Pod Booking & Circulation Matrix",
-                "interactiveType": "howl_relations",
-                "interactiveData": {
-                    "schema": "SQL_3NF",
-                    "tables": [
+                "category": "Relational Database Design & Operational Information System",
+                "overview": "Perancangan sistem basis data relasional komprehensif (ternormalisasi 3NF) untuk Howl Library & Creative Space di Ciumbuleuit, Bandung. Mengotomasi proses reservasi, pemantauan kapasitas ruang real-time, manajemen keanggotaan (Customer Member vs Howl Crew), sirkulasi buku fisik, dan pelacakan gelang preferensi sosial.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Manajemen Data dan Informasi",
+                    "year": "2026",
+                    "team": "Malya Maritza Rahadiani, Ari Okta Pratama, Rachell Helena Sharon Gloria",
+                    "role": "Database Architect & Normalization Lead"
+                },
+                "problemStatement": {
+                    "summary": "HOWL menggabungkan perpustakaan independen, kafe, dan ruang diskusi kreatif. Operasional sebelumnya mengandalkan Google Form dan pencatatan manual yang tidak dapat memvalidasi kapasitas batas ruang serta rentan kecolongan batas durasi pengunjung.",
+                    "painPoints": [
                         {
-                            "name": "tbl_members",
-                            "key": "PK: member_id",
-                            "fields": "name, tier, join_date"
+                            "title": "Reservasi Google Form Tanpa Validasi Kapasitas Real-Time",
+                            "desc": "Batas kapasitas maksimal 60 orang/sesi tidak terkontrol secara dinamis dan tidak mengakomodasi reservasi rombongan (group booking), memicu over-capacity."
                         },
                         {
-                            "name": "tbl_circulation",
-                            "key": "FK: book_id, member_id",
-                            "fields": "borrow_date, due_date, fine"
+                            "title": "Overstaying Tanpa Deteksi Check-In / Check-Out",
+                            "desc": "Tidak adanya validasi check-in/check-out membuat pengunjung yang telah melebihi durasi sesi (6 jam) tetap berada di ruangan tanpa terdeteksi kasir."
                         },
                         {
-                            "name": "tbl_creative_pods",
-                            "key": "PK: pod_id, schedule",
-                            "fields": "capacity, soundproof_flag, status"
+                            "title": "Pencatatan Keanggotaan & Hak Pinjam Manual",
+                            "desc": "Pengecekan kuota free pass bulanan (4x weekday, 2x weekend) dan hak pinjam buku bawa pulang (take-home) rentan salah catat pada buku kasir konvensional."
+                        },
+                        {
+                            "title": "Preferensi Sosial (Mood Wristband) Belum Terhubung Sistem",
+                            "desc": "Pengunjung memilih gelang Me Time (Hijau) atau Networking (Kuning), namun belum ada sistem otomatis yang mencetak label stiker jam kunjungan dan mood di meja kasir."
                         }
                     ]
-                }
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Modul Reservasi & Kontrol Kapasitas",
+                        "tag": "Front Desk & Booking",
+                        "description": "Web-app reservasi mandiri, group booking, dan walk-in kasir.",
+                        "highlights": [
+                            "Kalkulasi kuota sisa kursi secara real-time dari batas aman 60 orang per sesi.",
+                            "Validasi sesi 6 jam dengan batas toleransi keterlambatan check-in 3 jam.",
+                            "Integrasi printer thermal kasir: otomatis mencetak stiker nama, jam masuk, jam keluar, dan preferensi sosial saat status 'Check-in'."
+                        ]
+                    },
+                    {
+                        "name": "2. Modul Keanggotaan (Membership Engine)",
+                        "tag": "Loyalty & Access",
+                        "description": "Klasifikasi hak akses antara Customer Member dan Howl Crew internal.",
+                        "highlights": [
+                            "Otorisasi cepat via pemindaian Keyring NFC / QR Code fisik member di meja kasir.",
+                            "Pemotongan kuota kedatangan otomatis (4x sesi weekday & 2x sesi weekend per bulan).",
+                            "Diskon transaksi F&B kafe 10% dan hak eksklusif pinjam buku ke rumah 1x/bulan."
+                        ]
+                    },
+                    {
+                        "name": "3. Modul Sirkulasi Buku (In-House & Take-Home)",
+                        "tag": "Library Inventory",
+                        "description": "Pelacakan buku fisik di rak dan riwayat bacaan pengunjung.",
+                        "highlights": [
+                            "Pencatatan cepat via barcode/ISBN tanpa perlu mencetak barcode baru.",
+                            "Pemisahan data buku yang dipajang di display rak vs stok disimpan di gudang.",
+                            "Pencatatan Inhouse Reads secara anonim untuk analitik 'Book of the Month'.",
+                            "Aturan denda keterlambatan take-home (>1 bulan Rp5.000) dan sewa kuota habis (Rp15.000)."
+                        ]
+                    },
+                    {
+                        "name": "4. Modul Pembayaran & Executive Dashboard",
+                        "tag": "Finansial & Analitik",
+                        "description": "Pencatatan multi-metode pembayaran dan analitik tren okupansi.",
+                        "highlights": [
+                            "Dukungan pembayaran Cash (hitung kembalian) dan QRIS dinamis (expired 15 menit).",
+                            "Audit trail staf/kasir yang memproses setiap transaksi.",
+                            "Dashboard analitik owner untuk melihat rasio member, tingkat okupansi, dan keberhasilan event."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Booking Mandiri / Walk-in",
+                        "actor": "Pengunjung / Kasir",
+                        "description": "Pilih jadwal sesi (6 jam), jumlah rombongan, dan preferensi mood sosial (Me Time/Networking)."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Check-in Kasir & Cetak Gelang Thermal",
+                        "actor": "Kasir Operasional",
+                        "description": "Kasir memvalidasi kedatangan; printer thermal otomatis mencetak label gelang preferensi."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Aktivitas Ruang & Baca In-House",
+                        "actor": "Pengunjung & Staf Buku",
+                        "description": "Pengunjung membaca buku; staf men-scan barcode buku yang dibaca untuk pencatatan lalu lintas bacaan."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Peminjaman Buku Bawa Pulang (Take Home)",
+                        "actor": "Customer Member",
+                        "description": "Scan Keyring QR member untuk otorisasi pinjam buku take-home 1x/bulan."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Check-out & Rekapitulasi Sesi",
+                        "actor": "Kasir & Owner Dashboard",
+                        "description": "Validasi waktu keluar, slot kapasitas kembali bertambah, query agregat masuk ke dashboard owner."
+                    }
+                ],
+                "techStack": [
+                    "Relational Database Normalization (UNF, 1NF, 2NF, 3NF)",
+                    "Entity Relationship Diagram (ERD)",
+                    "Data Dictionary (Kamus Data 14 Tabel)",
+                    "Thermal Label Printer Integration",
+                    "QR Code / NFC Keyring Protocol",
+                    "Visual Paradigm Modeling"
+                ],
+                "deliverables": [
+                    "Laporan Akhir Analisis dan Perancangan Basis Data HOWL (Lengkap Bab 1 s/d Bab 5).",
+                    "Conceptual Database Design (ERD) dan Kamus Data lengkap 14 tabel ternormalisasi.",
+                    "Logical Database Design & Physical Database Design teruji integritas referensialnya.",
+                    "Business Rules terverifikasi dari wawancara owner (Kak Syawal) dan observasi kasir."
+                ],
+                "metrics": "Menjamin 0% over-capacity melebihi 60 orang dan akurasi 100% pelacakan hak pinjam buku serta free pass member.",
+                "thumbnail": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "HOWL Library & Creative Space 3NF Database & Reservation System",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Entity Relationship Diagram (ERD)",
+                    "Kamus Data (Data Dictionary 14 Tabel)",
+                    "Logical Database Design (LDD)",
+                    "Physical Database Design (PDD)",
+                    "Business Rules & 3NF Normalization"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "View Interactive Prototype",
+                        "url": "howl-library.vercel.app",
+                        "type": "website",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Physical Database Design",
+                        "url": "https://github.com/malyamaritza/howl-space-db/tree/main/sql",
+                        "type": "github",
+                        "icon": "🗄️",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Entity Relationship Diagram (ERD)",
+                        "tag": "Database Schema",
+                        "description": "14 entitas relasional saling terhubung tanpa anomali redundansi."
+                    },
+                    {
+                        "caption": "Stiker Gelang Mood Thermal",
+                        "tag": "Hardware Output",
+                        "description": "Format label nama, jam kedatangan, jam keluar, dan mood sosial."
+                    },
+                    {
+                        "caption": "Logical Data Model",
+                        "tag": "Data Modeling",
+                        "description": "Pemetaan primary key dan foreign key tabel transaksi peminjaman."
+                    }
+                ]
+            },
+            {
+                "id": "filmint",
+                "tabName": "🔖 Filmint Mobile Streaming",
+                "tabColor": "bg-[#657B5A] text-white",
+                "title": "Filmint — Mobile Streaming Platform Perfilman Indonesia",
+                "category": "Advanced Systems Analysis, UML 2.5 Architecture & Lo-Fi Wireframing",
+                "overview": "Studi kasus analisis dan perancangan sistem informasi lanjutan untuk layanan mobile streaming film Indonesia berbayar (Filmint). Memodelkan proses bisnis terintegrasi meliputi registrasi akun, paket berlangganan tiering (Silver, Gold, Platinum), fitur pengiriman gift langganan, pembayaran Virtual Account 1x24 jam dengan verifikasi otomatis, katalog eksplorasi multi-genre dengan batasan single-stream, pencatatan histori tontonan dan ulasan, serta modul admin kurasi film dan pelaporan eksekutif bulanan.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Analisis dan Perancangan Sistem Informasi Lanjutan (APSI Lanjutan)",
+                    "year": "2025",
+                    "team": "Individu / Lab Assignment (Pengumpulan via SatuConnect)",
+                    "role": "Lead System Analyst & Software Architect"
+                },
+                "problemStatement": {
+                    "summary": "Pesatnya perkembangan industri perfilman Indonesia yang sukses menembus festival internasional membutuhkan platform streaming mobile legal yang mampu mengelola transaksi berbayar dengan batas waktu ketat, mencegah streaming bersamaan ganda, mencatat riwayat tontonan, serta menyediakan mekanisme pemberian hadiah langganan antar pengguna."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Registrasi Akun & Autentikasi Pengguna",
+                        "tag": "User Management",
+                        "description": "Gerbang masuk pengguna aplikasi mobile Filmint dengan validasi kelengkapan identitas.",
+                        "highlights": [
+                            "Form Sign Up komprehensif: nama lengkap, jenis kelamin, tanggal lahir, nomor handphone, email, password, dan konfirmasi re-password.",
+                            "Validasi penyimpanan data customer sebelum hak akses katalog dibuka.",
+                            "Autentikasi Sign In aman berbasis kredensial email dan kata sandi."
+                        ]
+                    },
+                    {
+                        "name": "2. Paket Berlangganan Tiering & Fitur Send as Gift",
+                        "tag": "Subscription Engine",
+                        "description": "Model monetisasi berbayar berjenjang dan mekanisme pengiriman hadiah langganan.",
+                        "highlights": [
+                            "Pilihan 3 paket subscription: Silver, Gold, dan Platinum dengan perbedaan jangka waktu langganan, resolusi kualitas gambar, dan harga.",
+                            "Fitur 'Send as Gift': input email dan nomor handphone customer penerima hadiah.",
+                            "Kustomisasi kartu ucapan digital pilihan gambar dan pesan teks personal yang telah disediakan sistem."
+                        ]
+                    },
+                    {
+                        "name": "3. Gateway Virtual Account & Verifikasi Otomatis (1x24 Jam)",
+                        "tag": "Finansial & Billing",
+                        "description": "Pemrosesan transaksi pembayaran langganan dengan timer time-to-live 24 jam.",
+                        "highlights": [
+                            "Penerbitan nomor rekening Virtual Account Filmint dengan total tagihan transparan.",
+                            "Batas waktu pembayaran 1x24 jam dengan mekanisme Auto-Cancel otomatis oleh sistem bila melewati batas waktu.",
+                            "Verifikasi pembayaran otomatis oleh sistem yang langsung mengaktifkan paket dan mengirimkan invoice resmi ke email customer."
+                        ]
+                    },
+                    {
+                        "name": "4. Menu Explore & Single-Stream Video Concurrency",
+                        "tag": "Streaming Core",
+                        "description": "Eksplorasi katalog multi-genre dan kontrol pemutaran video berkeamanan tinggi.",
+                        "highlights": [
+                            "Katalog explore multi-genre: Drama, Komedi, Horor, Petualangan, Aksi, Romantis, Keluarga, Dokumenter, dan Animasi.",
+                            "Penegakan aturan bisnis: setiap film wajib memiliki minimal 2 genre.",
+                            "Aturan konkurensi: customer hanya dapat streaming satu film dalam satu waktu.",
+                            "Penyimpanan otomatis watch history: durasi terakhir ditonton, tanggal menonton, dan persentase durasi tontonan."
+                        ]
+                    },
+                    {
+                        "name": "5. Pop-Up Review & Modul Administrator Filmint",
+                        "tag": "Evaluasi & Backoffice",
+                        "description": "Mekanisme pengumpulan ulasan kepuasan penonton dan panel manajemen konten kurasi film.",
+                        "highlights": [
+                            "Pop-up otomatis pasca film selesai: halaman review dengan rating bintang range 1-5 dan komentar teks.",
+                            "Fitur upload film admin: judul film, tahun rilis, sutradara, daftar pemain, sinopsis, pemilihan min. 2 genre, dan file video.",
+                            "Laporan Bulanan Admin: rekap periode, total akumulasi durasi tonton, dan frekuensi tayang film terpopuler untuk bahan evaluasi manager."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Download & Sign Up Akun",
+                        "actor": "Customer",
+                        "description": "Customer mengunduh aplikasi Filmint dari app store, mengisi data registrasi diri lengkap, dan login ke akun."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Pilih Paket Subscription / Kirim Gift",
+                        "actor": "Customer & Sistem",
+                        "description": "Pilih paket Silver, Gold, atau Platinum untuk diri sendiri atau kirim sebagai gift beserta kartu ucapan kustom."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Transfer Virtual Account 1x24 Jam",
+                        "actor": "Customer & Payment Engine",
+                        "description": "Transfer ke nomor Virtual Account Filmint dalam tempo 24 jam; sistem memverifikasi otomatis dan mengirimkan invoice ke email."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Explore Katalog & Nonton Film",
+                        "actor": "Customer & Video Player",
+                        "description": "Pilih film favorit (min. 2 genre), streaming 1 film dalam satu waktu, sistem otomatis merekam riwayat durasi tonton."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Ulasan Rating & Laporan Bulanan Admin",
+                        "actor": "Customer, Admin & Manager",
+                        "description": "Customer memberikan review bintang 1-5 setelah tamat; admin menerbitkan laporan performa bulanan untuk bahan keputusan manager."
+                    }
+                ],
+                "techStack": [
+                    "UML 2.5 Modeling (Use Case, Activity, SSD, Class, Sequence)",
+                    "Three-Layer Architecture (UI, Domain/Business Logic, Data Access)",
+                    "Domain Model Class Diagram & Relational Database Design",
+                    "CRC Cards & First-Cut Design Class Diagram (DCD)",
+                    "Communication & Package Diagram",
+                    "Figma (Low-Fidelity Wireframing & Prototyping)"
+                ],
+                "deliverables": [
+                    "Dokumen Analisis Lengkap: Use Case Diagram, Use Case Description, dan Activity Diagram alur bisnis.",
+                    "Perancangan Arsitektur Sistem: Domain Model Class Diagram, System Sequence Diagram (SSD), dan System Architecture I/O.",
+                    "Perancangan Basis Data: Database Design ternormalisasi (Akun, Subscription, Virtual Account, Watch History, Review).",
+                    "Desain Berorientasi Objek: CRC Cards, First Cut DCD, First Cut Sequence Diagram, dan Three-Layer Sequence Diagram.",
+                    "Diagram Komunikasi & Pengemasan: Communication Diagram dan Package Diagram modul Filmint.",
+                    "Desain Prototype Simpel: Wireframe Lo-Fi Mobile App Filmint dibuat menggunakan Figma."
+                ],
+                "metrics": "Arsitektur berorientasi objek Three-Layer dengan validasi pembayaran otomatis Virtual Account 1x24 jam dan integritas data playback multi-genre.",
+                "thumbnail": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Filmint Indonesian Movie Streaming Platform UML Modeling & Lo-Fi Wireframe",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Use Case Diagram & Description",
+                    "Activity Diagram Bisnis",
+                    "Domain Model Class Diagram",
+                    "System Sequence Diagram (SSD)",
+                    "Three-Layer Sequence Diagram",
+                    "First-Cut Design Class Diagram (DCD)",
+                    "Communication & Package Diagram",
+                    "Wireframe Lo-Fi Figma"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "Figma Lo-Fi Mobile Wireframe",
+                        "url": "https://www.figma.com/proto/sample-filmint-lofi-wireframe",
+                        "type": "figma",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Use Case Diagram & Description",
+                        "tag": "Requirements Modeling",
+                        "description": "Pemetaan interaksi customer, sistem payment VA, dan admin kurasi film."
+                    },
+                    {
+                        "caption": "Three-Layer Sequence Diagram",
+                        "tag": "Software Architecture",
+                        "description": "Interaksi terstruktur antara UI Layer, Domain Business Logic Layer, dan Data Access Layer."
+                    },
+                    {
+                        "caption": "Domain Model & Database Design",
+                        "tag": "Data Modeling",
+                        "description": "Struktur entitas pengguna, paket subscription, virtual account, watch history, dan ulasan."
+                    }
+                ]
+            },
+            {
+                "id": "eatventory",
+                "tabName": "🔖 Eatventory Food Stock",
+                "tabColor": "bg-[#325540] text-[#DEEFE7]",
+                "title": "Eatventory — Smart Food Stock Management & Food Waste Mitigation",
+                "category": "UI/UX Research, Behavioral Analysis & Hi-Fi Figma Prototyping",
+                "overview": "Riset UI/UX komprehensif dan perancangan prototipe interaktif High-Fidelity (Hi-Fi) untuk Eatventory, aplikasi manajemen persediaan makanan cerdas untuk mendukung target SDGs Zero Hunger. Mengatasi pemborosan makanan akibat overstock dan makanan kedaluwarsa melalui analisis kebutuhan konsumsi berbasis Expert System, integrasi supermarket rekanan dengan jadwal pick-up, dan notifikasi peringatan dini (early warning expiry alert).",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "UI/UX Research",
+                    "year": "2025",
+                    "team": "Russell Reece (2810011414), Malya Maritza Rahadiani (2810010891), Ari Okta Pratama (2810010802)",
+                    "role": "Lead UI/UX Researcher & Hi-Fi Interaction Designer"
+                },
+                "problemStatement": {
+                    "summary": "Berdasarkan data Sistem Informasi Pengelolaan Sampah Nasional (SIPSN), sampah di Indonesia didominasi oleh sampah sisa makanan. Hasil survei kuisioner (N=29) menemukan 55% responden membuang makanan 1-2 kali seminggu, dengan 65% disebabkan oleh makanan yang telah kedaluwarsa atau basi akibat porsi berlebihan dan ketidakpastian dalam mengatur persediaan stok."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Stock Analyze (Expert System Engine)",
+                        "tag": "Analisis Cerdas",
+                        "description": "Kalkulator kebutuhan konsumsi presisi berbasis parameter aktivitas dan jumlah orang.",
+                        "highlights": [
+                            "Form input parameter: durasi hari, tipe makanan, jenis kegiatan, jumlah orang, dan estimasi biaya.",
+                            "Mesin rekomendasi berbasis Expert System menghasilkan daftar stok makanan dan kuantitas ideal yang dipersonalisasi.",
+                            "Aksi langsung 'Add to Cart' dari hasil rekomendasi untuk belanja sesuai kebutuhan tanpa overstock."
+                        ]
+                    },
+                    {
+                        "name": "2. Smart Inventory & Early-Warning Expiry Alert",
+                        "tag": "Manajemen Stok",
+                        "description": "Pusat inventori dapur digital untuk memantau masa penyimpanan bahan makanan.",
+                        "highlights": [
+                            "Pencatatan digital nama item, kategori bahan, jumlah kuantitas, dan tanggal kedaluwarsa.",
+                            "Deteksi otomatis bahan makanan yang mendekati batas kedaluwarsa (Near Exp Date).",
+                            "Push notification peringatan dini kepada pengguna untuk segera mengonsumsi bahan makanan sebelum rusak."
+                        ]
+                    },
+                    {
+                        "name": "3. Integrasi Supermarket Checkout & Jadwal Pick-Up",
+                        "tag": "Mitra Belanja",
+                        "description": "Menghubungkan rekomendasi stok dengan pembelian langsung di supermarket rekanan.",
+                        "highlights": [
+                            "Kemitraan supermarket agar pengguna dapat langsung membeli bahan makanan yang direkomendasikan.",
+                            "Penjadwalan tanggal dan jam pengambilan barang (Pick-up Date) mandiri di supermarket tujuan.",
+                            "Opsi pembayaran digital terintegrasi dan otomatis mencatat item yang dibeli ke inventori aplikasi."
+                        ]
+                    },
+                    {
+                        "name": "4. AI Assistant Chatbot & Resep Olahan Sisa",
+                        "tag": "Konsultasi AI",
+                        "description": "Asisten interaktif untuk edukasi penanganan sisa makanan dan inspirasi menu masakan.",
+                        "highlights": [
+                            "Tanya-jawab AI untuk rekomendasi resep kreatif memanfaatkan bahan makanan sisa yang masih layak konsumsi.",
+                            "Rekomendasi menu program makan bergizi dan penawaran porsi makanan yang lebih hemat.",
+                            "Prompt rekomendasi cerdas dengan tombol 'Add to Cart' untuk melengkapi bahan resep yang kurang."
+                        ]
+                    },
+                    {
+                        "name": "5. Edukasi Zero Hunger & Program Membership",
+                        "tag": "Dampak Sosial",
+                        "description": "Mendorong kesadaran berkelanjutan sejalan dengan target SDGs Zero Hunger.",
+                        "highlights": [
+                            "Edukasi pengelolaan sampah makanan, resep olahan sisa, dan tips penyimpanan bahan pangan.",
+                            "Membership premium untuk fitur analisis lanjutan, resep eksklusif, dan penawaran diskon mitra."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Input Parameter Kebutuhan Stok",
+                        "actor": "Pengguna",
+                        "description": "Masukkan durasi hari, tipe makanan, jenis kegiatan, jumlah orang, dan estimasi bujet belanja pada fitur Stock Analyze."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Analisis Expert System & Rekomendasi",
+                        "actor": "Expert System",
+                        "description": "Aplikasi menganalisis kebutuhan dan menyajikan daftar rekomendasi stok makanan beserta kuantitas idealnya."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Pilih Supermarket, Bayar & Pick-up",
+                        "actor": "Pengguna & Supermarket",
+                        "description": "Masukkan item ke cart, pilih supermarket tujuan, selesaikan pembayaran, dan tentukan jadwal pick-up pesanan."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Otomatisasi Masuk ke Smart Inventory",
+                        "actor": "Sistem Eatventory",
+                        "description": "Bahan makanan yang telah diambil otomatis tercatat ke smart inventory lengkap dengan tanggal kedaluwarsa."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Pantau Masa Simpan & Chatbot Resep Sisa",
+                        "actor": "Pengguna & AI Chatbot",
+                        "description": "Terima notifikasi peringatan mendekati expired dan konsultasikan ide masakan sisa via AI Chatbot."
+                    }
+                ],
+                "techStack": [
+                    "Figma (High-Fidelity Prototyping & Interactive Mockup)",
+                    "Design System & Style Guide (Typography Archivo, #325540, #DEEFE7, #ECBE47)",
+                    "Quantitative Survey & Statistical Analysis (Data SIPSN & Kuisioner N=29)",
+                    "User Persona Modeling (Daffa 18-24 thn & Mariyati 55+ thn)",
+                    "User Journey Mapping (Awareness s/d Inventory) & Affinity Diagram",
+                    "Information Architecture (Flowchart & Sitemap/Navigation Map)"
+                ],
+                "deliverables": [
+                    "Hi-Fi Interactive Mobile Prototype lengkap di Figma dengan micro-interactions dan navigasi mobile.",
+                    "Dokumen Riset UI/UX: Hasil Kuisioner SIPSN, Problem Definition 5W1H, How Might We (HMW), dan User Stories.",
+                    "Pemodelan Pengguna: User Persona terperinci (Daffa & Mariyati) dan User Journey Map 6 tahapan.",
+                    "Arsitektur Informasi: Flowchart komprehensif (Analyze Stock, Inventory, Supermarket Pick-up, Chatbot) & Sitemap.",
+                    "Design System & Style Guide: Palet warna (#325540, #DEEFE7, #ECBE47), font Archivo, dan komponen kartu analisis stok."
+                ],
+                "metrics": "Menargetkan reduksi pemborosan makanan rumah tangga hingga 65% melalui mitigasi overstock dan notifikasi kedaluwarsa dini.",
+                "thumbnail": "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Eatventory Smart Food Stock Management & Food Waste Mitigation Mobile Prototype",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Dokumen Riset UI/UX & Analisis Kuisioner",
+                    "User Persona Modeling (Daffa & Mariyati)",
+                    "Customer Journey Map (CJM 6 Tahap)",
+                    "Flowchart & Arsitektur Informasi",
+                    "Design System & UI Component Library"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "Jelajahi Figma Hi-Fi Mobile Prototype",
+                        "url": "https://www.figma.com/proto/sample-eatventory-hifi-prototype",
+                        "type": "figma",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Design System & Figma Component Library",
+                        "url": "https://www.figma.com/design/sample-eatventory-design-system",
+                        "type": "figma",
+                        "icon": "📐",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "User Journey Map 6 Tahapan",
+                        "tag": "User Research",
+                        "description": "Pemetaan emosi, touchpoint, dan aksi pengguna dari Awareness hingga Smart Inventory."
+                    },
+                    {
+                        "caption": "Design System & Style Guide",
+                        "tag": "Design System",
+                        "description": "Spesifikasi palet warna #325540, tipografi Archivo, dan komponen kartu analisis stok."
+                    },
+                    {
+                        "caption": "Flowchart & Sitemap Arsitektur",
+                        "tag": "Information Architecture",
+                        "description": "Diagram alur logika analisis stok, checkout supermarket, dan deteksi notifikasi kedaluwarsa."
+                    }
+                ]
             }
         ]
     },
@@ -176,89 +857,401 @@
                 "tabColor": "bg-[#7b9da9] text-white",
                 "title": "Empact Organization Official Web Profile",
                 "category": "Component-Driven Responsive Web Development",
-                "overview": "Situs profil organisasi resmi untuk Empact (bagian dari inisiatif UKM One by Code) yang menampilkan portofolio divisi, dokumentasi acara, dan pendaftaran anggota baru.",
+                "overview": "Situs profil organisasi resmi untuk Empact (bagian dari inisiatif UKM One by Code) yang menampilkan portofolio divisi, dokumentasi acara, dan pendaftaran anggota baru secara interaktif.",
+                "academicMeta": {
+                    "institution": "Satu University — Inisiatif One by Code",
+                    "course": "Frontend Web Development",
+                    "year": "2026",
+                    "team": "One by Code Core Team",
+                    "role": "Frontend Developer"
+                },
+                "problemStatement": {
+                    "summary": "Organisasi kemahasiswaan membutuhkan wadah profil digital yang profesional, berkecepatan tinggi, dan mampu menyajikan rekrutmen daring tanpa lag di berbagai perangkat mobile.",
+                    "painPoints": [
+                        {
+                            "title": "Tampilan Organisasi Konvensional Monoton",
+                            "desc": "Banyak web organisasi menggunakan template kaku yang tidak mencerminkan identitas kreatif dan modern anggota."
+                        },
+                        {
+                            "title": "Form Pendaftaran Terpisah & Lambat",
+                            "desc": "Pendaftaran rekrutmen sering menggunakan link eksternal yang terfragmentasi dari portofolio divisi."
+                        }
+                    ]
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Responsive Component Architecture",
+                        "tag": "Frontend Engineering",
+                        "description": "Hierarki komponen modular (Hero, Mission, Department Showcase, Event Highlights, Registration Form).",
+                        "highlights": [
+                            "Navigasi sticky dinamis dengan palet aksen soft.",
+                            "Grid departemen interaktif dengan modal detail per divisi.",
+                            "Validasi client-side ramah pengguna pada form pendaftaran."
+                        ]
+                    },
+                    {
+                        "name": "2. Performance Optimization",
+                        "tag": "Web Vitals",
+                        "description": "Optimasi bundle aset untuk memastikan skor Google Lighthouse 95+.",
+                        "highlights": [
+                            "Lazy loading gambar dan ikon vektor ringan.",
+                            "Loading time instan di jaringan seluler 4G/Wi-Fi."
+                        ]
+                    }
+                ],
                 "techStack": [
                     "React.js",
                     "Tailwind CSS",
-                    "JavaScript ES6",
-                    "Responsive Layouts",
-                    "Vite"
+                    "JavaScript ES6+",
+                    "Vite Bundler",
+                    "Figma Design System"
                 ],
                 "deliverables": [
-                    "Komponen navigasi responsif dengan dukungan dark-soft accent palette.",
-                    "Hierarki komponen modular (Hero, Mission, Department Showcase, Event Highlights, Registration Form).",
-                    "Optimasi performa halaman dengan skor Google Lighthouse 95+.",
-                    "Form validasi client-side interaktif dengan penanganan feedback ramah pengguna."
+                    "Komponen web responsif 100% mobile-friendly.",
+                    "Live deployed website dengan akses cepat.",
+                    "Dokumentasi komponen dan repositori GitHub yang bersih."
                 ],
-                "metrics": "100% Mobile Responsive dengan loading time instan dan animasi transisi halus.",
-                "interactiveDemoTitle": "Live Responsive Architecture Sandbox",
-                "interactiveType": "empact_tree",
-                "interactiveData": {
-                    "bundle": "BUNDLE: 42KB GZIP",
-                    "nodes": [
-                        "<Navbar sticky={true} theme=\"garden-soft\" />",
-                        "<HeroSection badge=\"Empact 2026 Recruitment\" />",
-                        "<DepartmentGrid filterable={true} />",
-                        "<ApplicationModal onSubmit={handleRegister} />"
-                    ]
-                }
+                "metrics": "Google Lighthouse Score 98/100 dengan waktu muat halaman awal di bawah 1 detik.",
+                "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Empact Organization Modern Profile Web Application",
+                "projectLinks": [
+                    {
+                        "label": "Kunjungi Live Website",
+                        "url": "https://empact-organization.vercel.app",
+                        "type": "live",
+                        "icon": "🌐",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Source Code di GitHub",
+                        "url": "https://github.com/malyamaritza/empact-web",
+                        "type": "github",
+                        "icon": "🐙",
+                        "isPrimary": false
+                    },
+                    {
+                        "label": "Figma Design System",
+                        "url": "https://www.figma.com/proto/sample-empact-web-ui",
+                        "type": "figma",
+                        "icon": "🎨",
+                        "isPrimary": false
+                    }
+                ]
             },
             {
                 "id": "gocamp",
                 "tabName": "🔖 GOCAMP E-commerce",
                 "tabColor": "bg-[#658a97] text-white",
-                "title": "GOCAMP — Camping Gear Rental & E-Commerce",
+                "title": "GOCAMP — Casual Camping E-Commerce Platform",
                 "category": "Full Frontend + Serverless Sheets Backend Engine",
-                "overview": "Aplikasi e-commerce berbasis web statis untuk penjualan peralatan casual camping dengan arsitektur serverless (zero-cost). Memanfaatkan model pemesanan \"Order First, Pay Later\" dengan proses checkout terotomatisasi dan validasi pembayaran manual via WhatsApp.",
+                "overview": "Aplikasi e-commerce berbasis web untuk toko peralatan casual camping yang dibangun dengan arsitektur Zero-Cost Serverless. Memadukan antarmuka web statis Vanilla JS dengan Google Apps Script sebagai API backend dan Google Sheets sebagai database transaksi real-time.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Projek Pemrograman Web",
+                    "year": "2026",
+                    "team": "Individu (Malya Maritza Rahadiani - 2810010891)",
+                    "role": "Full-Stack Developer & SRS Author"
+                },
+                "problemStatement": {
+                    "summary": "Toko peralatan camping menghadapi kendala pencatatan penjualan manual dan tingginya biaya server backend tradisional (PHP/Node.js) serta fee payment gateway berbayar untuk skala bisnis awal."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Katalog Produk & Keranjang Belanja",
+                        "tag": "Sisi Pelanggan",
+                        "description": "Eksplorasi barang camping, filtering kategori (Tenda, Carrier, Cooking Set), dan keranjang belanja.",
+                        "highlights": [
+                            "Data produk diambil real-time via Fetch API dari spreadsheet Google Sheets.",
+                            "Konversi algoritma khusus URL Google Drive menjadi Direct Link publik gambar cepat.",
+                            "Keranjang belanja persisten berbasis LocalStorage peramban."
+                        ]
+                    },
+                    {
+                        "name": "2. Alur Checkout 'Order First, Pay Later'",
+                        "tag": "Transaksi Aman",
+                        "description": "Sistem pemesanan aman dengan perlindungan stok server-side.",
+                        "highlights": [
+                            "Mekanisme penguncian stok atomic (LockService Google Apps Script) untuk mencegah bentrok data.",
+                            "Pemotongan stok otomatis saat checkout sukses dan penerbitan ID order unik.",
+                            "Pengiriman email invoice konfirmasi otomatis ke pembeli."
+                        ]
+                    },
+                    {
+                        "name": "3. Panel Administrasi Toko Berkeamanan PIN",
+                        "tag": "Sisi Pengelola",
+                        "description": "Manajemen pesanan dan kalkulasi ongkir terlindungi autentikasi.",
+                        "highlights": [
+                            "Halaman admin.html dilindungi enkripsi SHA-256 password hash + salt unik (PIN: gocampAdmin2026).",
+                            "Fitur input nominal ongkos kirim manual dan tombol 'Send Bills' otomatis ke WhatsApp pelanggan.",
+                            "Fitur Decline Order dengan mekanisme otomatis mengembalikan stok (Auto-Restock) ke spreadsheet."
+                        ]
+                    },
+                    {
+                        "name": "4. Riwayat Transaksi & Audit Log",
+                        "tag": "Pelaporan",
+                        "description": "Arsip pesanan berstatus Paid atau Declined dengan filter pencarian instan."
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Pilih Produk & Tambah Keranjang",
+                        "actor": "Pelanggan",
+                        "description": "Telusuri katalog, tambahkan barang ke keranjang belanja lokal."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Checkout & Atomic Lock Validasi",
+                        "actor": "Pelanggan & Google Script",
+                        "description": "Kirim form; backend mengunci stok via LockService, potong stok, simpan row pesanan, kirim email invoice."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Admin Review & Hitung Ongkir",
+                        "actor": "Admin Toko (admin.html)",
+                        "description": "Buka panel dengan PIN, masukkan ongkos kirim pada pesanan Pending."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Kirim Tagihan via WhatsApp",
+                        "actor": "Admin & WhatsApp API",
+                        "description": "Klik 'Send Bills'; tautan otomatis membuka chat WhatsApp berisi rincian pesanan dan nomor rekening."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Verifikasi Bayar / Auto-Restock",
+                        "actor": "Admin Toko",
+                        "description": "Bukti transfer valid mengubah status jadi 'Paid'. Jika batal, klik 'Decline' dan stok otomatis kembali bertambah."
+                    }
+                ],
                 "techStack": [
-                    "HTML5",
-                    "CSS3",
-                    "JavaScript (Vanilla)",
-                    "Google Apps Script",
-                    "Google Sheets API"
+                    "HTML5 Semantik",
+                    "CSS3 Modern Variable",
+                    "Vanilla JavaScript (ES6+)",
+                    "Google Apps Script (GAS Engine)",
+                    "Google Sheets Database",
+                    "WhatsApp Click-to-Chat API",
+                    "Vercel Static Web Hosting"
                 ],
                 "deliverables": [
-                    "Katalog produk responsif yang mendukung navigasi, fungsi pencarian barang, dan filtering produk spesifik.",
-                    "Manajemen keranjang belanja dinamis yang menyimpan data pengguna sementara melalui LocalStorage peramban.",
-                    "Sistem proses Checkout dengan validasi pengurangan ketersediaan stok fisik real-time berbasis Locking Mechanism di sisi server backend.",
-                    "Dasbor admin terproteksi PIN (kriptografi hashing SHA-256) untuk konfirmasi pelunasan, penambahan biaya ongkos kirim, dan rekapitulasi riwayat pesanan."
+                    "Dokumen Lengkap Spesifikasi Kebutuhan Perangkat Lunak (SRS GoCamp 2026).",
+                    "Class Diagram & Multilayer Sequence Diagram untuk 'Checkout' dan 'Kelola Pesanan'.",
+                    "Aplikasi Web E-Commerce live deployed di Vercel dengan panel admin terproteksi PIN.",
+                    "Backend Script Google Apps Script dengan proteksi konkurensi data stok."
                 ],
-                "metrics": "Memproses sinkronisasi data transaksi ke Google Sheets dalam waktu rata-rata 5-8 detik dan load time awal kurang dari 5 detik.",
-                "interactiveDemoTitle": "Serverless Webhook Data Flow",
-                "interactiveType": "gocamp_sheets",
-                "interactiveData": {
-                    "endpoint": "POST /macros/s/...exec",
-                    "samplePayload": "{ customerName: \"Malya\", cartItems: [\"Tent 4P\", \"Carrier 60L\"], rentalDays: 3, totalPrice: 175000 }",
-                    "statusMsg": "✓ Status 200 OK — Row appended & Mail Dispatch Triggered"
-                }
+                "metrics": "Zero-cost database & backend hosting dengan waktu pemrosesan transaksi 5-8 detik dan uptime 99%.",
+                "thumbnail": "../assets/thumbnail_gocamp.png",
+                "thumbnailAlt": "GOCAMP Camping Equipment Rental & Store Platform",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SRS)",
+                    "Class Diagram",
+                    "Multilayer Sequence Diagram",
+                    "Arsitektur Google Apps Script (GAS)",
+                    "Skema Database Google Sheets"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "View GoCamp Website",
+                        "url": "gocamp-project.vercel.app/",
+                        "type": "live",
+                        "icon": "🏕️",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Akses Admin Panel (PIN: gocampAdmin2026)",
+                        "url": "https://gocamp-project.vercel.app/admin.html",
+                        "type": "live",
+                        "icon": "🔐",
+                        "isPrimary": false
+                    },
+                    {
+                        "label": "Source Code Frontend & Backend Script",
+                        "url": "https://github.com/malyamaritza/gocamp-serverless-ecommerce",
+                        "type": "github",
+                        "icon": "🐙",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Activity Diagram Checkout",
+                        "tag": "UML Workflow",
+                        "description": "Alur transaksi pelanggan dari keranjang hingga penyimpanan Google Sheets."
+                    },
+                    {
+                        "caption": "Multilayer Sequence Diagram",
+                        "tag": "Backend Logic",
+                        "description": "Komunikasi asinkron antara Client, GAS, LockService, dan Sheets."
+                    },
+                    {
+                        "caption": "Dashboard Admin Panel",
+                        "tag": "Admin Interface",
+                        "description": "Antarmuka pemrosesan pesanan, input ongkir, dan trigger WhatsApp."
+                    }
+                ]
             },
             {
                 "id": "edulms",
                 "tabName": "🔖 Edu LMS Prototype",
                 "tabColor": "bg-[#94B4C1] text-slate-900",
-                "title": "Edu LMS — E-Learning Management System",
+                "title": "Edu LMS — Student Portal Interface Demo",
                 "category": "Educational Experience & Course Flow Prototyping",
-                "overview": "Antarmuka pembelajaran daring adaptif yang berorientasi pada kemudahan navigasi silabus mata kuliah, tracking progres modul, dan submit tugas mahasiswa.",
+                "overview": "Prototipe interaktif Learning Management System (LMS) berbasis front-end yang didesain khusus dari sudut pandang (POV) mahasiswa untuk perguruan tinggi. Menghadirkan navigasi intuitif, konsistensi visual, dan fungsionalitas simulasi akademik menyeluruh tanpa ketergantungan backend kompleks.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Human-Computer Interaction & Frontend Web",
+                    "year": "2026",
+                    "team": "Individu (Malya Maritza Rahadiani)",
+                    "role": "Frontend Developer & UI Designer"
+                },
+                "problemStatement": {
+                    "summary": "Mahasiswa kerap menghadapi portal akademik yang rumit, navigasi tugas yang membingungkan antar kelas teori dan praktikum, keterlambatan pengumpulan tugas akibat ketiadaan indikator urgensi waktu, serta kekhawatiran privasi ketika nilai akademik terpampang di layar kelas."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Dashboard (Pusat Kendali Mahasiswa)",
+                        "tag": "Beranda Real-Time",
+                        "description": "Ringkasan seluruh aktivitas akademik semester berjalan dalam satu pandangan.",
+                        "highlights": [
+                            "Learning Progress Bar per mata kuliah semester berjalan.",
+                            "Attendance Recap pie chart persentase dengan warning otomatis jika absen > 1x.",
+                            "Task Notifications dengan urutan deadline terdekat dan indikator urgensi warna.",
+                            "Mading Kampus slider pengumuman digital dan Mini Calendar (onsite vs VC meeting point).",
+                            "To-Do List otomatis dari Kanban board dan notifikasi nilai baru dosen."
+                        ]
+                    },
+                    {
+                        "name": "2. Courses (Mata Kuliah & Silabus)",
+                        "tag": "Eksplorasi Matkul",
+                        "description": "Akses lengkap bahan ajar dengan pemisahan kelas Lecture (Teori) dan Lab (Praktikum).",
+                        "highlights": [
+                            "Tab Session: topik utama, subtopik, learning outcome, dan akses bahan PPT/Docs.",
+                            "Tab Assessment Rubric: tabel transparan kriteria skor 0-100.",
+                            "Tab People: daftar foto, nama, NIM, dan prodi rekan satu kelas.",
+                            "Tab Attendance & Project: pintasan cepat ke rekap absensi dan proyek kelas."
+                        ]
+                    },
+                    {
+                        "name": "3. Assessment (Tugas & Ujian)",
+                        "tag": "Evaluasi Pembelajaran",
+                        "description": "Pusat manajemen tugas dengan penghitung waktu mundur dan histori penugasan.",
+                        "highlights": [
+                            "Urutan deadline terdekat dengan countdown hari/jam/menit dan rasio penyelesaian (misal 3/4 finished).",
+                            "Submission Form dengan pelacak attempt tersisa, daftar pertanyaan, dan validasi unggah file (PDF/Word).",
+                            "Informasi identitas anggota kelompok penugasan tim."
+                        ]
+                    },
+                    {
+                        "name": "4. Project & Kanban Board Manager",
+                        "tag": "Kolaborasi Semesteran",
+                        "description": "Pengelolaan penugasan kelompok jangka panjang dengan papan kerja visual.",
+                        "highlights": [
+                            "Routine Progress Card mingguan yang terbit berkala setelah dosen memberi penilaian.",
+                            "Kanban Board interaktif CRUD: Backlog, To-do, In Progress, Waiting, Done.",
+                            "Fitur drag-and-drop sticky notes, penugasan anggota lewat dropdown, dan level urgensi."
+                        ]
+                    },
+                    {
+                        "name": "5. Schedule, Attendance & Report (Privacy Mode)",
+                        "tag": "Transkrip & Kehadiran",
+                        "description": "Kalender akademik harian, rekap absensi, dan transkrip nilai aman.",
+                        "highlights": [
+                            "Schedule: kalender terpadu jadwal harian matkul.",
+                            "Attendance: progress bar proporsi kehadiran (contoh 8/12 sesi) dengan log riwayat per pertemuan.",
+                            "Report: IPK, visualisasi grafik rata-rata, dan fitur 'Privacy Mode' (sensor angka bawaan yang dapat dibuka dengan ikon mata)."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Review Dashboard & Urgensi Tugas",
+                        "actor": "Mahasiswa",
+                        "description": "Cek jadwal kelas terdekat, pengumuman mading, dan countdown tugas yang harus dikumpulkan."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Akses Materi & Sesi Kuliah",
+                        "actor": "Mahasiswa",
+                        "description": "Buka tab matkul Lecture/Lab, unduh PPT sesi hari ini, dan periksa rubrik penilaian skor."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Submit Tugas dengan Validasi",
+                        "actor": "Mahasiswa",
+                        "description": "Unggah file laporan sesuai batas ukuran, periksa status attempt, konfirmasi submit."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Kolaborasi Tim di Kanban Board",
+                        "actor": "Tim Mahasiswa",
+                        "description": "Geser sticky notes kartu progres mingguan dari To-do ke Done secara kolaboratif."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Pantau Transkrip Nilai (Privacy Mode)",
+                        "actor": "Mahasiswa",
+                        "description": "Buka modul Report, klik ikon mata untuk membuka sensor angka nilai IPK dan nilai tugas."
+                    }
+                ],
                 "techStack": [
-                    "HTML5",
-                    "Bootstrap / Tailwind",
-                    "CSS Grid",
-                    "JavaScript UI Controls"
+                    "HTML5 Semantik (POV Mahasiswa)",
+                    "CSS3 / Custom CSS Variables (Grid & Flexbox)",
+                    "Vanilla JavaScript (DOM Manipulation)",
+                    "HTML5 Drag & Drop API (Kanban Board)",
+                    "Chart.js (Pie Chart & Metrik Akademik)",
+                    "LocalStorage Simulation"
                 ],
                 "deliverables": [
-                    "Struktur dashboard mahasiswa terfokus: progress bar mingguan dan deadline submission tracker.",
-                    "Media viewer interaktif untuk modul teks dan presentasi materi kuliah.",
-                    "Komponen rubrik penilaian tugas transparan bagi pengajar dan mahasiswa.",
-                    "Aksesibilitas kontras warna WCAG AA untuk kenyamanan membaca berdurasi panjang."
+                    "7 Modul Antarmuka Mahasiswa Interaktif Berjalan di Browser.",
+                    "Sistem Papan Kanban Berbasis Drag-and-Drop tanpa Eksternal Framework Berat.",
+                    "Fitur Privacy Mode Sensor Nilai dengan Mekanisme Toggle Ikon Mata.",
+                    "Dokumentasi Kode Bersih Siap Dijalankan via Live Server."
                 ],
-                "metrics": "Peningkatan 40% kecepatan akses mahasiswa ke materi kuliah prioritas.",
-                "interactiveDemoTitle": "Student Progress Interface Module",
-                "interactiveType": "edulms_progress",
-                "interactiveData": {
-                    "moduleCode": "IS_ARCHITECTURE_WEEK_04",
-                    "percent": 75,
-                    "upcoming": "Assignment 02 - Normalization Case Study (Due Friday)"
-                }
+                "metrics": "Zero backend setup diperlukan, 100% responsif dengan waktu muat instan untuk demonstrasi perkuliahan.",
+                "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Edu LMS Student Learning Management Dashboard",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Spesifikasi Antarmuka Portal Mahasiswa",
+                    "Information Architecture (Sitemap LMS)",
+                    "Komponen Evaluasi & Rubrik Penilaian",
+                    "Kanban Workflow Logic"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "View Interface Edu LMS",
+                        "url": "edu-lms-project-fe.vercel.app",
+                        "type": "live",
+                        "icon": "🎓",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Source Code HTML/CSS/JS di GitHub",
+                        "url": "https://github.com/malyamaritza/edulms-student-portal",
+                        "type": "github",
+                        "icon": "🐙",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Dashboard Akademik POV Mahasiswa",
+                        "tag": "Interface Mockup",
+                        "description": "Ringkasan progress bar mingguan, kalender, dan mading pengumuman."
+                    },
+                    {
+                        "caption": "Kanban Board Project Kelompok",
+                        "tag": "Interactive Feature",
+                        "description": "Papan kerja interaktif dengan kartu sticky notes drag-and-drop."
+                    },
+                    {
+                        "caption": "Modul Report Nilai & Privacy Sensor",
+                        "tag": "Privacy Feature",
+                        "description": "Fitur sensor angka transkrip nilai untuk kenyamanan di tempat umum."
+                    }
+                ]
             }
         ]
     },
@@ -266,7 +1259,7 @@
         "id": "catC",
         "volumeLabel": "Archive Vol. 03",
         "title": "Gamification & Interactive Media",
-        "subtitle": "ELO Social Challenge and Frontyard Volleyball 2D.",
+        "subtitle": "ELO Communication App and Frontyard Volley (Cat vs Dog).",
         "countLabel": "2 Simulations",
         "icon": "🎮",
         "spineColor": "#c8877b",
@@ -277,79 +1270,375 @@
         "tabs": [
             {
                 "id": "elo",
-                "tabName": "🔖 ELO (Agilis)",
-                "tabColor": "bg-[#c8877b] text-white",
-                "title": "ELO — Sustainable Social Challenge Gamification",
-                "category": "Behavioral Gamification & Experience Design",
-                "overview": "Aplikasi mobile prototype yang mendorong perilaku ramah lingkungan masyarakat urban melalui mekanik gamifikasi, perolehan XP poin, leaderboard komunitas, dan penukaran voucher.",
+                "tabName": "🔖 Elo Communication App",
+                "tabColor": "bg-[#e89078] text-white",
+                "title": "Elo — Developing Your Communication Skill with Elo",
+                "category": "Projek Kewirausahaan, AI Conversation Practice & Mobile Gamification",
+                "overview": "Aplikasi pembantu peningkatan skill komunikasi yang dirancang oleh tim Powerpuff untuk mata kuliah Projek Kewirausahaan. Elo membantu pengguna mengatasi rasa kurang percaya diri, canggung, dan kesulitan menyusun kata saat berbicara melalui latihan percakapan berbasis simulasi AI (chat/audio), panduan interaktif tips komunikasi (intonasi & gestur), challenge bertahap, rekomendasi topik pembicaraan, grup komunitas pengguna, dan progress tracker ulasan berkala.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Projek Kewirausahaan",
+                    "year": "2025",
+                    "team": "Powerpuff (Malya Maritza Rahadiani, Frisco Thioris, Rachell Helena Sharon Gloria, Kaisan Fadhil, Lydia Cherine)",
+                    "role": "UI/UX Designer & Product Strategist"
+                },
+                "problemStatement": {
+                    "summary": "Kepercayaan diri dalam komunikasi merupakan faktor penting dalam kehidupan sosial dan profesional. Namun, banyak individu (khususnya pelajar, mahasiswa, dan pekerja muda rentang usia 15-25 tahun) mengalami kesulitan dalam berbicara di depan umum, berinteraksi dengan orang baru, atau menyampaikan pendapat dengan jelas."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Challenge Rutin Berjenjang (Gamifikasi)",
+                        "tag": "Core Practice",
+                        "description": "Pengguna diberikan challenge rutin dengan tingkat kesulitan yang meningkat secara bertahap.",
+                        "highlights": [
+                            "Metode utama pengguna untuk melatih dan meningkatkan kemampuan public speaking secara terukur.",
+                            "Tantangan bertahap yang memungkinkan user berinteraksi langsung dengan orang lain dengan dukungan aplikasi.",
+                            "Gamifikasi yang memotivasi rutinitas latihan komunikasi harian."
+                        ]
+                    },
+                    {
+                        "name": "2. Chatbot AI (Simulasi Chat & Audio)",
+                        "tag": "AI Simulation",
+                        "description": "Latihan percakapan dua arah interaktif langsung bersama asisten AI.",
+                        "highlights": [
+                            "Simulasi percakapan fleksibel melalui mode chat teks maupun rekaman audio/voice.",
+                            "Sistem merekam percakapan lalu memberikan ulasan dan umpan balik (feedback) mengenai percakapan yang dilakukan.",
+                            "Lingkungan latihan yang aman dan privat tanpa kekhawatiran penilaian orang lain."
+                        ]
+                    },
+                    {
+                        "name": "3. Tips & Trik Komunikasi Efektif",
+                        "tag": "Knowledge Base",
+                        "description": "Puluhan tips dan trik tambahan yang dapat dipelajari pengguna untuk meningkatkan efektivitas komunikasi.",
+                        "highlights": [
+                            "Panduan intonasi suara, artikulasi, dan tempo berbicara yang tepat.",
+                            "Panduan gestur tubuh dan kontak mata untuk membangun kepercayaan diri.",
+                            "Materi berbasis keilmuan yang dirancang bersama pakar komunikasi dan psikolog."
+                        ]
+                    },
+                    {
+                        "name": "4. Daftar Rekomendasi Topik Pembicaraan",
+                        "tag": "Conversation Starters",
+                        "description": "Penyediaan daftar topik pembicaraan menarik untuk mencairkan suasana dan memperlancar komunikasi.",
+                        "highlights": [
+                            "Kategori topik beragam: Hobi, Makanan Favorit, Film/Series, Fakta Menarik, Musik, Cerita Sekolah, Pengalaman Unik, dan Liburan.",
+                            "Membantu pengguna mengatasi momen canggung saat kenalan awal maupun interaksi sosial sehari-hari."
+                        ]
+                    },
+                    {
+                        "name": "5. Grup & Komunitas Pengguna",
+                        "tag": "Community Support",
+                        "description": "Wadah grup dan komunitas di mana pengguna dapat saling bertemu dengan orang berhobi atau lingkungan serupa.",
+                        "highlights": [
+                            "Mendukung user berinteraksi langsung dengan real-people dalam suasana yang nyaman dan berstandar aplikasi.",
+                            "Ruang saling dukung antar pengguna yang sama-sama ingin meningkatkan kemampuan komunikasi."
+                        ]
+                    },
+                    {
+                        "name": "6. Model Bisnis (Free, Subscription & Coin Purchase)",
+                        "tag": "Revenue Streams",
+                        "description": "Struktur monetisasi fleksibel yang dirancang untuk segmen pelajar, mahasiswa, dan pekerja muda.",
+                        "highlights": [
+                            "A. Free: Akses gratis ke fitur dasar dengan batasan fitur berbayar (penggunaan AI Voice, kustomisasi profil, tema).",
+                            "B. Subscription: Rp 35.000 / bulan per user untuk akses unlimited ke seluruh fitur aplikasi.",
+                            "C. Coin Purchase: Pembelian paket koin aplikasi (Rp 7.000 - Rp 25.000 / Rp 10.000 - Rp 50.000) untuk membuka fitur premium satuan."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Pilih Topik & Pelajari Tips Komunikasi",
+                        "actor": "Pengguna",
+                        "description": "Pengguna memilih topik obrolan (Hobi, Musik, Film, dsb.) dan mempelajari tips intonasi serta gestur tubuh."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "Latihan Simulasi Percakapan AI (Chat/Audio)",
+                        "actor": "Pengguna & Chatbot AI",
+                        "description": "Pengguna melatih percakapan langsung dengan AI; sistem merekam dialog yang dilakukan secara interaktif."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Terima Ulasan & Evaluasi Percakapan",
+                        "actor": "Sistem AI Evaluator",
+                        "description": "Sistem menyajikan ulasan mendalam mengenai jalannya percakapan dan area komunikasi yang perlu ditingkatkan."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Ikuti Challenge Rutin Bertahap",
+                        "actor": "Pengguna & Gamifikasi",
+                        "description": "Pengguna menyelesaikan challenge harian dengan tingkat kesulitan meningkat untuk mengasah public speaking."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Terhubung di Komunitas & Akses Fitur Premium",
+                        "actor": "Pengguna & Komunitas",
+                        "description": "Pengguna berinteraksi di grup komunitas sehobi atau menggunakan koin/subscription untuk akses fitur tanpa batas."
+                    }
+                ],
                 "techStack": [
-                    "Figma Interactive Prototype",
-                    "Gamification Design Framework",
-                    "User Persona Modeling"
+                    "Business Model Canvas (BMC) 9 Blok Lengkap",
+                    "Competitive Advantages Matrix (Speeko, Orai, Ruangguru, SpeakUp)",
+                    "Feedback Grid Analysis (Likes, Criticisms, Questions, Ideas)",
+                    "Target Audience Segmentation (Pelajar, Mahasiswa & Pekerja Muda 15-25 th)",
+                    "Figma Mobile UI/UX Prototyping",
+                    "Social Media Campaign Strategy (TikTok & YouTube)"
                 ],
                 "deliverables": [
-                    "Sistem leveling karakter pohon virtual yang bertumbuh seiring terselesaikannya misi keberlanjutan.",
-                    "Pemberian reward badges otomatis: 'Zero Waste Warrior', 'Public Transport Enthusiast', dsb.",
-                    "Katalog penukaran poin XP dengan voucher diskon brand mitra lokal yang terverifikasi.",
-                    "Fitur Social Feed untuk berbagi bukti aksi lingkungan bersama komunitas."
+                    "Laporan Presentasi Akhir Kewirausahaan: Business Model Canvas (BMC) 9 Blok Lengkap.",
+                    "Analisis Keunggulan Kompetitif: Matriks perbandingan kuadran harga vs kualitas terhadap Speeko, Orai, dan SpeakUp.",
+                    "Feedback Grid Validasi Pengguna: Evaluasi fitur komunitas, kritik desain remaja, pertanyaan situasi topik, dan ide variasi karakter AI.",
+                    "Strategi Pemasaran Media Sosial: Konten video promosi singkat via YouTube dan TikTok (@elo_communication).",
+                    "Desain Prototipe Mobile App di Figma: Alur Onboarding, Home Challenge Path, AI Practice (Chat/Voice), dan Topic Directory."
                 ],
-                "metrics": "Tingkat retensi pengguna terproyeksi meningkat 65% dibandingkan aplikasi pelacak kebiasaan konvensional.",
-                "interactiveDemoTitle": "Gamification Mechanic Breakdown",
+                "metrics": "Target segmen usia 15-25 tahun dengan harga langganan kompetitif Rp 35.000/bulan dan paket koin terjangkau Rp 7.000 - Rp 25.000.",
+                "thumbnail": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Elo Communication Skill Mobile App Prototype by Powerpuff",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Business Model Canvas (BMC) 9 Blok",
+                    "Competitive Advantage Matrix",
+                    "Feedback Grid Analysis",
+                    "Target Audience Segmentation",
+                    "Pitch Deck Presentasi Akhir"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "Desain Prototipe Mobile App di Figma",
+                        "url": "https://www.figma.com/proto/sample-elo-communication-app",
+                        "type": "figma",
+                        "icon": "🎨",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Kanal Kampanye TikTok @elo_communication",
+                        "url": "https://tiktok.com/@elo_communication",
+                        "type": "other",
+                        "icon": "📱",
+                        "isPrimary": false
+                    },
+                    {
+                        "label": "Video Promosi Aplikasi di YouTube",
+                        "url": "https://youtube.com/watch?v=sample-elo-promo",
+                        "type": "other",
+                        "icon": "🎬",
+                        "isPrimary": false
+                    }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Business Model Canvas (BMC)",
+                        "tag": "Business Architecture",
+                        "description": "9 blok model bisnis mencakup segmen usia 15-25 tahun, value proposition 5 fitur, channel TikTok/YouTube, dan revenue stream subscription Rp 35.000."
+                    },
+                    {
+                        "caption": "Feedback Grid Pengguna",
+                        "tag": "User Validation",
+                        "description": "Evaluasi respon pengguna mengenai fitur komunitas, rekomendasi topik, tes penempatan level awal, dan saran desain lebih colorful."
+                    },
+                    {
+                        "caption": "Competitive Advantages Matrix",
+                        "tag": "Market Analysis",
+                        "description": "Posisi ELO pada kuadran kualitas tinggi dengan harga langganan kompetitif dibandingkan Speeko, Orai, dan SpeakUp."
+                    }
+                ],
+                "interactiveDemoTitle": "Simulasi Siklus Latihan Komunikasi Elo",
                 "interactiveType": "elo_loop",
                 "interactiveData": {
                     "loop": [
                         {
                             "num": "1",
-                            "label": "Daily Quest",
-                            "icon": "🌱"
+                            "label": "Pilih Topik",
+                            "icon": "💬"
                         },
                         {
                             "num": "2",
-                            "label": "Proof Upload",
-                            "icon": "📸"
+                            "label": "Simulasi AI",
+                            "icon": "🤖"
                         },
                         {
                             "num": "3",
-                            "label": "XP + Tree Growth",
-                            "icon": "⭐"
+                            "label": "Challenge Rutin",
+                            "icon": "🎯"
                         },
                         {
                             "num": "4",
-                            "label": "Real Reward",
-                            "icon": "🎁"
+                            "label": "Review & Koin",
+                            "icon": "🪙"
                         }
                     ]
                 }
             },
             {
                 "id": "volleyball",
-                "tabName": "🔖 Frontyard Volleyball",
+                "tabName": "🔖 Frontyard Volley (Cat vs Dog)",
                 "tabColor": "bg-[#E8A598] text-stone-900",
-                "title": "Frontyard Volleyball — 2D Pixel Retro Arcade",
-                "category": "Interactive HTML5 Canvas Game Engine",
-                "overview": "Game arkade 2-pemain klasik bertema halaman rumah bernuansa santai, menampilkan pertarungan voli antara karakter Kucing dan Anjing dengan simulasi gravitasi bola realistis.",
+                "title": "Frontyard Volley: Cat vs Dog — 2D Retro 16-Bit Pixel Art Game",
+                "category": "Vanilla JavaScript (ES6+), HTML5 Canvas Physics & Custom Arcade Engine",
+                "overview": "Game kasual 2D bertema olahraga voli yang dirancang untuk mode permainan lokal dua pemain (local multiplayer). Mengusung estetika visual retro 16-bit pixel art, game ini menampilkan duel ketangkasan antara karakter Kucing (Player 1) dan Anjing (Player 2) di area halaman rumah. Terinspirasi dari game legendaris era 90-an/2000-an Pikachu Volleyball, game ini dibangun murni from scratch tanpa third-party game engine guna menguji kemampuan implementasi logika komputasi visual, engine fisika matematis, Finite State Machine animasi spritesheet, dan Web Audio API pada kecepatan standar 60 FPS stabil.",
+                "academicMeta": {
+                    "institution": "Satu University — Fakultas Teknologi Kreatif",
+                    "course": "Interactive Media & Visual Game Programming",
+                    "year": "2025",
+                    "team": "Individu (Malya Maritza Rahadiani)",
+                    "role": "Game Developer"
+                },
+                "problemStatement": {
+                    "summary": "Menghadirkan kembali nuansa nostalgia mekanik arcade klasik legendaris Pikachu Volleyball era 90-an dengan sentuhan karakter orisinal Kucing vs Anjing, sekaligus menguji kemampuan implementasi logika komputasi visual murni (from scratch) tanpa bergantung pada pustaka eksternal (third-party game engine seperti Unity, Godot, atau Phaser)."
+                },
+                "keyModules": [
+                    {
+                        "name": "1. Rendering HTML5 Canvas & 60 FPS Game Loop",
+                        "tag": "Graphics Pipeline",
+                        "description": "Pemanfaatan window.requestAnimationFrame() untuk menghasilkan siklus render mulus pada kecepatan standar 60 frame per detik (FPS).",
+                        "highlights": [
+                            "Elemen <canvas> sebagai wadah rendering visual utama beresolusi native.",
+                            "Struktur semantik HTML5 dan CSS3 responsif bergaya retro (Press Start 2P, blink animation, tombol bergaya piksel)."
+                        ]
+                    },
+                    {
+                        "name": "2. Arsitektur OOP & Finite State Machine (FSM) Spritesheet",
+                        "tag": "Character Animation",
+                        "description": "Logika permainan berbasis Object-Oriented Programming (Class Player dan Ball) dengan sistem animasi spritesheet.",
+                        "highlights": [
+                            "Teknik spritesheet animation berbasis cropping koordinat frame secara dinamis.",
+                            "Finite State Machine (FSM) yang berpindah status secara mulus antara idle, walk, jump, smash, dive, win, dan lose."
+                        ]
+                    },
+                    {
+                        "name": "3. Sistem Fisika Kustom (Gravitasi, Akselerasi & Friksi)",
+                        "tag": "Physics Engine",
+                        "description": "Perhitungan matematis murni tanpa game engine pihak ketiga untuk simulasi pergerakan dinamis.",
+                        "highlights": [
+                            "Perhitungan vektor kecepatan horizontal (vx) dan vertikal (vy) dengan penambahan gaya tarik gravitasi berkala.",
+                            "Friksi permukaan: penurunan momentum horizontal bertahap saat tombol dilepas untuk sensasi selip yang natural."
+                        ]
+                    },
+                    {
+                        "name": "4. Sistem Fisika Net (Top vs Side Collision)",
+                        "tag": "Net Mechanics",
+                        "description": "Pembagian zona tabrakan tiang net di area tengah halaman rumah.",
+                        "highlights": [
+                            "Top Collision: pantulan kecil ke atas saat bola menyentuh bibir atas tiang net.",
+                            "Side Collision: peredaman tenaga hingga 50% saat bola membentur badan tiang net."
+                        ]
+                    },
+                    {
+                        "name": "5. Deteksi Tabrakan AABB & Hitbox Padding Presisi",
+                        "tag": "Collision Detection",
+                        "description": "Penerapan metode Axis-Aligned Bounding Box dengan toleransi jangkauan serangan smash.",
+                        "highlights": [
+                            "Penyesuaian hitbox padding agar batas tabrakan presisi pada lekuk tubuh karakter Kucing dan Anjing.",
+                            "Kalkulasi sudut pantul dinamis berdasarkan titik tumpu benturan bola.",
+                            "Perluasan jangkauan hitbox (reach tolerance) saat karakter berada pada fase serangan smash."
+                        ]
+                    },
+                    {
+                        "name": "6. Manajemen Alur Permainan & Web Audio API Engine",
+                        "tag": "Audio & Game Flow",
+                        "description": "Pengaturan siklus status permainan dan integrasi efek suara interaktif.",
+                        "highlights": [
+                            "Penerapan multi-kondisi permainan: MENU, INTRO, PLAY, POINT, dan GAME_OVER.",
+                            "Sinkronisasi jeda waktu antara efek slow motion, teks aba-aba, dan kemunculan bola.",
+                            "Web Audio API: Background Music (BGM) dan Sound Effects (SFX) interaktif dengan pengaturan volume independen (mixing) dan kontrol on/off."
+                        ]
+                    }
+                ],
+                "businessWorkflow": [
+                    {
+                        "stepNumber": "01",
+                        "title": "Menu Utama & Inisialisasi Kontrol Lokal (2-Player)",
+                        "actor": "Pemain 1 & Pemain 2",
+                        "description": "Pemain 1 mengendalikan Kucing (sisi kiri) dan Pemain 2 mengendalikan Anjing (sisi kanan) pada tata letak antarmuka retro."
+                    },
+                    {
+                        "stepNumber": "02",
+                        "title": "State INTRO & Aba-Aba Servis Bola",
+                        "actor": "State Manager",
+                        "description": "Status INTRO menampilkan teks aba-aba retro sebelum bola dimunculkan dan diservis melambung ke lapangan."
+                    },
+                    {
+                        "stepNumber": "03",
+                        "title": "Manuver Posisi, Penyelamatan (Dive) & Smash",
+                        "actor": "FSM & Physics Loop",
+                        "description": "Pemain bermanuver melompat, melakukan aksi penyelamatan dive saat bola rendah, atau mengeksekusi serangan smash menukik."
+                    },
+                    {
+                        "stepNumber": "04",
+                        "title": "Kalkulasi Tabrakan Net & Titik Pantul Bola",
+                        "actor": "AABB Collision Engine",
+                        "description": "Sistem menghitung benturan bola pada bibir atas net (pantul atas) atau badan tiang net (teredam 50%)."
+                    },
+                    {
+                        "stepNumber": "05",
+                        "title": "Skor Poin, Efek Slow Motion & Status Game Over",
+                        "actor": "Game Rules & Audio API",
+                        "description": "Bola menyentuh tanah memicu kondisi POINT dengan slow motion; game berakhir di kondisi GAME_OVER dengan selebrasi win state."
+                    }
+                ],
                 "techStack": [
-                    "HTML5 Canvas API",
-                    "Pure JavaScript",
-                    "2D Physics & Collision",
-                    "Sprite Sheet Rendering"
+                    "HTML5 (<canvas> Native 2D Context & Layout Semantik)",
+                    "CSS3 (Retro Typography Press Start 2P, Blink Effect & Pixel UI)",
+                    "Vanilla JavaScript ES6+ (Zero External Libraries / From Scratch)",
+                    "Object-Oriented Programming (Class Player & Class Ball)",
+                    "Finite State Machine (FSM Spritesheet Animation)",
+                    "Custom Mathematical Physics (Gravity, Vectors vx/vy, Surface Friction)",
+                    "AABB Collision Detection with Hitbox Padding & Reach Tolerance",
+                    "Web Audio API (Synthesized BGM, Interactive SFX & Volume Mixing)"
                 ],
                 "deliverables": [
-                    "Custom Physics Engine ringan: gravitasi bola, elastisitas net, dan kecepatan pantulan sudut raket/kepala.",
-                    "Dukungan dual-input keyboard lokal (Player 1: WASD, Player 2: Arrow Keys) tanpa input lag.",
-                    "Sprite sheet animation engine untuk karakter idle, jumping, and smashing.",
-                    "Pencatat skor digital otomatis dengan win-condition set 15 poin dan selebrasi visual confetti."
+                    "Game 2D Frontyard Volley (Cat vs Dog) Lokal 2-Pemain Berjalan Native di Browser pada 60 FPS.",
+                    "Engine Fisika Kustom: Gravitasi bertahap, akselerasi vektor, friksi luncur, dan tabrakan net dual-zone (top vs side 50%).",
+                    "Sistem Animasi Karakter FSM: 7 status gerak (idle, walk, jump, smash, dive, win, lose) berbasis dinamic frame cropping.",
+                    "Arsitektur Game Loop & State Flow: Transisi multi-kondisi MENU, INTRO, PLAY, POINT, dan GAME_OVER.",
+                    "Sistem Web Audio API: Pengolahan BGM dan SFX interaktif dengan kontrol mixing volume independen."
                 ],
-                "metrics": "Konsisten berjalan pada 60 FPS tanpa external gaming framework atau library berat.",
-                "interactiveDemoTitle": "Canvas Physics Simulation Preview",
-                "interactiveType": "volleyball_game",
-                "interactiveData": {
-                    "fps": "60_FPS",
-                    "initialScore": {
-                        "p1": 8,
-                        "p2": 6
+                "metrics": "100% Vanilla JavaScript tanpa library eksternal, beroperasi stabil 60 FPS dengan rendering native canvas.",
+                "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+                "thumbnailAlt": "Frontyard Volley Cat vs Dog 2D Retro Pixel Game",
+                "gdriveDocumentationUrl": "",
+                "documentationLabels": [
+                    "Spesifikasi Teknis Engine & Project Brief",
+                    "Finite State Machine (FSM) Diagram",
+                    "Kalkulasi Fisika Net & Vektor Pantulan",
+                    "Web Audio Pipeline & Spritesheet Map"
+                ],
+                "projectLinks": [
+                    {
+                        "label": "Mainkan Game di Browser (Live Demo)",
+                        "url": "frontyard-volleygame.vercel.app",
+                        "type": "live",
+                        "icon": "🎮",
+                        "isPrimary": true
+                    },
+                    {
+                        "label": "Source Code Engine di GitHub",
+                        "url": "https://github.com/malyamaritza/frontyard-volleyball-canvas",
+                        "type": "github",
+                        "icon": "🐙",
+                        "isPrimary": false
                     }
-                }
+                ],
+                "galleryDocumentation": [
+                    {
+                        "caption": "Finite State Machine Karakter Spritesheet",
+                        "tag": "Animation System",
+                        "description": "Transisi status gerak dinamis antara idle, walk, jump, smash, dive, win, dan lose pada karakter Kucing dan Anjing."
+                    },
+                    {
+                        "caption": "Dual-Zone Net Physics & Collision",
+                        "tag": "Physics Engine",
+                        "description": "Pemisahan top collision (pantulan ke atas) dan side collision (peredaman kecepatan 50%) pada tiang net."
+                    },
+                    {
+                        "caption": "Multi-State Game Flow & Audio Mixing",
+                        "tag": "Game Architecture",
+                        "description": "Sinkronisasi state MENU, INTRO, PLAY, POINT, GAME_OVER dengan Web Audio API untuk BGM dan efek suara."
+                    }
+                ],
+                "interactiveDemoTitle": "Arena Uji Fisika 2D Frontyard Volley (Canvas 60 FPS)",
+                "interactiveType": "volleyball_game"
             }
         ]
     }

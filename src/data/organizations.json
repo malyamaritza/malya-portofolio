@@ -1,65 +1,273 @@
 [
     {
         "id": "himasif",
-        "period": "2026 — Present",
+        "name": "HIMASIF",
+        "shortDescription": "Himpunan Mahasiswa Sistem Informasi",
+        "activeYears": "2025 — Sekarang",
+        "currentRole": "Bendahara",
+        "currentRolePeriod": "2026 — Sekarang",
+        "logo": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=256&auto=format&fit=crop",
+        "logoAlt": "Logo HIMASIF",
+        "type": "organisasi",
         "periodBadgeColor": "pastel",
-        "organization": "HIMASIF (Himpunan Mahasiswa Sistem Informasi)",
-        "role": "Bendahara & Dokumentasi Pengabdian Kepada Masyarakat",
-        "description": "Memimpin tata kelola anggaran dan akuntabilitas kas himpunan. Berperan aktif sebagai tim Dokumentasi PKM (Pengabdian Kepada Masyarakat) di Desa Baros, Arjasari, menyusun arsip digital dan laporan pertanggungjawaban program kemasyarakatan.",
-        "tags": [
-            "Financial Audit",
-            "Field Documentation",
-            "Budgeting"
-        ],
-        "icon": "📊",
         "washiColor": "green",
-        "washiRotation": "-rotate-1"
+        "washiRotation": "-rotate-1",
+        "tags": [
+            "Tata Kelola Kas",
+            "PKM Desa Baros",
+            "Content Management System",
+            "Speaker Beasiswa"
+        ],
+        "journey": [
+            {
+                "year": "2025",
+                "title": "Anggota Aktif",
+                "role": "Anggota Divisi",
+                "description": "Bergabung sebagai anggota aktif himpunan mahasiswa, mengikuti rangkaian kaderisasi, pembinaan organisasi, dan berkontribusi aktif dalam agenda internal kepengurusan.",
+                "image": "",
+                "imageCaption": ""
+            },
+            {
+                "year": "Agustus 2025",
+                "title": "Partisipasi Kegiatan PKM (Pengabdian Kepada Masyarakat)",
+                "role": "Bendahara & Speaker",
+                "description": "Berpartisipasi dalam program PKM di Desa Baros. Mahasiswa membantu utilisasi papan informasi desa dengan membangun sistem content management (CMS). Pada agenda kedua, melaksanakan sosialisasi ke siswa SMA Baros mengenai strategi perolehan beasiswa perkuliahan dan bertindak langsung sebagai salah satu pembicara (speaker).",
+                "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Dokumentasi Pengabdian Kepada Masyarakat (PKM) Desa Baros & Sosialisasi Beasiswa SMA",
+                "tags": [
+                    "Desa Baros",
+                    "CMS Papan Informasi",
+                    "Speaker",
+                    "Bendahara PKM"
+                ]
+            },
+            {
+                "year": "2026",
+                "title": "Diangkat Menjadi Bendahara HIMASIF",
+                "role": "Bendahara",
+                "description": "Mendapat kepercayaan memegang amanah sebagai Bendahara Himpunan Mahasiswa Sistem Informasi. Bertanggung jawab atas pengelolaan sirkulasi kas, pembukuan keuangan yang transparan, dan pengendalian anggaran seluruh program kerja himpunan.",
+                "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Amanah Pengurus Harian & Manajemen Keuangan HIMASIF 2026",
+                "tags": [
+                    "Pengurus Harian",
+                    "Budgeting",
+                    "Cashflow Management"
+                ]
+            }
+        ]
     },
     {
-        "id": "onelsh",
-        "period": "2025 — Present",
+        "id": "onelish",
+        "name": "Onelish",
+        "shortDescription": "University English Club",
+        "activeYears": "2024 — Sekarang",
+        "currentRole": "Sekretaris Tetap",
+        "currentRolePeriod": "2025 — 2026",
+        "logo": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=256&auto=format&fit=crop",
+        "logoAlt": "Logo Onelish English Club",
+        "type": "organisasi",
         "periodBadgeColor": "peach",
-        "organization": "Onelsh (English Club)",
-        "role": "Sekretaris & Calon Ketua",
-        "description": "Mengorkestrasi administrasi internal dan korespondensi resmi. Dipercaya sebagai Seminar Internal Manager (18 Okt 2025) serta bertindak sebagai Speaker & Moderator dalam sesi Benchmarking internasional bersama University of the Philippines Manila (Feb 2026).",
-        "tags": [
-            "International Benchmarking",
-            "Public Speaking",
-            "Event Management"
-        ],
-        "icon": "🌐",
         "washiColor": "peach",
-        "washiRotation": "rotate-2"
+        "washiRotation": "rotate-2",
+        "tags": [
+            "Sekretaris Tetap",
+            "Benchmarking UPM Manila",
+            "Internal Seminar",
+            "Public Speaking"
+        ],
+        "journey": [
+            {
+                "year": "2024",
+                "title": "Anggota Aktif",
+                "role": "Active Member",
+                "description": "Mengawali langkah dalam English Club kampus, aktif berpartisipasi dalam sesi diskusi interaktif, speaking practice mingguan, dan pengembangan wawasan komunikasi global.",
+                "image": "",
+                "imageCaption": ""
+            },
+            {
+                "year": "2025",
+                "title": "Asisten Sekretaris",
+                "role": "Assistant Secretary",
+                "description": "Membantu divisi kesekretariatan dalam mencatat notulensi pertemuan, mengelola inventaris arsip digital, dan menyusun draf persuratan organisasi.",
+                "image": "",
+                "imageCaption": ""
+            },
+            {
+                "year": "Oktober 2025",
+                "title": "Sekretaris Acara Internal Seminar",
+                "role": "Event Secretary",
+                "description": "Mengemban tanggung jawab penuh atas administrasi, korespondensi pembicara, penerbitan sertifikat peserta, dan koordinasi jadwal pada gelaran Internal Seminar Onelish.",
+                "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Pelaksanaan Internal Seminar Onelish 2025",
+                "tags": [
+                    "Event Administration",
+                    "Correspondence",
+                    "Certificates"
+                ]
+            },
+            {
+                "year": "2025 — 2026",
+                "title": "Sekretaris Tetap Onelish",
+                "role": "Executive Secretary",
+                "description": "Ditetapkan sebagai Sekretaris Tetap Onelish. Memimpin tata kelola kesekretariatan umum, standarisasi dokumen resmi, dan jembatan komunikasi antar divisi serta pihak eksternal.",
+                "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Dokumentasi Tata Kelola Administrasi & Rapat Koordinasi Pengurus Onelish",
+                "tags": [
+                    "Executive Secretary",
+                    "Organization Registry"
+                ]
+            },
+            {
+                "year": "2026",
+                "title": "Speaker Acara Benchmarking Internasional (UPM)",
+                "role": "Speaker & Delegate",
+                "description": "Bertindak sebagai pembicara (speaker) resmi mewakili Onelish dalam forum benchmarking internasional bersama University of the Philippines Manila (UPM) untuk saling bertukar wawasan kurikulum komunitas bahasa dan program kerja.",
+                "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Sesi Benchmarking Onelish x University of the Philippines Manila (UPM)",
+                "tags": [
+                    "International Benchmarking",
+                    "Univ Philippines Manila",
+                    "Keynote Speaker"
+                ]
+            }
+        ]
     },
     {
         "id": "onebycode",
-        "period": "2026",
+        "name": "One by Code",
+        "shortDescription": "Coding & Programming Club",
+        "activeYears": "2025 — 2026",
+        "currentRole": "Bendahara",
+        "currentRolePeriod": "2026",
+        "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=256&auto=format&fit=crop",
+        "logoAlt": "Logo One by Code",
+        "type": "organisasi",
         "periodBadgeColor": "pond",
-        "organization": "One by Code (UKM Pemrograman)",
-        "role": "Bendahara Umum",
-        "description": "Mengelola alokasi modal dan sponsorship untuk bootcamp programming serta kompetisi coding. Menginisiasi standarisasi pembukuan digital transparan untuk seluruh divisi operasional.",
+        "washiColor": "green",
+        "washiRotation": "rotate-1",
         "tags": [
-            "Cashflow Control",
+            "Bendahara Umum",
+            "Project Komunitas Empact",
             "Tech Community"
         ],
-        "icon": "💻",
-        "washiColor": "peach",
-        "washiRotation": "rotate-1"
+        "journey": [
+            {
+                "year": "2025",
+                "title": "Anggota Aktif",
+                "role": "Member",
+                "description": "Bergabung dalam komunitas coding club kampus, mengikuti sesi pemecahan masalah algoritma, workshop web development, dan sharing teknologi peer-to-peer.",
+                "image": "",
+                "imageCaption": ""
+            },
+            {
+                "year": "2026",
+                "title": "Bendahara One by Code",
+                "role": "Treasurer",
+                "description": "Mengelola alokasi kas dan pendanaan kegiatan club, termasuk perancangan anggaran workshop teknis dan operasional perlengkapan komunitas pengembang software.",
+                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Koordinasi Tim & Tata Kelola Keuangan One by Code",
+                "tags": [
+                    "Kas Komunitas",
+                    "Budgeting Event"
+                ]
+            },
+            {
+                "year": "2026",
+                "title": "Build Project Website Komunitas Empact",
+                "role": "Project Contributor",
+                "description": "Berkontribusi dalam tim proyek kolaboratif untuk membangun situs web komunitas sosial Empact, mewujudkan antarmuka yang bersih dan interaktif guna mendukung diseminasi program komunitas.",
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Mockup & Pengembangan Arsitektur Website Komunitas Empact",
+                "tags": [
+                    "Empact Community",
+                    "Web Project",
+                    "Frontend"
+                ]
+            }
+        ]
     },
     {
-        "id": "community-volunteer",
-        "period": "2026",
+        "id": "carita-2025",
+        "name": "Volunteer Carita 2025",
+        "shortDescription": "Event Sosial Sharing Session",
+        "activeYears": "2025",
+        "currentRole": "Volunteer & Dokumentasi",
+        "currentRolePeriod": "2025",
+        "logo": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=256&auto=format&fit=crop",
+        "logoAlt": "Logo Volunteer Carita 2025",
+        "type": "event",
         "periodBadgeColor": "pastel",
-        "organization": "Community Tech Volunteer",
-        "role": "BWAI Bandung & Technical Workshops",
-        "description": "Volunteer aktif dalam perhelatan akbar Build with AI (BWAI) 2026 Bandung. Peserta intensif pada Workshop \"DevOps Meets Security\", serta mengampu inisiatif AI Content Creation (Mei–Juli 2026).",
+        "washiColor": "peach",
+        "washiRotation": "-rotate-2",
         "tags": [
-            "Build with AI",
-            "DevSecOps",
-            "AI Content Creation"
+            "Event Asisten",
+            "Dokumentasi Acara",
+            "Video Editing",
+            "Sharing Session"
         ],
-        "icon": "🤝",
+        "journey": [
+            {
+                "year": "2025",
+                "title": "Volunteer Pelaksana & Asisten Acara",
+                "role": "Event Assistant & Documentation",
+                "description": "Terjun langsung sebagai relawan lapangan saat penyelenggaraan event sosial sharing session Carita. Mengarahkan alur mobilitas peserta, mendampingi kebutuhan pemateri, dan menangkap momen penting kegiatan melalui dokumentasi visual.",
+                "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Suasana Acara Sharing Session & Interaksi Peserta Carita 2025",
+                "tags": [
+                    "Asisten Acara",
+                    "Field Volunteer",
+                    "Dokumentasi"
+                ]
+            },
+            {
+                "year": "2025",
+                "title": "Video Editor Recap After-Event",
+                "role": "Post-Event Video Editor",
+                "description": "Merancang dan menyunting video kilas balik (recap after event) yang merangkum antusiasme dan pesan inspiratif sesi Carita untuk keperluan publikasi media sosial dan arsip dokumentasi.",
+                "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Editing Video After-Movie & Highlight Reels Carita 2025",
+                "tags": [
+                    "Video Recap",
+                    "Post-Production",
+                    "Creative Content"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "satu-technovation-2026",
+        "name": "Satu Technovation 2026",
+        "shortDescription": "Seminar Teknologi AI",
+        "activeYears": "2026",
+        "currentRole": "Bendahara (Laporan Keuangan Danus)",
+        "currentRolePeriod": "2026",
+        "logo": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=256&auto=format&fit=crop",
+        "logoAlt": "Logo Satu Technovation 2026",
+        "type": "event",
+        "periodBadgeColor": "pond",
         "washiColor": "green",
-        "washiRotation": "-rotate-2"
+        "washiRotation": "rotate-2",
+        "tags": [
+            "Bendahara Danus",
+            "Seminar AI",
+            "Financial Reporting",
+            "LPJ"
+        ],
+        "journey": [
+            {
+                "year": "2026",
+                "title": "Bendahara (Dana Usaha & Laporan Keuangan)",
+                "role": "Bendahara Panitia Pelaksana",
+                "description": "Bertindak sebagai Bendahara yang bertanggung jawab mengawasi arus modal dana usaha (danus), merekonsiliasi transaksi ticketing peserta, memonitor pengeluaran logistik seminar teknologi AI, dan merampungkan Laporan Pertanggungjawaban (LPJ) keuangan akhir.",
+                "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?q=80&w=1000&auto=format&fit=crop",
+                "imageCaption": "Kepanitiaan & Manajemen Keuangan Seminar AI Satu Technovation 2026",
+                "tags": [
+                    "Dana Usaha",
+                    "Laporan Keuangan",
+                    "AI Seminar",
+                    "LPJ"
+                ]
+            }
+        ]
     }
 ]

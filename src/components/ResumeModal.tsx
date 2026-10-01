@@ -56,18 +56,33 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     </p>
                 </div>
 
-                {/* Education */}
+                {/* Education Timeline */}
                 <div className="mb-6">
                     <h3 className="text-xs font-mono font-bold uppercase text-garden-sage tracking-wider mb-2">
                         Education
                     </h3>
-                    <div className="bg-garden-sand/40 border border-garden-sage/30 rounded-xl p-3 text-xs">
-                        <div className="font-bold text-garden-dark">
-                            {profileData.education.institution}
-                        </div>
-                        <div className="text-stone-600 mt-0.5">
-                            {profileData.education.focusAreas}
-                        </div>
+                    <div className="space-y-2">
+                        {profileData.educationTimeline ? (
+                            profileData.educationTimeline.map((edu) => (
+                                <div key={edu.id} className="bg-garden-sand/40 border border-garden-sage/30 rounded-xl p-3 text-xs">
+                                    <div className="flex justify-between items-center">
+                                        <span className="font-bold text-garden-dark">{edu.institution}</span>
+                                        <span className="text-[10px] font-mono text-stone-500 bg-white border border-stone-300 px-2 py-0.5 rounded-full">{edu.period}</span>
+                                    </div>
+                                    <div className="text-garden-sage font-semibold text-[11px] mt-0.5">{edu.major} ({edu.level})</div>
+                                    <div className="text-stone-500 text-[10px] mt-0.5">Status: {edu.status}</div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="bg-garden-sand/40 border border-garden-sage/30 rounded-xl p-3 text-xs">
+                                <div className="font-bold text-garden-dark">
+                                    {profileData.education.institution}
+                                </div>
+                                <div className="text-stone-600 mt-0.5">
+                                    {profileData.education.focusAreas}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -101,11 +116,11 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                         {orgsData.map((org) => (
                             <div key={org.id} className="border-l-2 border-garden-sage pl-3 py-1">
                                 <div className="flex justify-between">
-                                    <span className="font-bold text-garden-dark">{org.organization}</span>
-                                    <span className="text-[10px] font-mono text-stone-500">{org.period}</span>
+                                    <span className="font-bold text-garden-dark">{org.name}</span>
+                                    <span className="text-[10px] font-mono text-stone-500">{org.activeYears}</span>
                                 </div>
-                                <div className="text-garden-sage font-semibold text-[11px]">{org.role}</div>
-                                <p className="text-stone-600 mt-0.5 leading-relaxed">{org.description}</p>
+                                <div className="text-garden-sage font-semibold text-[11px]">{org.currentRole} ({org.currentRolePeriod})</div>
+                                <p className="text-stone-600 mt-0.5 leading-relaxed">{org.shortDescription}</p>
                             </div>
                         ))}
                     </div>
