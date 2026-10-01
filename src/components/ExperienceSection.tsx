@@ -3,6 +3,7 @@ import orgsData from '../data/organizations.json';
 import { OrganizationExperience } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import RevealOnScroll from './RevealOnScroll';
+import { resolveImage } from '../lib/imageMap';
 
 const organizations = orgsData as OrganizationExperience[];
 
@@ -36,9 +37,6 @@ export default function ExperienceSection() {
             {/* Section Header */}
             <RevealOnScroll delay={50} duration={600}>
                 <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
-                    <div className="inline-block bg-[#455c3e] text-garden-cream font-mono text-[11px] sm:text-xs font-bold uppercase px-3 py-1 rounded-md shadow-xs mb-2">
-                        {t.expBadge}
-                    </div>
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-garden-dark">
                         {t.expTitle}
                     </h2>
@@ -73,8 +71,9 @@ export default function ExperienceSection() {
                                     {/* Header: Logo & Active Years Badge */}
                                     <div className="flex items-start justify-between gap-1.5 sm:gap-3 mb-2 sm:mb-3">
                                         <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl overflow-hidden border border-garden-sage/40 sm:border-2 bg-[#FAF7EE] shadow-2xs shrink-0 flex items-center justify-center">
-                                            <img
-                                                src={org.logo}
+                                            {org.logo && resolveImage(org.logo) ? (
+                                                <img
+                                                    src={resolveImage(org.logo)}
                                                 alt={org.logoAlt || org.name}
                                                 referrerPolicy="no-referrer"
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"
@@ -91,6 +90,11 @@ export default function ExperienceSection() {
                                                     }
                                                 }}
                                             />
+                                        ) : (
+                                                <div className="w-full h-full flex items-center justify-center font-mono font-bold text-xs sm:text-base text-garden-sage bg-garden-sand">
+                                                    {org.name.slice(0, 2).toUpperCase()}
+                                                </div>
+                                            )}
                                         </div>
                                         <span className="text-[9px] sm:text-[11px] font-mono px-1.5 sm:px-2.5 py-0.5 rounded-full font-bold bg-garden-pastel text-garden-dark border border-garden-sage/30 truncate max-w-[65%] sm:max-w-none text-center">
                                             {org.activeYears}
@@ -161,23 +165,29 @@ export default function ExperienceSection() {
                         {/* Modal Header */}
                         <div className="flex items-start gap-4 border-b-2 border-dashed border-garden-sand pb-5 pr-8">
                             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-garden-sage bg-white shadow-2xs shrink-0 flex items-center justify-center">
-                                <img
-                                    src={selectedOrg.logo}
-                                    alt={selectedOrg.logoAlt || selectedOrg.name}
-                                    referrerPolicy="no-referrer"
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        const target = e.currentTarget;
-                                        target.style.display = 'none';
-                                        if (target.parentElement) {
-                                            target.parentElement.innerHTML = `
-                        <div class="w-full h-full flex items-center justify-center font-mono font-bold text-lg text-garden-sage bg-garden-sand">
-                          ${selectedOrg.name.slice(0, 2).toUpperCase()}
-                        </div>
-                      `;
-                                        }
-                                    }}
-                                />
+                                {selectedOrg.logo && resolveImage(selectedOrg.logo) ? (
+                                    <img
+                                        src={resolveImage(selectedOrg.logo)}
+                                        alt={selectedOrg.logoAlt || selectedOrg.name}
+                                        referrerPolicy="no-referrer"
+                                        className="w-full h-full object-cover"
+                                        onError={(e) => {
+                                            const target = e.currentTarget;
+                                            target.style.display = 'none';
+                                            if (target.parentElement) {
+                                                target.parentElement.innerHTML = `
+                            <div class="w-full h-full flex items-center justify-center font-mono font-bold text-lg text-garden-sage bg-garden-sand">
+                              ${selectedOrg.name.slice(0, 2).toUpperCase()}
+                            </div>
+                          `;
+                                            }
+                                        }}
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center font-mono font-bold text-lg text-garden-sage bg-garden-sand">
+                                        {selectedOrg.name.slice(0, 2).toUpperCase()}
+                                    </div>
+                                )}
                             </div>
 
                             <div>
@@ -269,7 +279,7 @@ export default function ExperienceSection() {
                                             <div className="mt-3.5 pt-3 border-t border-dashed border-garden-sand">
                                                 <div className="rounded-xl overflow-hidden border-2 border-garden-sage/50 bg-[#FAF7EE] p-1.5 sm:p-2 shadow-2xs">
                                                     <img
-                                                        src={step.image}
+                                                        src={resolveImage(step.image)}
                                                         alt={step.imageCaption || step.title}
                                                         referrerPolicy="no-referrer"
                                                         className="w-full h-44 sm:h-56 object-cover rounded-lg"

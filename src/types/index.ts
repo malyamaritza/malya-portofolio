@@ -4,6 +4,7 @@ export interface ProjectLink {
     type: 'figma' | 'live' | 'github' | 'docs' | 'other';
     icon?: string;
     isPrimary?: boolean;
+    description?: string;
 }
 
 export interface ProjectModule {

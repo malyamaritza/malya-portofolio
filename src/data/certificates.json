@@ -1,168 +1,71 @@
 [
     {
-        "id": "cert-uiux-specialization",
+        "id": "cert-digcofest-2024",
         "title": "Business Case Competition - DIGCOFEST",
-        "issuer": "Google Career Certificates",
+        "issuer": "DIGCOFEST",
         "issueDate": "2024",
         "category": "Business Case",
         "badgeColor": "pastel",
-        "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1000&q=80",
+        "image": "@assets/certificate_digcofest.png",
         "imageAlt": "Google UX Design Certificate Preview",
-        "shortDescription": "Sertifikasi komprehensif 7 modul perancangan antarmuka pengguna dari riset empati hingga pengujian usabilitas.",
-        "fullDescription": "Menyelesaikan program profesional intensif perancangan produk digital oleh Google. Menguasai alur kerja Design Thinking: empathize, define, ideate, prototype, and test. Merancang wireframe low-fidelity hingga high-fidelity prototype interaktif di Figma, audit aksesibilitas, serta presentasi portofolio studi kasus.",
+        "shortDescription": "Semifinalis Business Case Competion",
+        "fullDescription": "",
         "skills": [
-            "User Research",
-            "Figma",
-            "Design Systems",
-            "Usability Testing",
-            "Wireframing",
-            "WCAG Accessibility"
+            "Business Analyst",
+            "Wireframing"
         ],
-        "credentialId": "GGL-UX-2025-88421",
-        "credentialUrl": "https://coursera.org/verify/professional-cert/google-ux"
+        "credentialId": "127896/UN38.7/DL01.02/2024",
+        "credentialUrl": ""
     },
     {
-        "id": "cert-enterprise-architecture",
+        "id": "cert-gem-2025",
         "title": "Semifinalis Business Plan Competition, Gerakan Entrepreneur Muda",
-        "issuer": "Satu University & Industry Partner",
+        "issuer": "Gerakan Entrepreneur Muda",
         "issueDate": "2025",
-        "category": "Systems Analysis & Business Architecture",
+        "category": "Business Plan",
         "badgeColor": "pond",
-        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80",
+        "image": "@/assets/certificate_gem.jpg",
         "imageAlt": "Enterprise Information Systems Certificate",
-        "shortDescription": "Kompetensi pemodelan arsitektur sistem informasi enterprise, perancangan BPMN, dan analisis kebutuhan bisnis.",
-        "fullDescription": "Penghargaan kelulusan sertifikasi kompetensi analisis sistem enterprise. Memvalidasi kemampuan dalam penyusunan Software Requirements Specification (SRS), perancangan diagram alir bisnis (BPMN 2.0), diagram use-case UML, serta analisis kelayakan integrasi multi-modul untuk industri retail dan logistik.",
+        "shortDescription": "Semifinalis Business Case Competition",
+        "fullDescription": ".",
         "skills": [
-            "BPMN 2.0",
-            "UML Modeling",
-            "SRS Documentation",
-            "System Flowchart",
-            "Enterprise Data Flow"
+            "Entrepreneurship"
         ],
-        "credentialId": "SATU-IS-2026-0049",
+        "credentialId": "",
         "credentialUrl": "#"
     },
     {
-        "id": "cert-frontend-web",
-        "title": "Semifinalis Business Plan Competition - Logicodix",
-        "issuer": "Dicoding Academy / IT Certification",
-        "issueDate": "Agu 2025",
-        "category": "Frontend Development",
-        "badgeColor": "peach",
-        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "Frontend Web Development Certificate",
-        "shortDescription": "Sertifikasi pembangunan web modern responsif, komponen berbasis React, Tailwind CSS, dan integrasi RESTful API.",
-        "fullDescription": "Sertifikasi praktis dalam membangun antarmuka web modern berskala produksi. Meliputi pemahaman arsitektur komponen React, state management dengan hooks, integrasi REST API asynchronous, optimasi performa web responsif, dan styling modular menggunakan Tailwind CSS.",
-        "skills": [
-            "React.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "RESTful API Integration",
-            "Responsive Design"
-        ],
-        "credentialId": "DCD-FE-782194",
-        "credentialUrl": "https://dicoding.com/certificates/verify"
-    },
-    {
-        "id": "cert-database-sql",
-        "title": "Relational Database Design & SQL Optimization",
-        "issuer": "Oracle Academy / Database Program",
-        "issueDate": "Mei 2025",
-        "category": "Database Engineering",
-        "badgeColor": "pastel",
-        "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "Relational Database Certificate",
-        "shortDescription": "Sertifikasi perancangan skema basis data relasional ternormalisasi 3NF, query SQL kompleks, dan ERD modeling.",
-        "fullDescription": "Membuktikan penguasaan teknik perancangan Entity-Relationship Diagram (ERD), normalisasi tabel data hingga tahap Third Normal Form (3NF), integritas referensial (foreign keys, cascade triggers), serta optimalisasi indexing dan query kompleks di PostgreSQL/MySQL.",
-        "skills": [
-            "PostgreSQL",
-            "ERD Modeling",
-            "3NF Normalization",
-            "Complex SQL Queries",
-            "Database Indexing"
-        ],
-        "credentialId": "ORA-DB-99014",
-        "credentialUrl": "#"
-    },
-    {
-        "id": "cert-agile-project",
-        "title": "Agile & Scrum Project Management Fundamentals",
-        "issuer": "Project Management Institute (PMI) Student Chapter",
-        "issueDate": "Des 2025",
-        "category": "Project Management",
+        "id": "cert-logicodix-2025",
+        "title": "Semifinalis Business Plan Competition, Logicodix",
+        "issuer": "Logicodix",
+        "issueDate": "2025",
+        "category": "Business Plan",
         "badgeColor": "pond",
-        "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "Agile Project Management Certificate",
-        "shortDescription": "Penerapan metodologi kerja kolaboratif Agile Scrum, manajemen backlog produk, sprint planning, dan kanban.",
-        "fullDescription": "Pemahaman mendalam mengenai kerangka kerja Agile dan Scrum dalam pengembangan software digital. Berfokus pada pengelolaan product backlog, estimasi user story points, fasilitasi sprint grooming & retrospectives, serta penggunaan perangkat papan kerja Trello dan Jira.",
+        "image": "@/assets/certificate_logicodix.png",
+        "imageAlt": "Enterprise Information Systems Certificate",
+        "shortDescription": "Semifinalis Business Case Competition Logicodix 2025",
+        "fullDescription": ".",
         "skills": [
-            "Scrum Framework",
-            "Sprint Planning",
-            "Product Backlog Grooming",
-            "Kanban Workflow",
-            "Jira/Trello"
+            "Entrepreneurship"
         ],
-        "credentialId": "PMI-AGL-2025-3312",
+        "credentialId": "171940/UN38.5/KM.10.04/2025",
         "credentialUrl": "#"
     },
     {
-        "id": "cert-international-speaking",
-        "title": "International Speaker & Moderator Recognition",
-        "issuer": "University of the Philippines Manila & Onelsh",
-        "issueDate": "Feb 2026",
-        "category": "Leadership & Communication",
-        "badgeColor": "peach",
-        "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "International Speaker Certificate",
-        "shortDescription": "Sertifikat penghargaan sebagai Speaker dan Moderator dalam International Academic Benchmarking Session 2026.",
-        "fullDescription": "Penghargaan resmi atas kontribusi aktif memimpin dan memandu diskusi ilmiah lintas budaya antara delegasi mahasiswa Satu University dan University of the Philippines Manila, membahas kolaborasi kepemimpinan dan adopsi transformasi digital kampus.",
-        "skills": [
-            "International Moderation",
-            "Public Speaking",
-            "Cross-Cultural Communication",
-            "Academic Bilateral Session"
-        ],
-        "credentialId": "UPM-ONE-2026-SPK",
-        "credentialUrl": "#"
-    },
-    {
-        "id": "cert-hci-evaluation",
-        "title": "Human-Computer Interaction & Usability Heuristics",
-        "issuer": "Interaction Design Foundation (IxDF)",
-        "issueDate": "Okt 2025",
-        "category": "UX & Usability Research",
-        "badgeColor": "pastel",
-        "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "Human-Computer Interaction Certificate",
-        "shortDescription": "Sertifikasi evaluasi ergonomi kognitif antarmuka perangkat lunak dan metodologi Nielsen Norman Heuristic Evaluation.",
-        "fullDescription": "Kompetensi mendalam dalam pengujian heuristik antarmuka perangkat lunak, penyusunan kuesioner System Usability Scale (SUS), pemetaan mental model pengguna, dan pengujian aksesibilitas digital berbasis pedoman WCAG.",
-        "skills": [
-            "Heuristic Evaluation",
-            "Cognitive Walkthrough",
-            "SUS Questionnaire",
-            "Information Architecture"
-        ],
-        "credentialId": "IXDF-HCI-2025-412",
-        "credentialUrl": "#"
-    },
-    {
-        "id": "cert-bpmn-workflow",
-        "title": "Business Process Model and Notation (BPMN 2.0)",
-        "issuer": "Object Management Group (OMG) Certified",
-        "issueDate": "Mar 2025",
-        "category": "Business Process & Systems",
+        "id": "cert-nbpc-unesa-2025",
+        "title": "Semifinalis National Business Plan Competition, UNESA 2025",
+        "issuer": "UNESA",
+        "issueDate": "2025",
+        "category": "Business Plan",
         "badgeColor": "pond",
-        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
-        "imageAlt": "BPMN 2.0 Certified Certificate",
-        "shortDescription": "Standar pemodelan proses bisnis terintegrasi, orkestrasi workflow, dan identifikasi bottleneck alur sistem.",
-        "fullDescription": "Sertifikasi tingkat lanjut pemodelan proses bisnis BPMN 2.0. Memetakan swimlane lintas departemen, event gateway, penanganan exception, dan dokumentasi arsitektur sistem enterprise untuk integrasi otomatisasi ERP.",
+        "image": "@/assets/certificate_nbpc2025.png",
+        "imageAlt": "Enterprise Information Systems Certificate",
+        "shortDescription": "Semifinalis National Business Case Competition",
+        "fullDescription": ".",
         "skills": [
-            "BPMN 2.0 Syntax",
-            "Process Automation",
-            "Swimlane Diagrams",
-            "Enterprise Workflow"
+            "Entrepreneurship"
         ],
-        "credentialId": "OMG-BPMN-2025-104",
+        "credentialId": "026/016/B/NBPC/HMP-PEND.MAT/UNESA/IX/2025",
         "credentialUrl": "#"
     }
 ]

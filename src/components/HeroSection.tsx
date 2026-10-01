@@ -4,6 +4,7 @@ import profileDataRaw from '../data/profile.json';
 import { ProfileData } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import RevealOnScroll from './RevealOnScroll';
+import profilePhotoSrc from '../assets/profile_photo.jpg';
 
 const profileData = profileDataRaw as ProfileData;
 
@@ -30,14 +31,13 @@ export default function HeroSection({ onOpenResumeModal }: HeroSectionProps) {
                             {/* Avatar Profile / Illustrated Badge */}
                             <div className="md:col-span-4 flex flex-col items-center text-center">
                                 <div className="relative group">
-                                    <div className="w-28 h-28 xs:w-32 xs:h-32 sm:w-40 sm:h-40 rounded-full border-4 border-dashed border-garden-moss bg-garden-pastel/40 p-1.5 sm:p-2 flex items-center justify-center overflow-hidden shadow-inner">
+                                    <div className="w-32 h-32 xs:w-36 xs:h-36 sm:w-48 sm:h-48 rounded-full border-4 border-dashed border-garden-moss bg-garden-pastel/40 p-1.5 sm:p-2 flex items-center justify-center overflow-hidden shadow-inner">
                                         {/* Botanical / Cat Garden Illustration Avatar */}
-                                        <div className="w-full h-full rounded-full bg-[#FAF7EE] border border-garden-sage flex flex-col items-center justify-center text-garden-sage p-1 sm:p-2 relative shadow-sm">
-                                            <span className="text-3xl sm:text-5xl mb-0.5 sm:mb-1 select-none">🐱🌱</span>
-                                            <span className="font-hand text-base sm:text-lg text-garden-dark font-bold leading-tight">
-                                                {profileData.shortName}
-                                            </span>
-                                        </div>
+                                        <img
+                                            src={typeof profilePhotoSrc === 'string' ? profilePhotoSrc : profilePhotoSrc.src}
+                                            alt={profileData.shortName}
+                                            className="w-full h-full object-cover rounded-full"
+                                        />
                                     </div>
 
                                     {/* Status Pin */}
@@ -54,11 +54,6 @@ export default function HeroSection({ onOpenResumeModal }: HeroSectionProps) {
 
                             {/* Main Biography Content */}
                             <div className="md:col-span-8 space-y-2.5 sm:space-y-3">
-                                <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-garden-pastel/60 border border-garden-sage/30 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold text-garden-dark">
-                                    <span className="text-xs">✨</span>
-                                    <span>{t.badgeInternship}</span>
-                                </div>
-
                                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-garden-dark leading-tight">
                                     {profileData.name}
                                 </h1>

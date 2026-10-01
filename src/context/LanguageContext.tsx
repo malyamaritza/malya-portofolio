@@ -108,7 +108,7 @@ const translationsId: Translations = {
     badgeInternship: 'Sedang menempuh studi & terbuka untuk kesempatan magang',
     roleHeadline: 'Mahasiswa Sistem Informasi @ Satu University | Frontend Developer, UI/UX Architect & Analis Sistem.',
     bioText: 'Merancang arsitektur sistem informasi terstruktur dan pengalaman pengguna yang estetis. Terbiasa menganalisis proses bisnis, memetakan skema relasional, dan membangun aplikasi web responsif berstandar modern.',
-    exploreArchiveBtn: 'Jelajahi Buku Arsip',
+    exploreArchiveBtn: 'Lihat Projek',
     contactResumeBtn: 'Kontak & Resume',
 
     educationTitle: 'Riwayat Pendidikan',
@@ -124,8 +124,8 @@ const translationsId: Translations = {
     universityStatus: 'Mahasiswa Aktif',
 
     dossierBadge: 'Seri Berkas Portofolio',
-    archiveTitle: 'Buku Arsip Lanskap',
-    archiveSubtitle: 'Pilih map kategori fisik di bawah ini untuk meninjau analisis kebutuhan, prototipe, dan arsitektur teknis proyek.',
+    archiveTitle: 'Arsip Projek',
+    archiveSubtitle: 'Pilih map kategori projek di bawah ini untuk meninjau projek sesuai kategori.',
     openDossierBtn: 'Buka Berkas →',
     artifactNumber: 'Berkas Artefak',
     overviewLabel: 'Ringkasan Sistem',
@@ -150,12 +150,12 @@ const translationsId: Translations = {
 
     expBadge: 'Kepemimpinan & Kontribusi',
     expTitle: 'Pengalaman Organisasi & Kepanitiaan',
-    expSubtitle: 'Rekam jejak kepemimpinan, tata kelola finansial, kesekretariatan, dan kontribusi sosial.',
+    expSubtitle: 'Rekam jejak kontribusi di organisasi dan kepanitiaan',
     journeyMapBtn: 'Lihat Peta Perjalanan →',
 
     certBadge: 'Kualifikasi & Lisensi',
     certTitle: 'Galeri Sertifikasi Terverifikasi',
-    certSubtitle: 'Kumpulan sertifikat kompetensi resmi di bidang analisis sistem, pemrograman web, dan manajemen proyek.',
+    certSubtitle: 'Kumpulan sertifikat kompetensi resmi',
     viewAllBtn: 'Semua Sertifikat',
 
     aboutBadge: 'Profil Pribadi',
@@ -165,7 +165,7 @@ const translationsId: Translations = {
     sendEmailBtn: 'Kirim Email',
     downloadResumeBtn: 'Lihat Resume Lengkap',
 
-    footerText: 'Dibuat dengan cinta & matcha • Malya Maritza Rahadiani Portfolio 2026',
+    footerText: 'Malya Maritza Portfolio 2026',
 };
 
 const translationsEn: Translations = {
@@ -186,7 +186,7 @@ const translationsEn: Translations = {
     badgeInternship: 'Currently cultivating digital experiences & looking for internship',
     roleHeadline: 'Information Systems Student @ Satu University | Frontend Developer, UI/UX Architect & System Analyst.',
     bioText: 'Crafting structured software blueprints and aesthetic, thoughtful user experiences. Experienced in orchestrating retail information systems, bridging organizational requirements with human-centered interfaces, and building responsive web apps with clean code.',
-    exploreArchiveBtn: 'Explore Archive Books',
+    exploreArchiveBtn: 'View Projects',
     contactResumeBtn: 'Contact & Resume',
 
     educationTitle: 'Education Timeline',
@@ -202,8 +202,8 @@ const translationsEn: Translations = {
     universityStatus: 'Active Student',
 
     dossierBadge: 'Interactive Dossier Series',
-    archiveTitle: 'The Landscape Archive Books',
-    archiveSubtitle: 'Select a physical category binder below to inspect full requirements analysis, prototypes, and technical architectures.',
+    archiveTitle: 'Projects Archive',
+    archiveSubtitle: 'Select a project category binder below to review projects by category.',
     openDossierBtn: 'Open Dossier →',
     artifactNumber: 'Artifact Dossier',
     overviewLabel: 'System Overview',
@@ -228,12 +228,12 @@ const translationsEn: Translations = {
 
     expBadge: 'Leadership & Contributions',
     expTitle: 'Organizational Experience & Involvements',
-    expSubtitle: 'Track record in leadership, financial management, secretarial duties, and community impact.',
+    expSubtitle: 'Track record of contributions in organizations and committees',
     journeyMapBtn: 'View Journey Map →',
 
     certBadge: 'Credentials & Licenses',
     certTitle: 'Verified Certificate Gallery',
-    certSubtitle: 'Official credentials in systems analysis, web development, and digital product design.',
+    certSubtitle: 'Official certified credentials and competencies',
     viewAllBtn: 'All Certificates',
 
     aboutBadge: 'Demographic Profile',
@@ -243,7 +243,7 @@ const translationsEn: Translations = {
     sendEmailBtn: 'Send Email',
     downloadResumeBtn: 'View Full Resume',
 
-    footerText: 'Handcrafted with love & matcha • Malya Maritza Rahadiani Portfolio 2026',
+    footerText: 'Malya Maritza Portfolio 2026',
 };
 
 interface LanguageContextType {

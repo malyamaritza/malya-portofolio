@@ -39,24 +39,13 @@ export default function AboutContactSection({ onOpenResumeModal }: AboutContactS
                                         <span
                                             key={tech.name}
                                             className={`px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium text-[11px] sm:text-xs shadow-2xs transition-transform hover:scale-105 select-none ${tech.featured
-                                                    ? 'bg-garden-pastel border border-garden-moss text-garden-dark font-bold'
-                                                    : 'bg-[#FAF7EE] border border-garden-sage text-garden-dark'
+                                                ? 'bg-garden-pastel border border-garden-moss text-garden-dark font-bold'
+                                                : 'bg-[#FAF7EE] border border-garden-sage text-garden-dark'
                                                 }`}
                                         >
                                             {tech.name}
                                         </span>
                                     ))}
-                                </div>
-                            </div>
-
-                            {/* Academic Accreditations */}
-                            <div className="bg-garden-sand/60 border border-dashed border-garden-sage p-3 sm:p-3.5 rounded-xl text-xs space-y-1">
-                                <div className="font-bold text-garden-dark flex items-center gap-1.5">
-                                    <span>🎓</span>
-                                    <span>{profileData.education.institution}</span>
-                                </div>
-                                <div className="text-stone-600 pl-5">
-                                    {profileData.education.focusAreas}
                                 </div>
                             </div>
                         </div>
@@ -79,65 +68,65 @@ export default function AboutContactSection({ onOpenResumeModal }: AboutContactS
                                 <h3 className="text-base sm:text-lg font-bold text-garden-dark mt-1">
                                     {t.contactHeader}
                                 </h3>
-                                <p className="text-xs text-stone-600 mt-1 leading-relaxed">
-                                    {isId
-                                        ? 'Terbuka untuk kolaborasi rekayasa sistem informasi, magang UI/UX, dan riset akademis.'
-                                        : 'Open for frontend engineering roles, UI/UX architecture internships, and academic research collaborations.'}
-                                </p>
-                            </div>
+                                    <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                                        {isId
+                                            ? 'Terbuka untuk kolaborasi rekayasa sistem informasi, magang UI/UX, dan riset akademis.'
+                                            : 'Open for frontend engineering roles, UI/UX architecture internships, and academic research collaborations.'}
+                                    </p>
+                                </div>
 
-                            {/* Contact Buttons / Actions */}
-                            <div className="space-y-2 sm:space-y-2.5 mt-5 sm:mt-6">
-                                <a
-                                    href={`mailto:${profileData.email}`}
-                                    className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
-                                >
-                                    <span className="flex items-center gap-2 truncate">
-                                        <span>💌</span>
-                                        <span className="truncate">{profileData.email}</span>
-                                    </span>
-                                    <span className="shrink-0 ml-1">↗</span>
-                                </a>
+                                {/* Contact Buttons / Actions */}
+                                <div className="space-y-2 sm:space-y-2.5 mt-5 sm:mt-6">
+                                    <a
+                                        href={`mailto:${profileData.email}`}
+                                        className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
+                                    >
+                                        <span className="flex items-center gap-2 truncate">
+                                            <span>💌</span>
+                                            <span className="truncate">{profileData.email}</span>
+                                        </span>
+                                        <span className="shrink-0 ml-1">↗</span>
+                                    </a>
 
-                                <a
-                                    href={profileData.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
-                                >
-                                    <span className="flex items-center gap-2">
-                                        <span>💼</span>
-                                        <span>LinkedIn Profile</span>
-                                    </span>
-                                    <span className="shrink-0 ml-1">↗</span>
-                                </a>
+                                    <a
+                                        href={profileData.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            <span>💼</span>
+                                            <span>LinkedIn Profile</span>
+                                        </span>
+                                        <span className="shrink-0 ml-1">↗</span>
+                                    </a>
 
-                                <a
-                                    href={profileData.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
-                                >
-                                    <span className="flex items-center gap-2">
-                                        <span>🐙</span>
-                                        <span>GitHub Repository</span>
-                                    </span>
-                                    <span className="shrink-0 ml-1">↗</span>
-                                </a>
+                                    <a
+                                        href={profileData.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full flex items-center justify-between bg-white hover:bg-garden-cream border border-garden-sage px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold text-garden-dark shadow-2xs transition transform hover:-translate-y-0.5"
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            <span>🐙</span>
+                                            <span>GitHub Repository</span>
+                                        </span>
+                                        <span className="shrink-0 ml-1">↗</span>
+                                    </a>
 
-                                {/* Download Resume CTA */}
-                                <button
-                                    type="button"
-                                    onClick={onOpenResumeModal}
-                                    className="w-full mt-2 flex items-center justify-center gap-2 bg-garden-sage hover:bg-garden-moss text-garden-cream px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow-2xs transition transform hover:-translate-y-0.5 cursor-pointer"
-                                >
-                                    <span>{t.downloadResumeBtn}</span>
-                                    <span>📑</span>
-                                </button>
+                                    {/* Download Resume CTA */}
+                                    <button
+                                        type="button"
+                                        onClick={onOpenResumeModal}
+                                        className="w-full mt-2 flex items-center justify-center gap-2 bg-garden-sage hover:bg-garden-moss text-garden-cream px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs font-bold shadow-2xs transition transform hover:-translate-y-0.5 cursor-pointer"
+                                    >
+                                        <span>{t.downloadResumeBtn}</span>
+                                        <span>📑</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </RevealOnScroll>
         </section>
     );

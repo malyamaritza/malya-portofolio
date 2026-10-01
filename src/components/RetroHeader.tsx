@@ -55,9 +55,6 @@ export default function RetroHeader() {
                         <span className="text-sm">🌸</span>
                         <span>{t.portfolioUrl}</span>
                     </span>
-                    <span className="text-[10px] bg-garden-pastel text-garden-dark px-2 py-0.5 rounded-full font-sans font-bold">
-                        {t.readyStatus}
-                    </span>
                 </div>
             </div>
 

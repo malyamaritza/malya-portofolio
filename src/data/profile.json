@@ -1,13 +1,13 @@
 {
     "name": "Malya Maritza Rahadiani",
-    "shortName": "Malya M. R.",
+    "shortName": "Malya",
     "taglineBadge": "Currently cultivating digital experiences & looking for internship",
     "roleHeadline": "Information Systems Student @ Satu University | Frontend Developer, UI/UX Architect & System Analyst.",
     "bio": "Crafting structured software blueprints and aesthetic, thoughtful user experiences. Experienced in orchestrating retail information systems, bridging organizational requirements with human-centered interfaces, and building responsive web apps with clean code.",
-    "campusBadge": "@Satu Univ '26",
+    "campusBadge": "@Satu University B28",
     "location": "Bandung, Indonesia",
-    "email": "malya.maritza@student.satu.ac.id",
-    "linkedin": "https://linkedin.com",
+    "email": "malyamaritza01@gmail.com",
+    "linkedin": "https://linkedin.com/in/malyamaritza",
     "github": "https://github.com/malyamaritza",
     "techStack": [
         {
@@ -32,11 +32,11 @@
         },
         {
             "name": "SQL / Relational DB",
-            "featured": false
+            "featured": true
         },
         {
             "name": "Figma UI/UX",
-            "featured": true
+            "featured": false
         },
         {
             "name": "UML & System Modeling",
@@ -61,8 +61,8 @@
             "institutionFull": "SMA YAS",
             "level": "Sekolah Menengah Atas (SMA)",
             "levelEn": "Senior High School",
-            "major": "Pendidikan Menengah Atas",
-            "majorEn": "Secondary High School Education",
+            "major": "Rumpun Sains",
+            "majorEn": "Science Major",
             "status": "Lulus",
             "statusEn": "Graduated",
             "badgeColor": "bg-garden-pastel text-garden-dark"

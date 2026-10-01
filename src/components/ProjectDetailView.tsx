@@ -107,7 +107,7 @@ export default function ProjectDetailView({
                                         src={project.thumbnail}
                                         alt={project.thumbnailAlt || project.title}
                                         onError={() => setImageError(true)}
-                                        className="w-full h-full object-cover object-top"
+                                        className="w-full h-full object-contain"
                                         loading="lazy"
                                     />
                                 ) : (
@@ -395,10 +395,10 @@ export default function ProjectDetailView({
                     {project.projectLinks && project.projectLinks.length > 0 ? (
                         <div
                             className={`grid gap-3.5 ${project.projectLinks.length === 1
-                                    ? 'grid-cols-1 sm:grid-cols-2 max-w-xl'
-                                    : project.projectLinks.length === 2
-                                        ? 'grid-cols-1 sm:grid-cols-2'
-                                        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                                ? 'grid-cols-1 sm:grid-cols-2 max-w-xl'
+                                : project.projectLinks.length === 2
+                                    ? 'grid-cols-1 sm:grid-cols-2'
+                                    : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
                                 }`}
                         >
                             {project.projectLinks.map((link, idx) => {
@@ -421,8 +421,8 @@ export default function ProjectDetailView({
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={`flex flex-col justify-between p-4 rounded-xl border-2 transition-all transform active:scale-98 hover:-translate-y-1 group shadow-xs ${isPrimary
-                                                ? 'bg-[#5B7553] hover:bg-[#4a6344] text-[#FAF7EE] border-[#3d5038] shadow-scrapbook'
-                                                : 'bg-[#FAF7EE] hover:bg-white text-garden-dark border-garden-sage hover:border-garden-dark'
+                                            ? 'bg-[#5B7553] hover:bg-[#4a6344] text-[#FAF7EE] border-[#3d5038] shadow-scrapbook'
+                                            : 'bg-[#FAF7EE] hover:bg-white text-garden-dark border-garden-sage hover:border-garden-dark'
                                             }`}
                                     >
                                         <div className="flex items-start justify-between gap-2 mb-3">
@@ -438,8 +438,8 @@ export default function ProjectDetailView({
                                             </span>
                                             <span
                                                 className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold uppercase ${isPrimary
-                                                        ? 'bg-[#455c3e] text-garden-pastel'
-                                                        : 'bg-garden-sand text-garden-sage'
+                                                    ? 'bg-[#455c3e] text-garden-pastel'
+                                                    : 'bg-garden-sand text-garden-sage'
                                                     }`}
                                             >
                                                 {typeLabel}
@@ -450,6 +450,11 @@ export default function ProjectDetailView({
                                             <h4 className="text-xs sm:text-sm font-bold leading-snug">
                                                 {link.label}
                                             </h4>
+                                            {link.description && (
+                                                <p className={`text-[11px] font-sans mt-1.5 leading-relaxed line-clamp-2 ${isPrimary ? 'text-garden-cream/90' : 'text-stone-600'}`}>
+                                                    {link.description}
+                                                </p>
+                                            )}
                                             <div className="mt-3 pt-2 border-t border-current/20 flex items-center justify-between text-[11px] font-mono">
                                                 <span className="opacity-80 truncate max-w-[170px]">
                                                     Buka Tautan
@@ -470,7 +475,7 @@ export default function ProjectDetailView({
                     )}
                 </div>
 
-                {/* Diagram & Galeri Tambahan jika ada */}
+                {/* Diagram & Galeri Tambahan jika ada
                 {project.galleryDocumentation && project.galleryDocumentation.length > 0 && (
                     <div className="mt-6 pt-5 border-t border-garden-sand space-y-3">
                         <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-garden-dark flex items-center gap-1.5">
@@ -493,7 +498,7 @@ export default function ProjectDetailView({
                             ))}
                         </div>
                     </div>
-                )}
+                )} */}
             </section>
 
             {/* Bottom Floating/Fixed Return Action */}

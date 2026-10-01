@@ -11,6 +11,7 @@ import {
     Award,
     Search
 } from 'lucide-react';
+import { resolveImage } from '../lib/imageMap';
 
 const certificatesData = certificatesDataRaw as CertificateItem[];
 
@@ -75,9 +76,6 @@ export default function CertificateGallerySection() {
             {/* Section Header */}
             <RevealOnScroll delay={50} duration={600}>
                 <div className="text-center max-w-2xl mx-auto mb-3 sm:mb-4 px-2">
-                    <div className="inline-block bg-garden-sage text-garden-cream font-mono text-[11px] sm:text-xs font-bold uppercase px-3 py-1 rounded-md shadow-sm mb-1.5">
-                        {t.certBadge}
-                    </div>
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-garden-dark">
                         {t.certTitle}
                     </h2>
@@ -163,7 +161,7 @@ export default function CertificateGallerySection() {
                                         <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-garden-sand/40 border border-garden-sage/30 mb-2.5 flex items-center justify-center">
                                             {!hasError && cert.image ? (
                                                 <img
-                                                    src={cert.image}
+                                                    src={resolveImage(cert.image)}
                                                     alt={cert.imageAlt || cert.title}
                                                     onError={() => handleImageError(cert.id)}
                                                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
@@ -245,7 +243,7 @@ export default function CertificateGallerySection() {
                         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-white border border-garden-sage/40 flex items-center justify-center shadow-inner">
                             {selectedCert.image ? (
                                 <img
-                                    src={selectedCert.image}
+                                    src={resolveImage(selectedCert.image)}
                                     alt={selectedCert.imageAlt || selectedCert.title}
                                     className="w-full h-full object-contain p-1"
                                 />
