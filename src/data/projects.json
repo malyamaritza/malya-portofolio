@@ -347,7 +347,7 @@
                 "projectLinks": [
                     {
                         "label": "Prototipe 1: Laundry Management",
-                        "url": "https://www.figma.com/proto/clevago-customer-app",
+                        "url": "hhttps://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-263&p=f&t=m3UgtjifGAjByfUk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3467",
                         "type": "figma",
                         "icon": "📱",
                         "description": "Memonitor proses laundry dari masuk ke internal hingga packing.",
@@ -533,16 +533,14 @@
                 "thumbnailAlt": "HOWL Library & Creative Space 3NF Database & Reservation System",
                 "gdriveDocumentationUrl": "https://drive.google.com/drive/folders/1aktWB2LaFxqH79Jow8kSQbtkPxHku5Db?usp=sharing",
                 "documentationLabels": [
-                    "Entity Relationship Diagram (ERD)",
-                    "Kamus Data (Data Dictionary 14 Tabel)",
+                    "Conceptual Databse Design / Entity Relationship Diagram (ERD)",
                     "Logical Database Design (LDD)",
-                    "Physical Database Design (PDD)",
-                    "Business Rules & Normalisasi 3NF"
+                    "Physical Database Design (PDD)"
                 ],
                 "projectLinks": [
                     {
                         "label": "View Interactive Prototype",
-                        "url": "https://howl-library.vercel.app",
+                        "url": "https://howl-project-woad.vercel.app",
                         "type": "live",
                         "icon": "🌐",
                         "description": "Prototipe interaktif web simulasi reservasi ruang dan sirkulasi buku.",
@@ -695,11 +693,12 @@
                     }
                 ],
                 "techStack": [
-                    "UML Modeling (Use Case, Activity, SSD, Sequence)",
+                    "Use Case & Use case description",
+                    "Activity Diagram",
                     "Domain Model Class Diagram",
-                    "Three-Layer Architecture",
-                    "CRC Cards & Design Class Diagram",
-                    "Communication & Package Diagram",
+                    "System Sequence Diagram",
+                    "Class Diagram First Cut",
+                    "First cut sequence diagram",
                     "Figma (Lo-Fi Wireframe)"
                 ],
                 "deliverables": [
@@ -715,14 +714,12 @@
                 "thumbnailAlt": "Filmint Indonesian Movie Streaming Platform UML Modeling & Lo-Fi Wireframe",
                 "gdriveDocumentationUrl": "https://drive.google.com/drive/folders/1GEbcW9sYN0KD6lG7q5KFwNqm8HwHDLsf?usp=sharing",
                 "documentationLabels": [
-                    "Use Case Diagram & Description",
-                    "Activity Diagram Bisnis",
+                    "Use Case & Use case description",
+                    "Activity Diagram",
                     "Domain Model Class Diagram",
-                    "System Sequence Diagram (SSD)",
-                    "Three-Layer Sequence Diagram",
-                    "First-Cut Design Class Diagram (DCD)",
-                    "Communication & Package Diagram",
-                    "Wireframe Lo-Fi Figma"
+                    "System Sequence Diagram",
+                    "Class Diagram First Cut",
+                    "First cut sequence diagram"
                 ],
                 "projectLinks": [
                     {
@@ -869,10 +866,10 @@
                 ],
                 "techStack": [
                     "Figma (Hi-Fi Prototype & Design System)",
-                    "Style Guide (Archivo, #325540, #DEEFE7, #ECBE47)",
-                    "Kuisioner & Data SIPSN",
+                    "Style Guide",
+                    "Kuisioner & Data",
                     "User Persona, User Story & Affinity Diagram",
-                    "User Journey Map (6 Tahap)",
+                    "User Journey Map",
                     "Flowchart & Sitemap"
                 ],
                 "deliverables": [
@@ -887,11 +884,7 @@
                 "thumbnailAlt": "Eatventory Smart Food Stock Management & Food Waste Mitigation Mobile Prototype",
                 "gdriveDocumentationUrl": "https://drive.google.com/drive/folders/1_fJvRpqgZwR54j9NFEpZv46LMQXCmA0J?usp=sharing",
                 "documentationLabels": [
-                    "Dokumen Riset UI/UX & Analisis Kuisioner",
-                    "User Persona Modeling (Daffa & Mariyati)",
-                    "Customer Journey Map (CJM 6 Tahap)",
-                    "Flowchart & Arsitektur Informasi",
-                    "Design System & UI Component Library"
+                    "Eatventory Infografis"
                 ],
                 "projectLinks": [
                     {
@@ -1144,7 +1137,7 @@
                     "Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SRS)",
                     "Class Diagram",
                     "Multilayer Sequence Diagram",
-                    "Arsitektur Google Apps Script (GAS)",
+                    "Use Case",
                     "Skema Database Google Sheets"
                 ],
                 "projectLinks": [
@@ -1312,10 +1305,10 @@
                 ],
                 "techStack": [
                     "HTML5",
-                    "CSS3 (Custom Variables, Grid, Flexbox)",
-                    "Vanilla JavaScript (DOM)",
+                    "CSS3",
+                    "Vanilla JavaScript",
                     "Kanban Drag-and-Drop",
-                    "Validasi Form & Toggle Sensor Nilai",
+                    "Toggle Sensor Nilai",
                     "Chart.js"
                 ],
                 "deliverables": [
@@ -1329,10 +1322,7 @@
                 "thumbnailAlt": "Edu LMS Student Learning Management Dashboard",
                 "gdriveDocumentationUrl": "",
                 "documentationLabels": [
-                    "Spesifikasi Antarmuka Portal Mahasiswa",
-                    "Information Architecture (Sitemap LMS)",
-                    "Komponen Evaluasi & Rubrik Penilaian",
-                    "Kanban Workflow Logic"
+                    "Spesifikasi Antarmuka Portal Mahasiswa"
                 ],
                 "projectLinks": [
                     {
@@ -1718,8 +1708,8 @@
                 ],
                 "techStack": [
                     "HTML5",
-                    "CSS3 (Press Start 2P, Blink Animation, Pixel UI)",
-                    "Vanilla JavaScript (ES6+)",
+                    "CSS3",
+                    "Vanilla JavaScript",
                     "OOP (Class Player & Ball)",
                     "FSM Spritesheet Animation",
                     "Custom Physics (Gravitasi, Vektor vx/vy, Friksi)",
