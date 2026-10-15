@@ -331,7 +331,7 @@
                     "Laporan akhir ClevaGo (Final Project Report Minggu 12).",
                     "Diagram end-to-end dan activity diagram: laundry, procurement, dan pemeliharaan aset.",
                     "Use case diagram laundry, procurement, dan pemeliharaan aset.",
-                    "Lima prototipe Figma untuk alur internal."
+                    "Enam prototipe Figma untuk alur internal"
                 ],
                 "metrics": "Dirancang untuk menekan risiko pakaian tertukar dan waktu pencarian manual lewat RFID, serta merapikan pengadaan dan perawatan aset lewat alur RFQ dan service order.",
                 "thumbnail": "@/assets/thumbnail_clevago.png",
@@ -347,7 +347,7 @@
                 "projectLinks": [
                     {
                         "label": "Prototipe 1: Laundry Management",
-                        "url": "hhttps://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-263&p=f&t=m3UgtjifGAjByfUk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3467",
+                        "url": "https://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-10136&t=hjXl2lLhjgb90Lkm-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A8735&starting-point-node-id=1%3A10136&show-proto-sidebar=1",
                         "type": "figma",
                         "icon": "📱",
                         "description": "Memonitor proses laundry dari masuk ke internal hingga packing.",
@@ -371,15 +371,23 @@
                     },
                     {
                         "label": "Prototipe 4: Sistem Pengadaan Material (Procurement)",
-                        "url": "https://www.figma.com/proto/emilgFi3LSWiQzsebRUZrS/ClevaGo-Internal-Department?node-id=7-4437&t=1uo02JFviWClTQ1z-1&scaling=scale-down&content-scaling=fixed&page-id=7%3A956&starting-point-node-id=7%3A4437",
+                        "url": "https://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-3467&p=f&t=HK6S50rmgnb4eKcm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3467&show-proto-sidebar=1",
                         "type": "figma",
                         "icon": "📦",
-                        "description": "Pengelolaan Purchase Request stok kimia, penerbitan RFQ, dan verifikasi PO.",
+                        "description": "Pengelolaan Purchase Request stok, penerbitan RFQ, dan verifikasi PO.",
                         "isPrimary": false
                     },
                     {
-                        "label": "Prototipe 5: Pemeliharaan Aset & Service Order",
-                        "url": "https://www.figma.com/proto/emilgFi3LSWiQzsebRUZrS/ClevaGo-Internal-Department?node-id=7-8591&p=f&t=O3mkQDR7KhWh1lMr-1&scaling=scale-down&content-scaling=fixed&page-id=7%3A6195&starting-point-node-id=7%3A6823",
+                        "label": "Prototipe 5 (tab): Staf Penerimaan Material",
+                        "url": "https://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-3467&p=f&t=HK6S50rmgnb4eKcm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3467&show-proto-sidebar=1",
+                        "type": "figma",
+                        "icon": "📦",
+                        "description": "Penerimaan material dari supplier dan pelaporan material masuk.",
+                        "isPrimary": false
+                    },
+                    {
+                        "label": "Prototipe 6: Pemeliharaan Aset & Service Order",
+                        "url": "https://www.figma.com/proto/o2r9v9vLZDoifsZwq4odZ7/Clevago---Internal?node-id=1-6052&p=f&t=G9WbYZDWXwkCN1z9-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A5193&starting-point-node-id=1%3A7593",
                         "type": "figma",
                         "icon": "🛠️",
                         "description": "Monitoring jadwal servis rutin mesin cuci dan tiket perbaikan vendor.",
@@ -516,19 +524,18 @@
                 ],
                 "techStack": [
                     "Normalisasi Relasional (UNF sampai 3NF)",
-                    "Entity Relationship Diagram (14 Tabel)",
+                    "Entity Relationship Diagram",
                     "Kamus Data",
                     "Logical Database Design",
                     "Physical Database Design",
                     "Business Rules & System Requirement"
                 ],
                 "deliverables": [
-                    "Laporan akhir analisis dan perancangan basis data HOWL (Bab I sampai V).",
-                    "Kamus data untuk 14 tabel master dan transaksional.",
-                    "ERD, Logical Database Design, dan Physical Database Design.",
-                    "Business rules dan kebutuhan sistem dari wawancara owner dan observasi kasir."
+                    "Laporan akhir analisis dan perancangan basis data HOWL.",
+                    "Kamus data untuk tabel master dan transaksional.",
+                    "ERD, Logical Database Design, dan Physical Database Design."
                 ],
-                "metrics": "Rancangan database 3NF dengan 14 tabel yang menyatukan reservasi, membership, sirkulasi buku, dan pembayaran, termasuk aturan kapasitas 60 orang dan kuota member.",
+                "metrics": "Rancangan database 3NF yang menyatukan reservasi, membership, sirkulasi buku, dan pembayaran, termasuk aturan kapasitas 60 orang dan kuota member.",
                 "thumbnail": "@/assets/thumbnail_howl.png",
                 "thumbnailAlt": "HOWL Library & Creative Space 3NF Database & Reservation System",
                 "gdriveDocumentationUrl": "https://drive.google.com/drive/folders/1aktWB2LaFxqH79Jow8kSQbtkPxHku5Db?usp=sharing",
