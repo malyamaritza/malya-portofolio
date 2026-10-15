@@ -985,7 +985,7 @@
                         "tag": "Web Vitals",
                         "description": "Optimasi bundle aset untuk memastikan skor Google Lighthouse 95+.",
                         "highlights": [
-                            "Lazy loading gambar dan ikon vektor ringan.",
+                            "Optimized loading gambar dan ikon vektor ringan.",
                             "Loading time instan di jaringan seluler 4G/Wi-Fi."
                         ]
                     }
@@ -1014,7 +1014,7 @@
                     },
                     {
                         "label": "Source Code di GitHub",
-                        "url": "https://github.com/onebycode/empact-community",
+                        "url": "https://github.com/onetech-su/empact-community",
                         "type": "github",
                         "icon": "🐙",
                         "isPrimary": false
@@ -1334,7 +1334,7 @@
                 "projectLinks": [
                     {
                         "label": "View Interface Edu LMS",
-                        "url": "edu-lms-project-fe.vercel.app",
+                        "url": "https://edu-lms-fe-project.vercel.app/",
                         "type": "live",
                         "icon": "🎓",
                         "isPrimary": true
