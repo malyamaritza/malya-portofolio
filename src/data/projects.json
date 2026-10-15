@@ -552,14 +552,6 @@
                         "icon": "🌐",
                         "description": "Prototipe interaktif web simulasi reservasi ruang dan sirkulasi buku.",
                         "isPrimary": true
-                    },
-                    {
-                        "label": "Physical Database Design & SQL",
-                        "url": "https://github.com/malyamaritza/howl-space-db/tree/main/sql",
-                        "type": "github",
-                        "icon": "🗄️",
-                        "description": "Skrip DDL SQL skema 14 tabel dan integritas referensial.",
-                        "isPrimary": false
                     }
                 ],
                 "galleryDocumentation": [
